@@ -5,8 +5,7 @@ class MyComponent extends React.Component {
         super(props);
     }
     render() {
-        //return React.createElement("div", null, "Hello", props.name)
-        return React.createElement("div", null, "Hello");
+        return React.createElement("div", {}, "Hello");
     }
 }
 

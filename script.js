@@ -1,14 +1,5 @@
 'use strict';
 
-let MyComponent = function MyComponent(props) {
-    return React.createElement(
-        "div",
-        null,
-        "Hello",
-        props.name
-    )
-};
-
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);

@@ -1,2 +1,2 @@
 # my-react-app
-A Playground for Testing and Learning React
+This is a playground for me to test and learn React.

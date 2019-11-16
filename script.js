@@ -65,7 +65,8 @@ class MyComponent extends React.Component {
                 "div",
                 null,
                 this.state.num
-            )
+            ),
+            React.createElement(BadgeList, null, null)
         )
     }
 }
@@ -86,12 +87,19 @@ class Badge extends React.Component {
     }
 }
 
-
+class BadgeList extends React.Component {
+    render() {
+        return React.createElement(
+            "div",
+            {style: {color: "green"}},
+            React.createElement(Badge, { name: "Bill" }, null),
+            React.createElement(Badge, { name: "Tom" }, null)
+        )
+    }
+}
 
 /*
 let BadgeList = React.createClass({
-    displayName: "BadgeList",
-
     render: function render() {
         return React.createElement(
             "div",

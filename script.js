@@ -70,6 +70,39 @@ class MyComponent extends React.Component {
     }
 }
 
+
+class Badge extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            React.createElement(
+                "div",
+                null,
+                this.props.name
+            )
+        )
+    }
+}
+
+
+
+/*
+let BadgeList = React.createClass({
+    displayName: "BadgeList",
+
+    render: function render() {
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(Badge, { name: "Bill" }),
+            React.createElement(Badge, { name: "Tom" })
+        );
+    }
+});
+*/
+
 ReactDOM.render(
     React.createElement(
         MyComponent, 

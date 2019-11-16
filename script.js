@@ -1,33 +1,71 @@
 'use strict';
 
+const br = React.createElement(
+    "br",
+    null,
+    null
+);
+
+function Button(props) {
+    return React.createElement(
+        "button",
+        {
+            onClick: props.handleClick
+        },
+        props.name
+    )
+}
+
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            num: 0
+        }
     }
-    render() {
-        return React.createElement("div", null, "Hello ", this.props.name)
-        //return React.createElement("div", null, "Hello");
+    handleIncrement = () => {
+        this.setState({
+            num: this.state.num + 1
+        })
     }
-}
-
-class Hello extends React.Component {
+    handleDecrement = () => {
+        this.setState({
+            num: this.state.num - 1
+        })
+    }
     render() {
         return React.createElement(
-            'div',
-            null,
-            `Hello ${this.props.toWhat}`
-        );
+            "div", 
+            {style: {color: "blue"}}, 
+            "Hello ", 
+            this.props.name, 
+            br,
+            `Hello ${this.props.toWhat}`,
+            br,
+            React.createElement(
+                Button,
+                {
+                    handleClick: this.handleIncrement,
+                    name: "Increment"
+                },
+                null
+            ),
+            React.createElement(
+                "div",
+                null,
+                this.state.num
+            )
+        )
     }
 }
 
-/*
 ReactDOM.render(
-    React.createElement(Hello, { toWhat: 'World' }, null),
-    document.querySelector("#app")
-);
-*/
-
-ReactDOM.render(
-    React.createElement(MyComponent, { name: 'John' }, null), 
+    React.createElement(
+        MyComponent, 
+        { 
+            name: 'John', 
+            toWhat: 'World' 
+        }, 
+        null), 
     document.querySelector("#app")
 );

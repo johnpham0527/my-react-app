@@ -10,5 +10,6 @@ class MyComponent extends React.Component {
     }
 }
 
-const domContainer = document.querySelector('#app');
-ReactDOM.render(React.createElement(MyComponent), domContainer);
+//const domContainer = document.querySelector('#app');
+//ReactDOM.render(React.createElement(MyComponent), domContainer);
+ReactDOM.render(React.createElement(MyComponent), document.querySelector("#app"));

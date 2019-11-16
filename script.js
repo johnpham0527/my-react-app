@@ -51,6 +51,14 @@ class MyComponent extends React.Component {
                 null
             ),
             React.createElement(
+                Button,
+                {
+                    handleClick: this.handleDecrement,
+                    name: "Decrement"
+                },
+                null
+            ),
+            React.createElement(
                 "div",
                 null,
                 this.state.num

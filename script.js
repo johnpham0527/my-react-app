@@ -16,6 +16,15 @@ function Button(props) {
     )
 }
 
+let MyName = function MyName(props) {
+    return React.createElement(
+        "div",
+        null,
+        "Hello ",
+        props.name
+    );
+};
+
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -66,7 +75,8 @@ class MyComponent extends React.Component {
                 null,
                 this.state.num
             ),
-            React.createElement(BadgeList, null, null)
+            React.createElement(BadgeList, null, null),
+            React.createElement(MyName, {name: "John Pham"}, null)
         )
     }
 }

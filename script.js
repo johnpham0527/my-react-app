@@ -40,8 +40,11 @@ class MyComponent extends React.Component {
             "Hello ", 
             this.props.name, 
             br,
-            `Hello ${this.props.toWhat}`,
-            br,
+            React.createElement(
+                "div",
+                {style: {color: "black"}},
+                `Hello ${this.props.toWhat}`
+            ),
             React.createElement(
                 Button,
                 {

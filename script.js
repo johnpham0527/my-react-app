@@ -34,6 +34,7 @@ let MyName = function MyName(props) {
     );
 };
 
+  
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -41,16 +42,19 @@ class MyComponent extends React.Component {
             num: 0
         }
     }
+    /*
     handleIncrement = () => {
         this.setState({
             num: this.state.num + 1
-        })
+        });
     }
+    
     handleDecrement = () => {
         this.setState({
             num: this.state.num - 1
         })
     }
+  
     render() {
         return React.createElement(
             "div", 
@@ -88,6 +92,7 @@ class MyComponent extends React.Component {
             React.createElement(MyName, {name: "John Pham"}, null)
         )
     }
+    */
 }
 
 
@@ -117,20 +122,7 @@ class BadgeList extends React.Component {
     }
 }
 
-
-let BadgeList = React.createClass({
-    render: function render() {
-        return React.createElement(
-            "div",
-            null,
-            React.createElement(Badge, { name: "Bill" }),
-            React.createElement(Badge, { name: "Tom" })
-        );
-    }
-});
-
-
-
+/*
 ReactDOM.render(
     React.createElement(
         MyComponent, 
@@ -141,10 +133,11 @@ ReactDOM.render(
         null), 
     document.querySelector("#app")
 );
+*/
 
-/*
+
 ReactDOM.render(
     hello,
-    document.querySelector("#app")
+    document.querySelector("#app"),
+    null
 );
-*/

@@ -1,11 +1,20 @@
 'use strict';
 
+/*
 const br = React.createElement(
     "br",
     null,
     null
 );
+*/
 
+const hello = React.createElement(
+    "h1",
+    {},
+    "Hello!"
+);
+
+/*
 function Button(props) {
     return React.createElement(
         "button",
@@ -108,7 +117,7 @@ class BadgeList extends React.Component {
     }
 }
 
-/*
+
 let BadgeList = React.createClass({
     render: function render() {
         return React.createElement(
@@ -119,7 +128,8 @@ let BadgeList = React.createClass({
         );
     }
 });
-*/
+
+
 
 ReactDOM.render(
     React.createElement(
@@ -129,5 +139,11 @@ ReactDOM.render(
             toWhat: 'World' 
         }, 
         null), 
+    document.querySelector("#app")
+);
+*/
+
+ReactDOM.render(
+    hello,
     document.querySelector("#app")
 );

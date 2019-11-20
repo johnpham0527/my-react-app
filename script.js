@@ -1,12 +1,12 @@
 'use strict';
 
-/*
+
 const br = React.createElement(
     "br",
     null,
     null
 );
-*/
+
 
 const hello = React.createElement(
     "h1",
@@ -14,7 +14,7 @@ const hello = React.createElement(
     "Hello!"
 );
 
-/*
+
 function Button(props) {
     return React.createElement(
         "button",
@@ -141,9 +141,10 @@ ReactDOM.render(
         null), 
     document.querySelector("#app")
 );
-*/
 
+/*
 ReactDOM.render(
     hello,
     document.querySelector("#app")
 );
+*/

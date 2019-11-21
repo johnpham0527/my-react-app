@@ -9,7 +9,7 @@ const br = React.createElement(
 
 
 const hello = React.createElement(
-    "h1",
+    "h2",
     {},
     "Hello!"
 );
@@ -47,7 +47,8 @@ class MyComponent extends React.Component {
             React.createElement(
                 "div",
                 null,
-                "Hi there!"
+                React.createElement("h1", null, "Hi there!"),
+                hello
             )
         )
     }
@@ -144,8 +145,14 @@ ReactDOM.render(
 );
 */
 
-
+/*
 ReactDOM.render(
     hello,
+    document.querySelector("#app")
+);
+*/
+
+ReactDOM.render(
+    React.createElement(MyComponent, null, null),
     document.querySelector("#app")
 );

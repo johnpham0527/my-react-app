@@ -147,7 +147,5 @@ ReactDOM.render(
 
 ReactDOM.render(
     hello,
-    document.querySelector("#app"),
-    null
+    document.querySelector("#app")
 );
-

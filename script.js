@@ -42,6 +42,15 @@ class MyComponent extends React.Component {
             num: 0
         }
     }
+    render() {
+        return(
+            React.createElement(
+                "div",
+                null,
+                "Hi there!"
+            )
+        )
+    }
     /*
     handleIncrement = () => {
         this.setState({
@@ -141,3 +150,4 @@ ReactDOM.render(
     document.querySelector("#app"),
     null
 );
+

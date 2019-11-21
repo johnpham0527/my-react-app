@@ -29,7 +29,8 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            num: 0
+            num: 0,
+            input: ""
         }
     }
     handleIncrement = () => {
@@ -40,6 +41,11 @@ class MyComponent extends React.Component {
     handleDecrement = () => {
         this.setState({
             num: this.state.num - 1
+        })
+    }
+    handleFormChange = (event) => {
+        this.setState({
+            input: event.target.value
         })
     }
     render() {
@@ -76,7 +82,8 @@ class MyComponent extends React.Component {
                 this.state.num
             ),
             React.createElement(BadgeList, null, null),
-            React.createElement(MyName, {name: "John Pham"}, null)
+            React.createElement(MyName, {name: this.state.input}, null),
+            React.createElement("input", {value: this.state.input, onChange: this.handleFormChange}, null)
         )
     }
 }

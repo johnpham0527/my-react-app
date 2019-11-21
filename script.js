@@ -39,11 +39,12 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            num: 0
-
+            num: 0,
+            input: ""
         };
         this.handleIncrement = this.handleIncrement.bind(this);
-        this.handleDecrement = this.handleIncrement.bind(this);
+        this.handleDecrement = this.handleDecrement.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
     handleIncrement() {
@@ -56,7 +57,13 @@ class MyComponent extends React.Component {
         this.setState({
             num: this.state.num - 1
         })
-    }
+    };
+
+    handleInputChange(event) {
+        this.setState({
+            input: event.target.value
+        })
+    };
 
     render() {
         return(
@@ -64,8 +71,56 @@ class MyComponent extends React.Component {
                 "div",
                 null,
                 React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
-                hello
-
+                hello,
+                React.createElement(
+                    MyName,
+                    {
+                        name: "John Pham"
+                    },
+                    null
+                ),
+                br,
+                React.createElement(
+                    BadgeList, 
+                    null, 
+                    null
+                ),
+                br,
+                React.createElement(
+                    Button,
+                    {
+                        handleClick: this.handleIncrement,
+                        name: "Increment"
+                    },
+                    null
+                ),
+                React.createElement(
+                    Button,
+                    {
+                        handleClick: this.handleDecrement,
+                        name: "Decrement"
+                    },
+                    null
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    this.state.num
+                ),
+                React.createElement(
+                    "input",
+                    { 
+                        value: this.state.input,
+                        type: "text",
+                        onChange: this.handleInputChange
+                    },
+                    null
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    this.state.input
+                )
             )
         )
     }
@@ -86,29 +141,7 @@ class MyComponent extends React.Component {
                 {style: {color: "black"}},
                 `Hello ${this.props.toWhat}`
             ),
-            React.createElement(
-                Button,
-                {
-                    handleClick: this.handleIncrement,
-                    name: "Increment"
-                },
-                null
-            ),
-            React.createElement(
-                Button,
-                {
-                    handleClick: this.handleDecrement,
-                    name: "Decrement"
-                },
-                null
-            ),
-            React.createElement(
-                "div",
-                null,
-                this.state.num
-            ),
-            React.createElement(BadgeList, null, null),
-            React.createElement(MyName, {name: "John Pham"}, null)
+
         )
     }
     */

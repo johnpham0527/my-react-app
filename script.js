@@ -40,8 +40,23 @@ class MyComponent extends React.Component {
         super(props);
         this.state = {
             num: 0
-        }
+        };
+        this.handleIncrement = this.handleIncrement.bind(this);
+        this.handleDecrement = this.handleIncrement.bind(this);
     }
+
+    handleIncrement() {
+        this.setState({
+            num: this.state.num + 1
+        });
+    };
+
+    handleDecrement() {
+        this.setState({
+            num: this.state.num - 1
+        })
+    }
+
     render() {
         return(
             React.createElement(
@@ -52,18 +67,10 @@ class MyComponent extends React.Component {
             )
         )
     }
-    /*
-    handleIncrement = () => {
-        this.setState({
-            num: this.state.num + 1
-        });
-    }
     
-    handleDecrement = () => {
-        this.setState({
-            num: this.state.num - 1
-        })
-    }
+
+    /*
+
   
     render() {
         return React.createElement(

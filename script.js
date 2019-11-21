@@ -40,6 +40,7 @@ class MyComponent extends React.Component {
         super(props);
         this.state = {
             num: 0
+
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleIncrement.bind(this);
@@ -62,8 +63,9 @@ class MyComponent extends React.Component {
             React.createElement(
                 "div",
                 null,
-                React.createElement("h1", null, "Hi there!"),
+                React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
                 hello
+
             )
         )
     }

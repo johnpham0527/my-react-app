@@ -1,12 +1,10 @@
 'use strict';
 
-
 const br = React.createElement(
     "br",
     null,
     null
 );
-
 
 const hello = React.createElement(
     "h2",
@@ -34,7 +32,6 @@ let MyName = function MyName(props) {
     );
 };
 
-  
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -105,8 +102,9 @@ class MyComponent extends React.Component {
                 React.createElement(
                     "div",
                     null,
-                    this.state.num
+                    `Your counter: ${this.state.num}`
                 ),
+                br,
                 React.createElement(
                     "input",
                     { 
@@ -116,35 +114,15 @@ class MyComponent extends React.Component {
                     },
                     null
                 ),
+                br,
                 React.createElement(
                     "div",
                     null,
-                    this.state.input
+                    `Your input: ${this.state.input}`
                 )
             )
         )
     }
-    
-
-    /*
-
-  
-    render() {
-        return React.createElement(
-            "div", 
-            {style: {color: "blue"}}, 
-            "Hello ", 
-            this.props.name, 
-            br,
-            React.createElement(
-                "div",
-                {style: {color: "black"}},
-                `Hello ${this.props.toWhat}`
-            ),
-
-        )
-    }
-    */
 }
 
 
@@ -173,26 +151,6 @@ class BadgeList extends React.Component {
         )
     }
 }
-
-/*
-ReactDOM.render(
-    React.createElement(
-        MyComponent, 
-        { 
-            name: 'John', 
-            toWhat: 'World' 
-        }, 
-        null), 
-    document.querySelector("#app")
-);
-*/
-
-/*
-ReactDOM.render(
-    hello,
-    document.querySelector("#app")
-);
-*/
 
 ReactDOM.render(
     React.createElement(MyComponent, null, null),

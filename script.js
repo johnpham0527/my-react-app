@@ -154,6 +154,7 @@ class MyComponent extends React.Component {
                 React.createElement(
                     "ul",
                     null,
+                    React.createElement(listElement, {list: this.state.list}, null)
                 )
             )
         )
@@ -187,15 +188,7 @@ class BadgeList extends React.Component {
     }
 }
 
-const myList = [1,2,3,4];
-
-ReactDOM.render(
-    React.createElement(listElement, {list: myList}, null),
-    document.querySelector("#app")
-);
-/*
 ReactDOM.render(
     React.createElement(MyComponent, null, null),
     document.querySelector("#app")
 );
-*/

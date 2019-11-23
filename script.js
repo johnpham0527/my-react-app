@@ -6,6 +6,13 @@ const br = React.createElement(
     null
 );
 
+const hello = React.createElement(
+    "h2",
+    {},
+    "Hello!"
+);
+
+
 function Button(props) {
     return React.createElement(
         "button",
@@ -30,60 +37,91 @@ class MyComponent extends React.Component {
         super(props);
         this.state = {
             num: 0,
-            input: ""
-        }
+            input: "",
+            list: []
+        };
+        this.handleIncrement = this.handleIncrement.bind(this);
+        this.handleDecrement = this.handleDecrement.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
-    handleIncrement = () => {
+
+    handleIncrement() {
         this.setState({
             num: this.state.num + 1
-        })
-    }
-    handleDecrement = () => {
+        });
+    };
+
+    handleDecrement() {
         this.setState({
             num: this.state.num - 1
         })
-    }
-    handleFormChange = (event) => {
+    };
+
+    handleInputChange(event) {
         this.setState({
             input: event.target.value
         })
-    }
+    };
+
     render() {
-        return React.createElement(
-            "div", 
-            {style: {color: "blue"}}, 
-            "Hello ", 
-            this.props.name, 
-            br,
-            React.createElement(
-                "div",
-                {style: {color: "black"}},
-                `Hello ${this.props.toWhat}`
-            ),
-            React.createElement(
-                Button,
-                {
-                    handleClick: this.handleIncrement,
-                    name: "Increment"
-                },
-                null
-            ),
-            React.createElement(
-                Button,
-                {
-                    handleClick: this.handleDecrement,
-                    name: "Decrement"
-                },
-                null
-            ),
+        return(
             React.createElement(
                 "div",
                 null,
-                this.state.num
-            ),
-            React.createElement(BadgeList, null, null),
-            React.createElement(MyName, {name: this.state.input}, null),
-            React.createElement("input", {value: this.state.input, onChange: this.handleFormChange}, null)
+                React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
+                hello,
+                React.createElement(
+                    MyName,
+                    {
+                        name: "John Pham"
+                    },
+                    null
+                ),
+                br,
+                React.createElement(
+                    BadgeList, 
+                    null, 
+                    null
+                ),
+                br,
+                React.createElement(
+                    Button,
+                    {
+                        handleClick: this.handleIncrement,
+                        name: "Increment"
+                    },
+                    null
+                ),
+                React.createElement(
+                    Button,
+                    {
+                        handleClick: this.handleDecrement,
+                        name: "Decrement"
+                    },
+                    null
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    `Your counter: ${this.state.num}`
+                ),
+                br,
+                React.createElement(
+                    "input",
+                    { 
+                        value: this.state.input,
+                        type: "text",
+                        onChange: this.handleInputChange
+                    },
+                    null
+                ),
+                br,
+                React.createElement(
+                    "div",
+                    null,
+                    `Your input: ${this.state.input}`
+                )
+            )
         )
     }
 }
@@ -115,26 +153,7 @@ class BadgeList extends React.Component {
     }
 }
 
-/*
-let BadgeList = React.createClass({
-    render: function render() {
-        return React.createElement(
-            "div",
-            null,
-            React.createElement(Badge, { name: "Bill" }),
-            React.createElement(Badge, { name: "Tom" })
-        );
-    }
-});
-*/
-
 ReactDOM.render(
-    React.createElement(
-        MyComponent, 
-        { 
-            name: 'John', 
-            toWhat: 'World' 
-        }, 
-        null), 
+    React.createElement(MyComponent, null, null),
     document.querySelector("#app")
 );

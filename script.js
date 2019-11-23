@@ -140,6 +140,11 @@ class MyComponent extends React.Component {
                         onClick: this.handleFormSubmit
                     },
                     "Submit"
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    this.state.printText
                 )
             )
         )

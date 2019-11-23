@@ -32,6 +32,10 @@ let MyName = function MyName(props) {
     );
 };
 
+const listElement = function listElement(props) {
+    return props.list.map((element) => React.createElement("li",null,element));
+}
+
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -146,6 +150,10 @@ class MyComponent extends React.Component {
                     "div",
                     null,
                     this.state.printText
+                ),
+                React.createElement(
+                    "ul",
+                    null,
                 )
             )
         )
@@ -179,7 +187,15 @@ class BadgeList extends React.Component {
     }
 }
 
+const myList = [1,2,3,4];
+
+ReactDOM.render(
+    React.createElement(listElement, {list: myList}, null),
+    document.querySelector("#app")
+);
+/*
 ReactDOM.render(
     React.createElement(MyComponent, null, null),
     document.querySelector("#app")
 );
+*/

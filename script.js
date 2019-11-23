@@ -120,6 +120,13 @@ class MyComponent extends React.Component {
                     "div",
                     null,
                     `Your input: ${this.state.input}`
+                ),
+                React.createElement(
+                    "button",
+                    {
+                        onClick: this.handleFormSubmit
+                    },
+                    "Submit"
                 )
             )
         )

@@ -66,6 +66,14 @@ class MyComponent extends React.Component {
 
     handleFormSubmit(event) {
         event.preventDefault();
+        let newList = this.state.list.slice();
+        newList.push(this.state.input);
+        let newPrintText = newList.join(", ");
+        this.setState({
+            list: newList,
+            printText: newPrintText,
+            input: ""
+        })
     };
 
     render() {

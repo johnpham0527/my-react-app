@@ -38,7 +38,8 @@ class MyComponent extends React.Component {
         this.state = {
             num: 0,
             input: "",
-            list: []
+            list: [],
+            printText: ""
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);
@@ -62,6 +63,8 @@ class MyComponent extends React.Component {
             input: event.target.value
         })
     };
+
+
 
     render() {
         return(

@@ -65,7 +65,7 @@ class MyComponent extends React.Component {
     };
 
     handleFormSubmit(event) {
-
+        event.preventDefault();
     };
 
     render() {

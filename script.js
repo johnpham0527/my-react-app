@@ -37,7 +37,8 @@ class MyComponent extends React.Component {
         super(props);
         this.state = {
             num: 0,
-            input: ""
+            input: "",
+            list: []
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);

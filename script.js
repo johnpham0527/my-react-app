@@ -64,7 +64,9 @@ class MyComponent extends React.Component {
         })
     };
 
+    handleFormSubmit(event) {
 
+    };
 
     render() {
         return(

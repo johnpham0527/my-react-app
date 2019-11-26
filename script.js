@@ -121,7 +121,6 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            num: 0,
             input: "",
             list: [],
             printText: ""
@@ -134,21 +133,11 @@ class MyComponent extends React.Component {
     }
 
     handleIncrement(event) {
-        /*
-        this.setState({
-            num: this.state.num + 1
-        });
-        */
        event.preventDefault();
        this.props.submitIncrement();
     };
 
     handleDecrement(event) {
-        /*
-        this.setState({
-            num: this.state.num - 1
-        })
-        */
        event.preventDefault();
        this.props.submitDecrement();
     };
@@ -221,13 +210,6 @@ class MyComponent extends React.Component {
                     },
                     null
                 ),
-                /*
-                React.createElement(
-                    "div",
-                    null,
-                    `Your counter: ${this.state.num}`
-                ),
-                */
                 React.createElement(
                     DisplayCounter,
                     {counter: this.props.storeState},

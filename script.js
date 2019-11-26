@@ -1,5 +1,9 @@
 'use strict';
 
+//Redux Code
+//const { Provider, connect } = ReactRedux;
+//const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
+
 const br = React.createElement(
     "br",
     null,

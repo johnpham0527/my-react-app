@@ -3,6 +3,27 @@
 //Redux Code
 //const { Provider, connect } = ReactRedux;
 //const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
+const INCREMENT = "INCREMENT";
+const DECREMENT = "DECREMENT";
+const RESET = "RESET";
+
+const defaultState = {
+    count: 0
+}
+
+const incrementCount = () => {
+    return {
+        type: INCREMENT
+    }
+}
+
+const decrementCount = () => {
+    return {
+        type: DECREMENT
+    }
+}
+
+
 
 const br = React.createElement(
     "br",

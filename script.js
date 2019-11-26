@@ -95,6 +95,15 @@ function Button(props) {
     )
 }
 
+const displayCounter = (props) => {
+    return React.createElement(
+        "span",
+        null,
+        "Count: ",
+        props.counter.count
+    )
+}
+
 let MyName = function MyName(props) {
     return React.createElement(
         "div",

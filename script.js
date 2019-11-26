@@ -95,7 +95,7 @@ function Button(props) {
     )
 }
 
-const displayCounter = (props) => {
+const DisplayCounter = (props) => {
     return React.createElement(
         "span",
         null,
@@ -212,10 +212,17 @@ class MyComponent extends React.Component {
                     },
                     null
                 ),
+                /*
                 React.createElement(
                     "div",
                     null,
                     `Your counter: ${this.state.num}`
+                ),
+                */
+                React.createElement(
+                    DisplayCounter,
+                    {counter: this.props.storeState},
+                    null
                 ),
                 br,
                 React.createElement(
@@ -282,9 +289,33 @@ class BadgeList extends React.Component {
     }
 }
 
+const Container = connect(mapStateToProps,mapDispatchToProps)(MyComponent);
+
+class AppWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            React.createElement(
+                Provider,
+                {store: store},
+                React.createElement(Container, null, null)
+            )
+        )
+    }
+}
+
+ReactDOM.render(
+    React.createElement(AppWrapper),
+    document.querySelector("#app")
+)
+
+/*
 ReactDOM.render(
     React.createElement(MyComponent, null, null),
     document.querySelector("#app")
 );
+*/
 
 //I should implement Redux middleware in order to practice async programming

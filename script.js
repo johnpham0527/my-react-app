@@ -97,7 +97,7 @@ function Button(props) {
 
 const DisplayCounter = (props) => {
     return React.createElement(
-        "span",
+        "div",
         null,
         "Count: ",
         props.counter.count
@@ -132,7 +132,7 @@ class MyComponent extends React.Component {
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
-    handleIncrement() {
+    handleIncrement(event) {
         /*
         this.setState({
             num: this.state.num + 1
@@ -142,7 +142,7 @@ class MyComponent extends React.Component {
        this.props.submitIncrement();
     };
 
-    handleDecrement() {
+    handleDecrement(event) {
         /*
         this.setState({
             num: this.state.num - 1
@@ -152,10 +152,10 @@ class MyComponent extends React.Component {
        this.props.submitDecrement();
     };
 
-    handleReset() {
+    handleReset(event) {
         event.preventDefault();
         this.props.submitReset();
-    }
+    };
 
     handleInputChange(event) {
         this.setState({
@@ -209,6 +209,14 @@ class MyComponent extends React.Component {
                     {
                         handleClick: this.handleDecrement,
                         name: "Decrement"
+                    },
+                    null
+                ),
+                React.createElement(
+                    Button,
+                    {
+                        handleClick: this.handleReset,
+                        name: "Reset"
                     },
                     null
                 ),

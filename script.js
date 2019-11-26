@@ -1,8 +1,9 @@
 'use strict';
 
 //Redux Code
-//const { Provider, connect } = ReactRedux;
+const { Provider, connect } = ReactRedux;
 //const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
+const { createStore } = Redux;
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
 const RESET = "RESET";
@@ -46,6 +47,31 @@ const countReducer = (state = defaultState, action) => {
     }
 }
 
+const store = Redux.createStore(countReducer);
+
+//React Redux Code
+const mapStateToProps = state => {
+    return {
+        storeState: state
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        submitIncrement: () => {
+            return dispatch(incrementCount())
+        },
+        submitDecrement: () => {
+            return dispatch(decrementCount())
+        },
+        submitReset: () => {
+            return dispatch(resetCount())
+        }
+    }
+}
+
+
+//React Code
 const br = React.createElement(
     "br",
     null,

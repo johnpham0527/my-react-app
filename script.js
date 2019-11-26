@@ -23,7 +23,28 @@ const decrementCount = () => {
     }
 }
 
+const resetCount = () => {
+    return {
+        type: RESET
+    }
+}
 
+const countReducer = (state = defaultState, action) => {
+    const newState = Object.assign({},state)
+    switch (action.type) {
+        case INCREMENT:
+            newState.count++;
+            return newState;
+        case DECREMENT:
+            newState.count--;
+            return newState;
+        case RESET:
+            newState.count = 0;
+            return newState;
+        default:
+            return state;
+    }
+}
 
 const br = React.createElement(
     "br",

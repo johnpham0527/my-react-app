@@ -124,16 +124,29 @@ class MyComponent extends React.Component {
     }
 
     handleIncrement() {
+        /*
         this.setState({
             num: this.state.num + 1
         });
+        */
+       event.preventDefault();
+       this.props.submitIncrement();
     };
 
     handleDecrement() {
+        /*
         this.setState({
             num: this.state.num - 1
         })
+        */
+       event.preventDefault();
+       this.props.submitDecrement();
     };
+
+    handleReset() {
+        event.preventDefault();
+        this.props.submitReset();
+    }
 
     handleInputChange(event) {
         this.setState({

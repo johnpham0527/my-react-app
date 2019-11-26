@@ -302,11 +302,4 @@ ReactDOM.render(
     document.querySelector("#app")
 )
 
-/*
-ReactDOM.render(
-    React.createElement(MyComponent, null, null),
-    document.querySelector("#app")
-);
-*/
-
 //I should implement Redux middleware in order to practice async programming

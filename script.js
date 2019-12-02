@@ -124,7 +124,8 @@ class MyComponent extends React.Component {
         this.state = {
             input: "",
             list: [],
-            printText: ""
+            printText: "",
+            calculatorString: ""
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);

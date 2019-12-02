@@ -307,3 +307,11 @@ ReactDOM.render(
 //I should practice implementing React Redux code that handles the input via the Redux store
 //I should practice implementing a simple calculator using React Redux
 //I should practice styling buttons using a CSS stylesheet for this React code
+
+/*
+JavaScript calculator pseudo-code:
+I'll create buttons for each of the 10 digits.
+The local React state will store each digit as the button is pressed into a string.
+Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
+Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
+*/

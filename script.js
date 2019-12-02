@@ -10,7 +10,7 @@ const RESET = "RESET";
 
 const defaultState = {
     count: 0,
-    stack: []
+    queue: []
 }
 
 const incrementCount = () => {

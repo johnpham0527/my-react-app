@@ -9,7 +9,8 @@ const DECREMENT = "DECREMENT";
 const RESET = "RESET";
 
 const defaultState = {
-    count: 0
+    count: 0,
+    stack: []
 }
 
 const incrementCount = () => {

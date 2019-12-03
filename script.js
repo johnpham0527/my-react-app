@@ -249,6 +249,25 @@ class MyComponent extends React.Component {
                     "ul",
                     null,
                     React.createElement(listElement, {list: this.state.list}, null)
+                ),
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement(
+                        "button",
+                        null,
+                        "1"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "2"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "3"
+                    )
                 )
             )
         )

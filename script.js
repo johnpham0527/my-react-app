@@ -303,7 +303,7 @@ class MyComponent extends React.Component {
                     br,
                     React.createElement(
                         "button",
-                        null,
+                        {style: {width: "100px"}},
                         "0"
                     ),
                 )

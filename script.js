@@ -306,6 +306,7 @@ ReactDOM.render(
 
 //I should implement Redux middleware in order to practice async programming
 //I should practice implementing React Redux code that handles the input via the Redux store
+//Implement multiple reducers
 //I should practice implementing a simple calculator using React Redux
 //I should practice styling buttons using a CSS stylesheet for this React code
 

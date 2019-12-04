@@ -256,6 +256,38 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "button",
                         null,
+                        "7"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "8"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "9"
+                    ),
+                    br,
+                    React.createElement(
+                        "button",
+                        null,
+                        "4"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "5"
+                    ),
+                    React.createElement(
+                        "button",
+                        null,
+                        "6"
+                    ),
+                    br,
+                    React.createElement(
+                        "button",
+                        null,
                         "1"
                     ),
                     React.createElement(
@@ -267,7 +299,13 @@ class MyComponent extends React.Component {
                         "button",
                         null,
                         "3"
-                    )
+                    ),
+                    br,
+                    React.createElement(
+                        "button",
+                        null,
+                        "0"
+                    ),
                 )
             )
         )

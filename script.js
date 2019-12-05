@@ -258,7 +258,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginRight: "5px"
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "7"

@@ -502,7 +502,7 @@ class MyComponent extends React.Component {
                         "button",
                         {style: 
                             {
-                                width: "115px",
+                                width: "35px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",

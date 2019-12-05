@@ -351,7 +351,21 @@ class MyComponent extends React.Component {
                                 textAlign: "center"
                             }
                         },
-                        "9"
+                        "9",
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "*"
                     ),
                     br,
                     React.createElement(
@@ -397,6 +411,20 @@ class MyComponent extends React.Component {
                         },
                         "6"
                     ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "-"
+                    ),
                     br,
                     React.createElement(
                         "button",
@@ -440,6 +468,20 @@ class MyComponent extends React.Component {
                             }
                         },
                         "3"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "*"
                     ),
                     br,
                     React.createElement(

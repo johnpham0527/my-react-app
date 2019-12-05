@@ -503,6 +503,8 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
+                                marginLeft: "0px",
+                                marginRight: "0px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -510,6 +512,34 @@ class MyComponent extends React.Component {
                             }
                         },
                         "0"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "."
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "="
                     ),
                 )
             )

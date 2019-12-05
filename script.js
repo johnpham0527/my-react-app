@@ -255,17 +255,33 @@ class MyComponent extends React.Component {
                     null,
                     React.createElement(
                         "button",
-                        null,
+                        {style: 
+                            {
+                                width: "35px",
+                                marginRight: "5px"
+                            }
+                        },
                         "7"
                     ),
                     React.createElement(
                         "button",
-                        null,
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "0px",
+                                marginRight: "0px"
+                            }
+                        },
                         "8"
                     ),
                     React.createElement(
                         "button",
-                        null,
+                        {style: 
+                            {
+                                width: "35px",
+                                marginLeft: "5px"
+                            }
+                        },
                         "9"
                     ),
                     br,

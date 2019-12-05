@@ -488,6 +488,20 @@ class MyComponent extends React.Component {
                         "button",
                         {style: 
                             {
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "+|-"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
                                 width: "115px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",

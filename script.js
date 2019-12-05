@@ -316,6 +316,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginRight: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -331,6 +332,7 @@ class MyComponent extends React.Component {
                                 width: "35px",
                                 marginLeft: "0px",
                                 marginRight: "0px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -345,6 +347,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -359,6 +362,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -374,6 +378,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginRight: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -389,6 +394,7 @@ class MyComponent extends React.Component {
                                 width: "35px",
                                 marginLeft: "0px",
                                 marginRight: "0px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -403,6 +409,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -417,6 +424,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -432,6 +440,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginRight: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -447,6 +456,7 @@ class MyComponent extends React.Component {
                                 width: "35px",
                                 marginLeft: "0px",
                                 marginRight: "0px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -461,6 +471,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -475,6 +486,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -490,6 +502,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginRight: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -504,6 +517,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "0px",
+                                marginTop: "5px",
                                 marginRight: "0px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
@@ -519,6 +533,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
@@ -533,6 +548,7 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "5px",
+                                marginTop: "5px",
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",

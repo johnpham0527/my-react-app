@@ -265,6 +265,63 @@ class MyComponent extends React.Component {
                                 textAlign: "center"
                             }
                         },
+                        "CE"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "C"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "Del"
+                    ),
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
+                        "/"
+                    ),
+                    br,
+                    React.createElement(
+                        "button",
+                        {style: 
+                            {
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
                         "7"
                     ),
                     React.createElement(

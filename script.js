@@ -273,7 +273,11 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "0px",
-                                marginRight: "0px"
+                                marginRight: "0px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "8"
@@ -283,7 +287,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginLeft: "5px"
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "9"
@@ -294,7 +302,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginRight: "5px"
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "4"
@@ -305,7 +317,11 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "0px",
-                                marginRight: "0px"
+                                marginRight: "0px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "5"
@@ -315,7 +331,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginLeft: "5px"
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "6"
@@ -326,7 +346,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginRight: "5px"
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "1"
@@ -337,7 +361,11 @@ class MyComponent extends React.Component {
                             {
                                 width: "35px",
                                 marginLeft: "0px",
-                                marginRight: "0px"
+                                marginRight: "0px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "2"
@@ -347,7 +375,11 @@ class MyComponent extends React.Component {
                         {style: 
                             {
                                 width: "35px",
-                                marginLeft: "5px"
+                                marginLeft: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
                             }
                         },
                         "3"
@@ -355,7 +387,15 @@ class MyComponent extends React.Component {
                     br,
                     React.createElement(
                         "button",
-                        {style: {width: "115px"}},
+                        {style: 
+                            {
+                                width: "115px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center"
+                            }
+                        },
                         "0"
                     ),
                 )

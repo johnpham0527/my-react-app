@@ -635,7 +635,8 @@ ReactDOM.render(
 
 /*
 JavaScript calculator pseudo-code:
-I'll create buttons for each of the 10 digits.
+[X] I'll create buttons for each of the 10 digits.
+[X] I'll add and style a display
 The local React state will store each digit as the button is pressed into a string.
 Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
 Once the equal button is pressed, the Redux queue operands and operators will be evaluated.

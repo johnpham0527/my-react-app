@@ -254,6 +254,21 @@ class MyComponent extends React.Component {
                     "div",
                     null,
                     React.createElement(
+                        "div",
+                        {
+                            style: {
+                                border: "1px solid black",
+                                width: "135px",
+                                padding: "10px",
+                                textAlign: "right",
+                                marginTop: "10px",
+                                marginBottom: "-10px"
+                            }
+                        },
+                        "0"
+                    ),
+                    br,
+                    React.createElement(
                         "button",
                         {style: 
                             {
@@ -556,7 +571,7 @@ class MyComponent extends React.Component {
                             }
                         },
                         "="
-                    ),
+                    )
                 )
             )
         )

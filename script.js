@@ -163,7 +163,8 @@ class MyComponent extends React.Component {
         this.setState({
             list: newList,
             printText: newPrintText,
-            input: ""
+            input: "",
+            calcInput: ""
         })
     };
 

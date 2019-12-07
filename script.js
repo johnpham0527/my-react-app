@@ -125,14 +125,14 @@ class MyComponent extends React.Component {
             input: "",
             list: [],
             printText: "",
-            calcString: ""
+            calcString: "..."
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);
         this.handleReset = this.handleReset.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.handleOne = this.handleOne.bind(this);
+        //this.handleOne = this.handleOne.bind(this);
     }
 
     handleIncrement(event) {
@@ -156,11 +156,13 @@ class MyComponent extends React.Component {
         })
     };
 
+    /*
     handleOne(event) {
         this.setState({
             calcString: this.state.calcString + "1"
         })
-    }
+    };
+    */
 
     handleFormSubmit(event) {
         event.preventDefault();
@@ -272,7 +274,7 @@ class MyComponent extends React.Component {
                                 marginBottom: "-10px"
                             }
                         },
-                        "0"
+                        this.state.calcString
                     ),
                     br,
                     React.createElement(
@@ -469,7 +471,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: handleOne
+                            //onClick: handleOne
                         },
                         "1"
                     ),

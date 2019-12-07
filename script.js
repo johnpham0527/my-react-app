@@ -469,7 +469,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            //onClick: handleOne
+                            onClick: this.handleOne
                         },
                         "1"
                     ),

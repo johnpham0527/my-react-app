@@ -458,7 +458,8 @@ class MyComponent extends React.Component {
                     br,
                     React.createElement(
                         "button",
-                        {style: 
+                        {
+                            style: 
                             {
                                 width: "35px",
                                 marginRight: "5px",
@@ -467,7 +468,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: handleOne
                         },
                         "1"
                     ),

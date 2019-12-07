@@ -132,7 +132,7 @@ class MyComponent extends React.Component {
         this.handleReset = this.handleReset.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        //this.handleOne = this.handleOne.bind(this);
+        this.handleOne = this.handleOne.bind(this);
     }
 
     handleIncrement(event) {
@@ -156,13 +156,11 @@ class MyComponent extends React.Component {
         })
     };
 
-    /*
     handleOne(event) {
         this.setState({
             calcString: this.state.calcString + "1"
         })
     };
-    */
 
     handleFormSubmit(event) {
         event.preventDefault();

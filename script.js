@@ -125,7 +125,7 @@ class MyComponent extends React.Component {
             input: "",
             list: [],
             printText: "",
-            calcString: "..."
+            calcString: "0"
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);

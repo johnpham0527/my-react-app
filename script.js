@@ -158,15 +158,30 @@ class MyComponent extends React.Component {
     };
 
     handleOne(event) {
-        this.setState({
-            calcString: this.state.calcString + "1"
-        })
+        if (this.state.calcString === "0") {
+            this.setState({
+                calcString: "1"
+            })
+        }
+        else {
+            this.setState({
+                calcString: this.state.calcString + "1"
+            })
+        }
+
     };
 
     handleTwo(event) {
-        this.setState({
-            calcString: this.state.calcString + "2"
-        })
+        if (this.state.calcString === "0") {
+            this.setState({
+                calcString: "2"
+            })
+        }
+        else {
+            this.setState({
+                calcString: this.state.calcString + "2"
+            })
+        }
     };
 
     handleFormSubmit(event) {

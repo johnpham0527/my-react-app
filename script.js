@@ -132,9 +132,6 @@ class MyComponent extends React.Component {
         this.handleReset = this.handleReset.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        this.handleOne = this.handleOne.bind(this);
-        this.handleTwo = this.handleTwo.bind(this);
-        this.handleThree = this.handleThree.bind(this);
         this.handleCalcButton = this.handleCalcButton.bind(this);
     }
 
@@ -157,46 +154,6 @@ class MyComponent extends React.Component {
         this.setState({
             input: event.target.value
         })
-    };
-
-    handleOne(event) {
-        if (this.state.calcString === "0") {
-            this.setState({
-                calcString: "1"
-            })
-        }
-        else {
-            this.setState({
-                calcString: this.state.calcString + "1"
-            })
-        }
-
-    };
-
-    handleTwo(event) {
-        if (this.state.calcString === "0") {
-            this.setState({
-                calcString: "2"
-            })
-        }
-        else {
-            this.setState({
-                calcString: this.state.calcString + "2"
-            })
-        }
-    };
-
-    handleThree(event) {
-        if (this.state.calcString === "0") {
-            this.setState({
-                calcString: "3"
-            })
-        }
-        else {
-            this.setState({
-                calcString: this.state.calcString + "3"
-            })
-        }
     };
 
     handleCalcButton(buttonValue) {
@@ -519,7 +476,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: this.handleOne
+                            onClick: () => this.handleCalcButton("1")
                         },
                         "1"
                     ),
@@ -536,7 +493,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: this.handleTwo
+                            onClick: () => this.handleCalcButton("2")
                         },
                         "2"
                     ),
@@ -552,7 +509,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: this.handleThree
+                            onClick: () => this.handleCalcButton("3")
                         },
                         "3"
                     ),

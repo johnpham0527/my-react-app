@@ -135,6 +135,7 @@ class MyComponent extends React.Component {
         this.handleOne = this.handleOne.bind(this);
         this.handleTwo = this.handleTwo.bind(this);
         this.handleThree = this.handleThree.bind(this);
+        this.handleCalcButton = this.handleCalcButton.bind(this);
     }
 
     handleIncrement(event) {
@@ -197,6 +198,19 @@ class MyComponent extends React.Component {
             })
         }
     };
+
+    handleCalcButton(buttonValue) {
+        if (this.state.calcString === "0") {
+            this.setState({
+                calcString: buttonValue
+            })
+        }
+        else {
+            this.setState({
+                calcString: this.state.calcString + buttonValue
+            })
+        }
+    }
 
     handleFormSubmit(event) {
         event.preventDefault();

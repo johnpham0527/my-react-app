@@ -134,6 +134,7 @@ class MyComponent extends React.Component {
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleOne = this.handleOne.bind(this);
         this.handleTwo = this.handleTwo.bind(this);
+        this.handleThree = this.handleThree.bind(this);
     }
 
     handleIncrement(event) {
@@ -180,6 +181,19 @@ class MyComponent extends React.Component {
         else {
             this.setState({
                 calcString: this.state.calcString + "2"
+            })
+        }
+    };
+
+    handleThree(event) {
+        if (this.state.calcString === "0") {
+            this.setState({
+                calcString: "3"
+            })
+        }
+        else {
+            this.setState({
+                calcString: this.state.calcString + "3"
             })
         }
     };
@@ -523,7 +537,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: this.handleThree
                         },
                         "3"
                     ),
@@ -538,7 +553,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: this.handleTwo
                         },
                         "*"
                     ),

@@ -162,6 +162,12 @@ class MyComponent extends React.Component {
         })
     };
 
+    handleTwo(event) {
+        this.setState({
+            calcString: this.state.calcString + "2"
+        })
+    };
+
     handleFormSubmit(event) {
         event.preventDefault();
         let newList = this.state.list.slice();

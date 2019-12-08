@@ -133,6 +133,7 @@ class MyComponent extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleOne = this.handleOne.bind(this);
+        this.handleTwo = this.handleTwo.bind(this);
     }
 
     handleIncrement(event) {

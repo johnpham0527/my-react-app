@@ -350,7 +350,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("7")
                         },
                         "7"
                     ),
@@ -366,7 +367,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("8")
                         },
                         "8"
                     ),
@@ -381,7 +383,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("9")
                         },
                         "9",
                     ),

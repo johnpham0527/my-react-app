@@ -162,6 +162,11 @@ class MyComponent extends React.Component {
                 calcString: buttonValue
             })
         }
+        else if (buttonValue === "Del") {
+            this.setState({
+                calcString: this.state.calcString.slice(0,this.state.calcString.length-1)
+            })
+        }
         else {
             this.setState({
                 calcString: this.state.calcString + buttonValue
@@ -320,7 +325,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("Del")
                         },
                         "Del"
                     ),

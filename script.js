@@ -167,6 +167,18 @@ class MyComponent extends React.Component {
                 calcString: this.state.calcString.slice(0,this.state.calcString.length-1)
             })
         }
+        else if (buttonValue === "plusMinus") {
+            if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign
+                this.setState({
+                    calcString: this.state.calcString.slice(1)
+                })
+            }
+            else { //toggle positive to negative by adding negative sign
+                this.setState({
+                    calcString: "-" + this.state.calcString
+                })
+            }
+        }
         else {
             this.setState({
                 calcString: this.state.calcString + buttonValue
@@ -537,7 +549,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: this.handleTwo
+                            onClick: () => this.handleCalcButton("2")
                         },
                         "*"
                     ),
@@ -553,7 +565,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("plusMinus")
                         },
                         "+|-"
                     ),

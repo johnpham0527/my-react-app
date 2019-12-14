@@ -184,6 +184,9 @@ class MyComponent extends React.Component {
                 })
             }
         }
+        else if (buttonValue === "add") {
+            
+        }
         else {
             this.setState({
                 calcString: this.state.calcString + buttonValue

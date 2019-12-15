@@ -282,7 +282,7 @@ class MyComponent extends React.Component {
             this.props.submitAdd(calcString);
             this.setState({
                 calcString: "0"
-            })
+            });
         }
         else if (buttonValue === "subtract") {
             
@@ -294,12 +294,15 @@ class MyComponent extends React.Component {
             
         }
         else if (buttonValue === "equal") {
-            
+            this.props.submitEqual(calcString);
+            this.setState({
+                calcString: this.props.storeState.result
+            });
         }
         else {
             this.setState({
                 calcString: this.state.calcString + buttonValue
-            })
+            });
         }
     }
 

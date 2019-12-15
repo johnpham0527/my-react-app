@@ -66,21 +66,21 @@ const add = (leftHandOperand) => {
     }
 }
 
-const subtract = () => {
+const subtract = (leftHandOperand) => {
     return {
         type: SUBTRACT,
         operand: leftHandOperand
     }
 }
 
-const multiply = () => {
+const multiply = (leftHandOperand) => {
     return {
         type: MULTIPLY,
         operand: leftHandOperand
     }
 }
 
-const divide = () => {
+const divide = (leftHandOperand) => {
     return {
         type: DIVIDE,
         operand: leftHandOperand

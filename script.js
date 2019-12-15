@@ -99,6 +99,31 @@ const calcReducer = (state = defaultCalcState, action) => {
             newState.queue.push(action.operand);
             newState.queue.push(action.type)
             return newState;
+        case EQUAL:
+            newState.queue.push(action.operand); //add the last operand into the queue
+            //evaluate the queue expressions
+            while (newState.queue.length > 0) {
+                let leftHandOperand = newState.shift();
+                let operator = newState.shift();
+                let rightHandOperand = newState.shift();
+                switch (operator) {
+                    case ADD:
+                        newState.result = leftHandOperand + rightHandOperand;
+                        break;
+                    case SUBTRACT:
+                        newState.result = leftHandOperand - rightHandOperand;
+                        break;
+                    case MULTIPLY:
+                        newState.result = leftHandOperand * rightHandOperand;
+                        break;
+                    case DIVIDE:
+                        newState.result = leftHandOperand / rightHandOperand;
+                        break;
+                    default:
+                        newState.result = "ERROR: unknown operator";
+                }
+            }
+            return newState;
         default:
             return state;
     }

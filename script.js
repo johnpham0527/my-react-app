@@ -562,7 +562,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "center"
                             },
-                            onClick: () => this.handleCalcButton("2")
+                            onClick: () => this.handleCalcButton("add")
                         },
                         "+"
                     ),

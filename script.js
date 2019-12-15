@@ -3,7 +3,7 @@
 //Redux Code
 const { Provider, connect } = ReactRedux;
 //const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
-const { createStore } = Redux;
+const { createStore, combineReducers } = Redux;
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
 const RESET = "RESET";
@@ -48,9 +48,13 @@ const countReducer = (state = defaultState, action) => {
 }
 
 //JavaScript calculator
+
+
 const defaultCalcState = {
     queue: []
 }
+
+
 
 
 const store = Redux.createStore(countReducer);

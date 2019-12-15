@@ -129,6 +129,11 @@ const calcReducer = (state = defaultCalcState, action) => {
     }
 }
 
+const rootReducer = Redux.combineReducers({
+    count: countReducer,
+});
+  
+
 const store = Redux.createStore(countReducer);
 
 //React Redux Code

@@ -279,7 +279,7 @@ class MyComponent extends React.Component {
             }
         }
         else if (buttonValue === "add") {
-            this.props.submitAdd(calcString);
+            this.props.submitAdd(this.state.calcString); //calcString contains the left-hand operand
             this.setState({
                 calcString: "0"
             });
@@ -294,7 +294,7 @@ class MyComponent extends React.Component {
             
         }
         else if (buttonValue === "equal") {
-            this.props.submitEqual(calcString);
+            this.props.submitEqual(this.state.calcString); //calcString contains the left-hand operand
             this.setState({
                 calcString: this.props.storeState.result
             });
@@ -804,8 +804,10 @@ ReactDOM.render(
 JavaScript calculator pseudo-code:
 [X] I'll create buttons for each of the 10 digits.
 [X] I'll add and style a display
-The local React state will store each digit as the button is pressed into a string.
-    I need to re-factor the calculator code to create event handlers and add them as event listeners. I should explore creating a function factory to handle the various number buttons (0-9).
-Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
-Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
+[X] The local React state will store each digit as the button is pressed into a string.
+[ ]    I need to re-factor the calculator code to create event handlers and add them as event listeners. I should explore creating a function factory to handle the various number buttons (0-9).
+[~] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
+[~] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
+
+I need to debug the equal button
 */

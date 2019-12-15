@@ -155,6 +155,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitReset: () => {
             return dispatch(resetCount())
+        },
+        submitAdd: (leftHandOperand) => {
+            return dispatch(add(leftHandOperand))
         }
     }
 }
@@ -276,6 +279,15 @@ class MyComponent extends React.Component {
             
         }
         else if (buttonValue === "subtract") {
+            
+        }
+        else if (buttonValue === "multiply") {
+            
+        }
+        else if (buttonValue === "divide") {
+            
+        }
+        else if (buttonValue === "equal") {
             
         }
         else {

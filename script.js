@@ -134,8 +134,8 @@ const rootReducer = Redux.combineReducers({
     calc: calcReducer
 });
   
-
-const store = Redux.createStore(countReducer);
+//const store = Redux.createStore(countReducer);
+const store = Redux.createStore(calcReducer);
 
 //React Redux Code
 const mapStateToProps = state => {

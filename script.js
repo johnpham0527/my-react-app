@@ -564,7 +564,7 @@ class MyComponent extends React.Component {
                             },
                             onClick: () => this.handleCalcButton("2")
                         },
-                        "*"
+                        "+"
                     ),
                     br,
                     React.createElement(

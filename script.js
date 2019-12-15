@@ -279,7 +279,10 @@ class MyComponent extends React.Component {
             }
         }
         else if (buttonValue === "add") {
-            
+            this.props.submitAdd(calcString);
+            this.setState({
+                calcString: "0"
+            })
         }
         else if (buttonValue === "subtract") {
             

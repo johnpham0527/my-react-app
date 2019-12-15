@@ -97,7 +97,7 @@ const calcReducer = (state = defaultCalcState, action) => {
         case MULTIPLY:
         case DIVIDE:
             newState.queue.push(action.operand);
-            newState.queue.push(action.type)
+            newState.queue.push(action.type);
             return newState;
         case EQUAL:
             newState.queue.push(action.operand); //add the last operand into the queue

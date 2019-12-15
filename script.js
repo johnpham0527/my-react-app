@@ -57,7 +57,29 @@ const defaultCalcState = {
     queue: []
 }
 
+const add = () => {
+    return {
+        type: ADD
+    }
+}
 
+const subtract = () => {
+    return {
+        type: SUBTRACT
+    }
+}
+
+const multiply = () => {
+    return {
+        type: MULTIPLY
+    }
+}
+
+const divide = () => {
+    return {
+        type: DIVIDE
+    }
+}
 
 
 const store = Redux.createStore(countReducer);

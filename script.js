@@ -48,7 +48,10 @@ const countReducer = (state = defaultState, action) => {
 }
 
 //JavaScript calculator
-
+const ADD = "ADD";
+const SUBTRACT = "SUBTRACT";
+const MULTIPLY = "MULTIPLY";
+const DIVIDE = "DIVIDE";
 
 const defaultCalcState = {
     queue: []

@@ -10,7 +10,6 @@ const RESET = "RESET";
 
 const defaultState = {
     count: 0,
-    queue: []
 }
 
 const incrementCount = () => {
@@ -47,6 +46,8 @@ const countReducer = (state = defaultState, action) => {
             return state;
     }
 }
+
+
 
 const store = Redux.createStore(countReducer);
 

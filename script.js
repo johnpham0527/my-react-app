@@ -81,6 +81,21 @@ const divide = () => {
     }
 }
 
+const calcReducer = (state = defaultCalcState, action) => {
+    const newState = Object.assign({}, state);
+    switch (action.type) {
+        case ADD:
+            return newState;
+        case SUBTRACT:
+            return newState;
+        case MULTIPLY:
+            return newState;
+        case DIVIDE:
+             return newState;
+        default:
+            return state;
+    }
+}
 
 const store = Redux.createStore(countReducer);
 

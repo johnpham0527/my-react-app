@@ -158,6 +158,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitAdd: (leftHandOperand) => {
             return dispatch(add(leftHandOperand))
+        },
+        submitEqual: (leftHandOperand) => {
+            return dispatch(equal(leftHandOperand))
         }
     }
 }

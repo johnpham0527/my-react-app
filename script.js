@@ -47,6 +47,10 @@ const countReducer = (state = defaultState, action) => {
     }
 }
 
+//JavaScript calculator
+const defaultCalcState = {
+    queue: []
+}
 
 
 const store = Redux.createStore(countReducer);

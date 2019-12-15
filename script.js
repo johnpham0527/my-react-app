@@ -131,6 +131,7 @@ const calcReducer = (state = defaultCalcState, action) => {
 
 const rootReducer = Redux.combineReducers({
     count: countReducer,
+    calc: calcReducer
 });
   
 

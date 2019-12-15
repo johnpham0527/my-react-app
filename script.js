@@ -52,6 +52,7 @@ const ADD = "ADD";
 const SUBTRACT = "SUBTRACT";
 const MULTIPLY = "MULTIPLY";
 const DIVIDE = "DIVIDE";
+const EQUAL = "EQUAL";
 
 const defaultCalcState = {
     queue: []
@@ -84,6 +85,8 @@ const divide = () => {
         operand: leftHandOperand
     }
 }
+
+
 
 const calcReducer = (state = defaultCalcState, action) => {
     const newState = Object.assign({}, state);

@@ -89,13 +89,12 @@ const calcReducer = (state = defaultCalcState, action) => {
     const newState = Object.assign({}, state);
     switch (action.type) {
         case ADD:
-            return newState;
         case SUBTRACT:
-            return newState;
         case MULTIPLY:
-            return newState;
         case DIVIDE:
-             return newState;
+            newState.queue.push(action.operand);
+            newState.queue.push(action.type)
+            return newState;
         default:
             return state;
     }

@@ -57,27 +57,31 @@ const defaultCalcState = {
     queue: []
 }
 
-const add = () => {
+const add = (leftHandOperand) => {
     return {
-        type: ADD
+        type: ADD,
+        operand: leftHandOperand
     }
 }
 
 const subtract = () => {
     return {
-        type: SUBTRACT
+        type: SUBTRACT,
+        operand: leftHandOperand
     }
 }
 
 const multiply = () => {
     return {
-        type: MULTIPLY
+        type: MULTIPLY,
+        operand: leftHandOperand
     }
 }
 
 const divide = () => {
     return {
-        type: DIVIDE
+        type: DIVIDE,
+        operand: leftHandOperand
     }
 }
 

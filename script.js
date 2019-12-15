@@ -55,7 +55,8 @@ const DIVIDE = "DIVIDE";
 const EQUAL = "EQUAL";
 
 const defaultCalcState = {
-    queue: []
+    queue: [],
+    result: 0
 }
 
 const add = (leftHandOperand) => {

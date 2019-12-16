@@ -87,7 +87,12 @@ const divide = (leftHandOperand) => {
     }
 }
 
-
+const equal = (leftHandOperand) => {
+    return {
+        type: EQUAL,
+        operand: leftHandOperand
+    }
+}
 
 const calcReducer = (state = defaultCalcState, action) => {
     const newState = Object.assign({}, state);

@@ -853,5 +853,6 @@ JavaScript calculator to-do list:
 [ ] Implement divs and classes for the calculator buttons
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue
+[ ] Properly handle plus/minus when the default display is zero
 
 */

@@ -293,13 +293,22 @@ class MyComponent extends React.Component {
             });
         }
         else if (buttonValue === "subtract") {
-            
+            this.props.submitSubtract(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "multiply") {
-            
+            this.props.submitMultiply(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "divide") {
-            
+            this.props.submitDivide(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "equal") {
             this.props.submitEqual(this.state.calcString); //calcString contains the left-hand operand

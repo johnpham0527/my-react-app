@@ -825,9 +825,10 @@ JavaScript calculator pseudo-code:
 [X] I'll create buttons for each of the 10 digits.
 [X] I'll add and style a display
 [X] The local React state will store each digit as the button is pressed into a string.
-[ ]    I need to re-factor the calculator code to create event handlers and add them as event listeners. I should explore creating a function factory to handle the various number buttons (0-9).
-[~] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
-[~] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
+[X] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
+[X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
+[ ] Implement subtract, multiply and divide cases for handleCalcButton
+[ ] Display the result onto the calculator after the equal button is pressed
+[ ] Debug the calc; I have spotted at least one error with the queue
 
-I need to debug the equal button
 */

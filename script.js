@@ -821,7 +821,7 @@ ReactDOM.render(
 //I should practice styling buttons using a CSS stylesheet for this React code
 
 /*
-JavaScript calculator pseudo-code:
+JavaScript calculator to-do list:
 [X] I'll create buttons for each of the 10 digits.
 [X] I'll add and style a display
 [X] The local React state will store each digit as the button is pressed into a string.
@@ -829,6 +829,8 @@ JavaScript calculator pseudo-code:
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
 [ ] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
+[ ] Implement divs and classes for the calculator buttons
+[ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted at least one error with the queue
 
 */

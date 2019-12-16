@@ -95,7 +95,7 @@ const equal = (leftHandOperand) => {
 }
 
 const calcReducer = (state = defaultCalcState, action) => {
-    const newState = Object.assign({}, state);
+    let newState = Object.assign({}, state);
     switch (action.type) {
         case ADD:
         case SUBTRACT:
@@ -106,26 +106,29 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
         case EQUAL:
             newState.queue.push(action.operand); //add the last operand into the queue
+            
             //evaluate the queue expressions
+            newState.result = parseFloat(newState.queue.shift(),10);
+
             while (newState.queue.length > 0) {
-                let leftHandOperand = newState.shift();
-                let operator = newState.shift();
-                let rightHandOperand = newState.shift();
+                let operator = newState.queue.shift();
+                let rightHandOperand = parseFloat(newState.queue.shift(),10); 
                 switch (operator) {
                     case ADD:
-                        newState.result = leftHandOperand + rightHandOperand;
+                        newState.result += rightHandOperand;
                         break;
                     case SUBTRACT:
-                        newState.result = leftHandOperand - rightHandOperand;
+                        newState.result -= rightHandOperand;
                         break;
                     case MULTIPLY:
-                        newState.result = leftHandOperand * rightHandOperand;
+                        newState.result *= rightHandOperand;
                         break;
                     case DIVIDE:
-                        newState.result = leftHandOperand / rightHandOperand;
+                        newState.result /= rightHandOperand;
                         break;
                     default:
                         newState.result = "ERROR: unknown operator";
+                        return newState;
                 }
             }
             return newState;

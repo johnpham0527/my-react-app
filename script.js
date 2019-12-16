@@ -738,6 +738,18 @@ class MyComponent extends React.Component {
                             onClick: () => this.handleCalcButton("equal")
                         },
                         "="
+                    ),
+                    br,
+                    React.createElement(
+                        "div",
+                        {},
+                        this.props.storeState.queue
+                    ),
+                    br,
+                    React.createElement(
+                        "div",
+                        {},
+                        this.props.storeState.result
                     )
                 )
             )

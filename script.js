@@ -730,7 +730,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("0")
                         },
                         "0"
                     ),

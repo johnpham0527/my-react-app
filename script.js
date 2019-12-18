@@ -853,7 +853,7 @@ JavaScript calculator to-do list:
 [X] The local React state will store each digit as the button is pressed into a string.
 [X] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
-[ ] Implement subtract, multiply and divide cases for handleCalcButton
+[X] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
 [ ] Implement divs and classes for the calculator buttons
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator

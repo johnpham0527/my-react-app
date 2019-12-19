@@ -167,6 +167,15 @@ const mapDispatchToProps = dispatch => {
         submitAdd: (leftHandOperand) => {
             return dispatch(add(leftHandOperand))
         },
+        submitSubtract: (leftHandOperand) => {
+            return dispatch(subtract(leftHandOperand))
+        },
+        submitMultiply: (leftHandOperand) => {
+            return dispatch(multiply(leftHandOperand))
+        },
+        submitDivide: (leftHandOperand) => {
+            return dispatch(divide(leftHandOperand))
+        },
         submitEqual: (leftHandOperand) => {
             return dispatch(equal(leftHandOperand))
         }
@@ -259,7 +268,7 @@ class MyComponent extends React.Component {
     };
 
     handleCalcButton(buttonValue) {
-        if (this.state.calcString === "0") {
+        if (this.state.calcString === "0" && buttonValue !== "plusMinus") {
             this.setState({
                 calcString: buttonValue
             })
@@ -275,15 +284,20 @@ class MyComponent extends React.Component {
             })
         }
         else if (buttonValue === "plusMinus") {
-            if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign
-                this.setState({
-                    calcString: this.state.calcString.slice(1)
-                })
+            if (this.state.calcString !== "0") {        
+                if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign
+                    this.setState({
+                        calcString: this.state.calcString.slice(1)
+                    })
+                }
+                else { //toggle positive to negative by adding negative sign
+                    this.setState({
+                        calcString: "-" + this.state.calcString
+                    })
+                }
             }
-            else { //toggle positive to negative by adding negative sign
-                this.setState({
-                    calcString: "-" + this.state.calcString
-                })
+            else {
+                return;
             }
         }
         else if (buttonValue === "add") {
@@ -293,13 +307,22 @@ class MyComponent extends React.Component {
             });
         }
         else if (buttonValue === "subtract") {
-            
+            this.props.submitSubtract(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "multiply") {
-            
+            this.props.submitMultiply(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "divide") {
-            
+            this.props.submitDivide(this.state.calcString); //calcString contains the left-hand operand
+            this.setState({
+                calcString: "0"
+            });
         }
         else if (buttonValue === "equal") {
             this.props.submitEqual(this.state.calcString); //calcString contains the left-hand operand
@@ -481,7 +504,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("divide")
                         },
                         "/"
                     ),
@@ -546,7 +570,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("multiply")
                         },
                         "*"
                     ),
@@ -712,7 +737,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("0")
                         },
                         "0"
                     ),
@@ -827,8 +853,17 @@ JavaScript calculator to-do list:
 [X] The local React state will store each digit as the button is pressed into a string.
 [X] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
-[ ] Implement subtract, multiply and divide cases for handleCalcButton
+[X] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
+<<<<<<< HEAD
 [ ] Debug the calc; I have spotted at least one error with the queue
 [ ] Implement the decimal function
+=======
+[ ] Implement divs and classes for the calculator buttons
+[ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
+[ ] Debug the calc; I have spotted errors with the queue
+[X] Properly handle plus/minus when the default display is zero
+[ ] Do not allow for there to be a leading zero in any number
+
+>>>>>>> 27bca981c359795139bcf4612569ac2023f48711
 */

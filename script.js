@@ -268,10 +268,15 @@ class MyComponent extends React.Component {
     };
 
     handleCalcButton(buttonValue) {
-        if (this.state.calcString === "0" && buttonValue !== "plusMinus") {
-            this.setState({
-                calcString: buttonValue
-            })
+        if (this.state.calcString === "0") {
+            if (buttonValue === "0") {
+                return;
+            }
+            else if (buttonValue !== "plusMinus") {
+                this.setState({
+                    calcString: buttonValue
+                })
+            }
         }
         else if (buttonValue === "Del") {
             this.setState({
@@ -861,6 +866,6 @@ JavaScript calculator to-do list:
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue
 [X] Properly handle plus/minus when the default display is zero
-[ ] Do not allow for there to be a leading zero in any number
+[X] Do not allow for there to be a leading zero in any number
 
 */

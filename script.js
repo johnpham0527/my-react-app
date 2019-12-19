@@ -855,15 +855,12 @@ JavaScript calculator to-do list:
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
 [X] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
-<<<<<<< HEAD
 [ ] Debug the calc; I have spotted at least one error with the queue
 [ ] Implement the decimal function
-=======
 [ ] Implement divs and classes for the calculator buttons
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue
 [X] Properly handle plus/minus when the default display is zero
 [ ] Do not allow for there to be a leading zero in any number
 
->>>>>>> 27bca981c359795139bcf4612569ac2023f48711
 */

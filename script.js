@@ -866,6 +866,6 @@ JavaScript calculator to-do list:
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue
 [X] Properly handle plus/minus when the default display is zero
-[X] Do not allow for there to be a leading zero in any number
+[~] Do not allow for there to be a leading zero in any whole number
 
 */

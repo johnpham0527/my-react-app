@@ -866,12 +866,12 @@ JavaScript calculator to-do list:
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
 [X] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
-[ ] Debug the calc; I have spotted at least one error with the queue
-[X] Implement the decimal function. DONE - parseFloat appears to handle decimals correctly, even when there is no digit after the decimal
+[~] Implement the decimal function. ALMOST DONE: need to account for the default case where decimal is pressed immediately before any other digit has been entered
 [ ] Implement divs and classes for the calculator buttons
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue
 [X] Properly handle plus/minus when the default display is zero
 [~] Do not allow for there to be a leading zero in any whole number
+[ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
 
 */

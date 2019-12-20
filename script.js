@@ -873,5 +873,6 @@ JavaScript calculator to-do list:
 [X] Properly handle plus/minus when the default display is zero
 [~] Do not allow for there to be a leading zero in any whole number
 [ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
+[ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
 
 */

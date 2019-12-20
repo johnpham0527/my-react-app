@@ -335,6 +335,11 @@ class MyComponent extends React.Component {
                 calcString: this.props.storeState.result
             });
         }
+        else if (buttonValue === "decimal") {
+            this.setState({
+                calcString: this.state.calcString + "."
+            })
+        }
         else {
             this.setState({
                 calcString: this.state.calcString + buttonValue
@@ -758,7 +763,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("decimal")
                         },
                         "."
                     ),
@@ -861,7 +867,7 @@ JavaScript calculator to-do list:
 [X] Implement subtract, multiply and divide cases for handleCalcButton
 [ ] Display the result onto the calculator after the equal button is pressed
 [ ] Debug the calc; I have spotted at least one error with the queue
-[ ] Implement the decimal function
+[X] Implement the decimal function. DONE - parseFloat appears to handle decimals correctly, even when there is no digit after the decimal
 [ ] Implement divs and classes for the calculator buttons
 [ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue

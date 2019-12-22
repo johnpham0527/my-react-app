@@ -54,6 +54,7 @@ const MULTIPLY = "MULTIPLY";
 const DIVIDE = "DIVIDE";
 const EQUAL = "EQUAL";
 const DIGIT = "DIGIT";
+const DECIMAL = "DECIMAL";
 
 const defaultCalcState = {
     queue: [],

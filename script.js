@@ -98,6 +98,13 @@ const equal = (leftHandOperand) => {
     }
 }
 
+const digit = (number) => {
+    return {
+        type: DIGIT,
+        char: number
+    }
+}
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

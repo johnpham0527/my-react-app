@@ -885,5 +885,5 @@ JavaScript calculator to-do list:
 [~] Do not allow for there to be a leading zero in any whole number
 [ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
-
+[ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 */

@@ -53,6 +53,7 @@ const SUBTRACT = "SUBTRACT";
 const MULTIPLY = "MULTIPLY";
 const DIVIDE = "DIVIDE";
 const EQUAL = "EQUAL";
+const DIGIT = "DIGIT";
 
 const defaultCalcState = {
     queue: [],

@@ -56,7 +56,8 @@ const EQUAL = "EQUAL";
 
 const defaultCalcState = {
     queue: [],
-    result: 0
+    result: 0,
+    display: 0
 }
 
 const add = (leftHandOperand) => {

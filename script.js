@@ -101,7 +101,19 @@ const equal = (leftHandOperand) => {
 const digit = (number) => {
     return {
         type: DIGIT,
-        char: number
+        num: number
+    }
+}
+
+const decimal = () => {
+    return {
+        type: DECIMAL,
+    }
+}
+
+const plusminus = () => {
+    return {
+        type: PLUSMINUS
     }
 }
 

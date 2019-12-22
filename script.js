@@ -55,6 +55,7 @@ const DIVIDE = "DIVIDE";
 const EQUAL = "EQUAL";
 const DIGIT = "DIGIT";
 const DECIMAL = "DECIMAL";
+const PLUSMINUS = "PLUSMINUS";
 
 const defaultCalcState = {
     queue: [],

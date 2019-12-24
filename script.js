@@ -207,6 +207,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitDecimal: () => {
             return dispatch(decimal())
+        },
+        submitPlusMinus: () => {
+            return dispatch(plusminus())
         }
     }
 }

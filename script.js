@@ -204,6 +204,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitDigit: (number) => {
             return dispatch(digit(number))
+        },
+        submitDecimal: () => {
+            return dispatch(decimal())
         }
     }
 }

@@ -833,6 +833,12 @@ class MyComponent extends React.Component {
                         "div",
                         {},
                         this.props.storeState.result
+                    ),
+                    br,
+                    React.createElement(
+                        "div",
+                        {},
+                        this.props.storeState.display
                     )
                 )
             )

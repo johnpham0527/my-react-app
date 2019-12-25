@@ -124,7 +124,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             if (newState.display === "0" && action.num === "0")
                 return newState;
             else
-                newState.display.concat("0")
+                newState.display.concat(action.num)
             return newState;
         case ADD:
         case SUBTRACT:
@@ -379,6 +379,7 @@ class MyComponent extends React.Component {
             })
         }
         else {
+            this.props.submitDigit(buttonValue);
             this.setState({
                 calcString: this.state.calcString + buttonValue
             });

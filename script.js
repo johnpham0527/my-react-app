@@ -318,17 +318,22 @@ class MyComponent extends React.Component {
 
     handleCalcButton(buttonValue) {
         switch (buttonValue) {
-                case "Del":
+            case "Del":
+                /*
                         this.setState({
                             calcString: this.state.calcString.slice(0,this.state.calcString.length-1)
                         })
-                        break;
-                case "CE":
+                */
+                break;
+            case "CE":
+                /*
                         this.setState({
                             calcString: "0"
                         });
-                        break;
-                case "plusMinus":
+                */
+                break;
+            case "plusMinus":
+                /*
                         if (this.state.calcString !== "0") {        
                             if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign
                                 this.setState({
@@ -345,50 +350,65 @@ class MyComponent extends React.Component {
                             //I need to handle the case where calcString === "0"
                             return;
                         }
-                        break;
-                case "add":
+                */
+                break;
+            case "add":
+                /*
                         this.props.submitAdd(this.state.calcString); //calcString contains the left-hand operand
                         this.setState({
                             calcString: "0"
                         });
-                        break;
-                case "subtract":
+                */
+                break;
+            case "subtract":
+                /*
                         this.props.submitSubtract(this.state.calcString); //calcString contains the left-hand operand
                         this.setState({
                             calcString: "0"
                         });
-                        break;
-                case "multiply":
+                */
+                break;
+            case "multiply":
+                /*
                         this.props.submitMultiply(this.state.calcString); //calcString contains the left-hand operand
                         this.setState({
                             calcString: "0"
                         });
-                        break;
-                case "divide":
+                */
+                break;
+            case "divide":
+                /*
                         this.props.submitDivide(this.state.calcString); //calcString contains the left-hand operand
                         this.setState({
                             calcString: "0"
                         });
-                        break;
-                case "equal":
+                */
+                break;
+            case "equal":
+                /*
                         this.props.submitEqual(this.state.calcString); //calcString contains the left-hand operand
                         this.setState({
                             calcString: this.props.storeState.result
                         });
-                        break;
-                case "decimal":
+                */
+                break;
+            case "decimal":
+                /*
                         this.setState({
                             calcString: this.state.calcString + "."
                         })
-                        break;
-                case "C":
+                */
+                break;
+            case "C":
                         //I need to implement the case where the button is "C"
-                        break;
-                default: //the default case is a digit
-                        this.props.submitDigit(buttonValue);
+                break;
+            default: //the default case is a digit
+                this.props.submitDigit(buttonValue);
+                /*
                         this.setState({
                             calcString: this.state.calcString + buttonValue
-                        }); 
+                        });
+                */
         }
     }
 
@@ -926,4 +946,5 @@ JavaScript calculator to-do list:
 [ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
 [ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
+[ ] Re-implement everything to avoid using calcString local state
 */

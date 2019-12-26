@@ -522,7 +522,7 @@ class MyComponent extends React.Component {
                                 marginBottom: "-10px"
                             }
                         },
-                        this.state.calcString
+                        this.props.storeState.display
                     ),
                     br,
                     React.createElement(

@@ -56,6 +56,9 @@ const EQUAL = "EQUAL";
 const DIGIT = "DIGIT";
 const DECIMAL = "DECIMAL";
 const PLUSMINUS = "PLUSMINUS";
+const CE = "CE";
+const C = "C";
+const DEL = "DEL";
 
 const defaultCalcState = {
     queue: [],

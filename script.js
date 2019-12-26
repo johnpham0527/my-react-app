@@ -131,7 +131,7 @@ const calcReducer = (state = defaultCalcState, action) => {
                 }
             }
             else {
-                newState.display.concat(action.num);
+                newState.display = newState.display + action.num;
                 return newState;
             }
         case ADD:

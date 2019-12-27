@@ -224,11 +224,11 @@ const mapDispatchToProps = dispatch => {
         submitReset: () => {
             return dispatch(resetCount())
         },
-        submitAdd: (leftHandOperand) => {
-            return dispatch(add(leftHandOperand))
+        submitAdd: () => {
+            return dispatch(add())
         },
-        submitSubtract: (leftHandOperand) => {
-            return dispatch(subtract(leftHandOperand))
+        submitSubtract: () => {
+            return dispatch(subtract())
         },
         submitMultiply: (leftHandOperand) => {
             return dispatch(multiply(leftHandOperand))

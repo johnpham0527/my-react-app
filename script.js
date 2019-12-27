@@ -63,7 +63,8 @@ const DEL = "DEL";
 const defaultCalcState = {
     queue: [],
     result: 0,
-    display: "0"
+    display: "0",
+    operatorPressed: false
 }
 
 const add = () => {

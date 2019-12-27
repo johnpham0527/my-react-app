@@ -382,6 +382,7 @@ class MyComponent extends React.Component {
                             calcString: "0"
                         });
                 */
+                this.props.submitSubtract();
                 break;
             case "multiply":
                 /*

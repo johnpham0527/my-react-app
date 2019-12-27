@@ -124,6 +124,7 @@ const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case DIGIT:
+
             if (newState.display === "0") {
                 if (action.num === "0") {
                     return newState;
@@ -141,8 +142,18 @@ const calcReducer = (state = defaultCalcState, action) => {
             if (newState.queue.length === 0) {
                 newState.queue.push(newState.display);
                 newState.queue.push(action.type);
-                return newState;
+                newState.operatorPressed = true;
             }
+            else if (newState.operatorPressed === false) {
+                newState.queue.push(newState.display);
+                newState.queue.push(action.type);
+                newState.operatorPressed = true;
+            }
+            else { //replace previously pushed operator with this new operator
+                newState.queue.pop();
+                newState.queue.push(action.type);
+            }
+            return newState;
 
         case SUBTRACT:
         case MULTIPLY:

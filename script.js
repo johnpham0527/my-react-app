@@ -66,10 +66,9 @@ const defaultCalcState = {
     display: "0"
 }
 
-const add = (leftHandOperand) => {
+const add = () => {
     return {
         type: ADD,
-        operand: leftHandOperand
     }
 }
 
@@ -138,6 +137,12 @@ const calcReducer = (state = defaultCalcState, action) => {
                 return newState;
             }
         case ADD:
+            if (newState.queue.length === 0) {
+                newState.queue.push(newState.display);
+                newState.queue.push(action.type);
+                return newState;
+            }
+
         case SUBTRACT:
         case MULTIPLY:
         case DIVIDE:
@@ -359,6 +364,7 @@ class MyComponent extends React.Component {
                             calcString: "0"
                         });
                 */
+               this.props.submitAdd();
                 break;
             case "subtract":
                 /*

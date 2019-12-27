@@ -124,7 +124,10 @@ const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case DIGIT:
-
+            if (newState.operatorPressed === true) {
+                newState.operatorPressed = false;
+                newState.display = "0";
+            }
             if (newState.display === "0") {
                 if (action.num === "0") {
                     return newState;

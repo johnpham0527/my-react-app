@@ -92,10 +92,9 @@ const divide = (leftHandOperand) => {
     }
 }
 
-const equal = (leftHandOperand) => {
+const equal = () => {
     return {
         type: EQUAL,
-        operand: leftHandOperand
     }
 }
 

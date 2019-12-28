@@ -425,6 +425,7 @@ class MyComponent extends React.Component {
                             calcString: this.props.storeState.result
                         });
                 */
+                this.props.submitEqual();
                 break;
             case "decimal":
                 /*

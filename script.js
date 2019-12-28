@@ -419,12 +419,6 @@ class MyComponent extends React.Component {
                 */
                 break;
             case "equal":
-                /*
-                        this.props.submitEqual(this.state.calcString); //calcString contains the left-hand operand
-                        this.setState({
-                            calcString: this.props.storeState.result
-                        });
-                */
                 this.props.submitEqual();
                 break;
             case "decimal":

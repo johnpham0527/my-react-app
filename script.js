@@ -265,8 +265,8 @@ const mapDispatchToProps = dispatch => {
         submitDivide: (leftHandOperand) => {
             return dispatch(divide(leftHandOperand))
         },
-        submitEqual: (leftHandOperand) => {
-            return dispatch(equal(leftHandOperand))
+        submitEqual: () => {
+            return dispatch(equal())
         },
         submitDigit: (number) => {
             return dispatch(digit(number))

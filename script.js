@@ -244,8 +244,8 @@ const mapDispatchToProps = dispatch => {
         submitSubtract: () => {
             return dispatch(subtract())
         },
-        submitMultiply: (leftHandOperand) => {
-            return dispatch(multiply(leftHandOperand))
+        submitMultiply: () => {
+            return dispatch(multiply())
         },
         submitDivide: (leftHandOperand) => {
             return dispatch(divide(leftHandOperand))

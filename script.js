@@ -79,10 +79,9 @@ const subtract = () => {
     }
 }
 
-const multiply = (leftHandOperand) => {
+const multiply = () => {
     return {
         type: MULTIPLY,
-        operand: leftHandOperand
     }
 }
 

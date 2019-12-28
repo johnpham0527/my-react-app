@@ -73,10 +73,9 @@ const add = () => {
     }
 }
 
-const subtract = (leftHandOperand) => {
+const subtract = () => {
     return {
         type: SUBTRACT,
-        operand: leftHandOperand
     }
 }
 

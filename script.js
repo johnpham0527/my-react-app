@@ -390,21 +390,10 @@ class MyComponent extends React.Component {
                this.props.submitAdd();
                 break;
             case "subtract":
-                /*
-                        this.props.submitSubtract(this.state.calcString); //calcString contains the left-hand operand
-                        this.setState({
-                            calcString: "0"
-                        });
-                */
                 this.props.submitSubtract();
                 break;
             case "multiply":
-                /*
-                        this.props.submitMultiply(this.state.calcString); //calcString contains the left-hand operand
-                        this.setState({
-                            calcString: "0"
-                        });
-                */
+                this.props.submitMultiply();
                 break;
             case "divide":
                 /*

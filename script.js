@@ -85,10 +85,9 @@ const multiply = () => {
     }
 }
 
-const divide = (leftHandOperand) => {
+const divide = () => {
     return {
         type: DIVIDE,
-        operand: leftHandOperand
     }
 }
 
@@ -187,8 +186,21 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             return newState;
         case DIVIDE:
-            newState.queue.push(action.operand);
-            newState.queue.push(action.type);
+            if (newState.queue.length === 0) {
+                newState.queue.push(newState.display);
+                newState.queue.push(action.type);
+                newState.operatorPressed = true;
+            }
+            else if (newState.operatorPressed === false) {
+                newState.queue.push(newState.display);
+                newState.queue.push(action.type);
+                newState.operatorPressed = true;
+            }
+            else { //replace previously pushed operator with this new operator
+                newState.queue.pop();
+                newState.queue.push(action.type);
+            }
+            return newState;
             return newState;
         case EQUAL:
             newState.queue.push(action.operand); //add the last operand into the queue
@@ -259,8 +271,8 @@ const mapDispatchToProps = dispatch => {
         submitMultiply: () => {
             return dispatch(multiply())
         },
-        submitDivide: (leftHandOperand) => {
-            return dispatch(divide(leftHandOperand))
+        submitDivide: () => {
+            return dispatch(divide())
         },
         submitEqual: () => {
             return dispatch(equal())
@@ -408,12 +420,7 @@ class MyComponent extends React.Component {
                 this.props.submitMultiply();
                 break;
             case "divide":
-                /*
-                        this.props.submitDivide(this.state.calcString); //calcString contains the left-hand operand
-                        this.setState({
-                            calcString: "0"
-                        });
-                */
+                this.props.submitDivide();
                 break;
             case "equal":
                 this.props.submitEqual();

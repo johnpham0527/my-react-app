@@ -437,11 +437,6 @@ class MyComponent extends React.Component {
                 break;
             default: //the default case is a digit
                 this.props.submitDigit(buttonValue);
-                /*
-                        this.setState({
-                            calcString: this.state.calcString + buttonValue
-                        });
-                */
         }
     }
 

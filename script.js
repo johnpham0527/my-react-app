@@ -116,6 +116,10 @@ const plusminus = () => {
     }
 }
 
+const evaluate = (leftHand, operator, righthand) => {
+  return 0;
+} 
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

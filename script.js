@@ -117,6 +117,12 @@ const plusminus = () => {
 }
 
 const evaluate = (leftHand, operator, righthand) => {
+  
+  switch (operator) {
+    case ADD:
+      return leftHand + rightHand;
+   } 
+
   return 0;
 } 
 

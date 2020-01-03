@@ -121,7 +121,10 @@ const evaluate = (leftHand, operator, righthand) => {
   switch (operator) {
     case ADD:
       return leftHand + rightHand;
+    case SUBTRACT:
+       return leftHand - rightHand;
    } 
+    
 
   return 0;
 } 

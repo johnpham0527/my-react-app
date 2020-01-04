@@ -117,16 +117,19 @@ const plusminus = () => {
 }
 
 const evaluate = (leftHand, operator, righthand) => {
-  
-  switch (operator) {
-    case ADD:
-      return leftHand + rightHand;
-    case SUBTRACT:
-       return leftHand - rightHand;
+    switch (operator) {
+        case ADD:
+            return leftHand + rightHand;
+        case SUBTRACT:
+            return leftHand - rightHand;
+        case MULTIPLY:
+            return leftHand * rightHand;
+        case DIVIDE:
+            return leftHand - rightHand;
+        default:
+            return -1;
    } 
-    
-
-  return 0;
+    return -1;
 } 
 
 const calcReducer = (state = defaultCalcState, action) => {

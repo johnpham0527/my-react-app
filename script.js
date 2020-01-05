@@ -219,7 +219,8 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
             return newState;
         case EQUAL:
-            newState.queue.push(action.operand); //add the last operand into the queue
+           /* 
+newState.queue.push(action.operand); //add the last operand into the queue
             
             //evaluate the queue expressions
             newState.result = parseFloat(newState.queue.shift(),10);
@@ -246,6 +247,7 @@ const calcReducer = (state = defaultCalcState, action) => {
                 }
             }
             return newState;
+*/
         default:
             return state;
     }

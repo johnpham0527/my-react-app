@@ -216,7 +216,6 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.queue.push(action.type);
             }
             return newState;
-            return newState;
         case EQUAL:
            /* 
 newState.queue.push(action.operand); //add the last operand into the queue

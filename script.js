@@ -129,7 +129,6 @@ const evaluate = (leftHand, operator, righthand) => {
         default:
             return -1;
    } 
-    return -1;
 } 
 
 const calcReducer = (state = defaultCalcState, action) => {

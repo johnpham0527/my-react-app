@@ -153,53 +153,8 @@ const calcReducer = (state = defaultCalcState, action) => {
                 return newState;
             }
         case ADD:
-            if (newState.queue.length === 0) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else if (newState.operatorPressed === false) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else { //replace previously pushed operator with this new operator
-                newState.queue.pop();
-                newState.queue.push(action.type);
-            }
-            return newState;
         case SUBTRACT:
-            if (newState.queue.length === 0) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else if (newState.operatorPressed === false) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else { //replace previously pushed operator with this new operator
-                newState.queue.pop();
-                newState.queue.push(action.type);
-            }
-            return newState;
         case MULTIPLY:
-            if (newState.queue.length === 0) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else if (newState.operatorPressed === false) {
-                newState.queue.push(newState.display);
-                newState.queue.push(action.type);
-                newState.operatorPressed = true;
-            }
-            else { //replace previously pushed operator with this new operator
-                newState.queue.pop();
-                newState.queue.push(action.type);
-            }
-            return newState;
         case DIVIDE:
             if (newState.queue.length === 0) {
                 newState.queue.push(newState.display);

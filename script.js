@@ -201,7 +201,9 @@ newState.queue.push(action.operand); //add the last operand into the queue
             }
             return newState;
 */
-        default:
+         case DECIMAL:
+            return state;
+         default:
             return state;
     }
 }

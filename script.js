@@ -201,8 +201,14 @@ newState.queue.push(action.operand); //add the last operand into the queue
             }
             return newState;
 */
-         case DECIMAL:
+        case DECIMAL:
             return state;
+        case DEL:
+            return state;
+        case C:
+            return state;
+        case CE:
+            return state; 
          default:
             return state;
     }

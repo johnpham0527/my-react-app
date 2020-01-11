@@ -202,7 +202,11 @@ newState.queue.push(action.operand); //add the last operand into the queue
             return newState;
 */
         case DECIMAL:
-            return state;
+            let num = newState.queue.pop();
+            //need to check if num is a digit or already has a decimal
+            num = num + '.';
+            newState.queue.push(num);
+            return newState;
         case DEL:
             return state;
         case C:
@@ -957,4 +961,5 @@ JavaScript calculator to-do list:
     [X] Re-implement the divide button
     [ ] Re-implement the equal button code to test what I currently have
     [ ] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
+    [ ] Perform error checks for calcReducer decimal case 
 */

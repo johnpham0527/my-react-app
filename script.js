@@ -131,6 +131,24 @@ const evaluate = (leftHand, operator, righthand) => {
    } 
 } 
 
+const isDigit = (char) => {
+    switch (char) {
+        case ONE:
+        case TWO: 
+        case THREE: 
+        case FOUR: 
+        case FIVE: 
+        case SIX: 
+        case SEVEN: 
+        case EIGHT: 
+        case NINE: 
+        case ZERO: 
+            return true;
+        default:
+            return false;
+    } 
+}
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

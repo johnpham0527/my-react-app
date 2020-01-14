@@ -159,7 +159,11 @@ const isOperator = (char) => {
     default:
       return false;
   } 
-} 
+}
+
+const hasDecimal = (numString) => {
+    return numString[numString.length-1] === '.';
+}
 
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);

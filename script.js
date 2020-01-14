@@ -149,6 +149,18 @@ const isDigit = (char) => {
     } 
 }
 
+const isOperator = (char) => {
+  switch (char) {
+    case ADD:
+    case SUBTRACT:
+    case MULTIPLY: 
+    case DIVIDE:
+      return true;
+    default:
+      return false;
+  } 
+} 
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

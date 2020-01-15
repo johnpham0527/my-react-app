@@ -237,8 +237,9 @@ newState.queue.push(action.operand); //add the last operand into the queue
 */
         case DECIMAL:
             let num = newState.queue.pop();
-            //need to check if num is a digit or already has a decimal
-            num = num + '.';
+            if (isDigit(num) && !hasDecimal(num)) { // check if num is a digit or already has a decimal
+                num = num + '.';
+            }
             newState.queue.push(num);
             return newState;
         case DEL:

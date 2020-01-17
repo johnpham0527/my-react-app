@@ -165,6 +165,10 @@ const hasDecimal = (numString) => {
     return numString[numString.length-1] === '.';
 }
 
+const hasNegative = (numString) => {
+    return numString[0] === '-';
+}
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

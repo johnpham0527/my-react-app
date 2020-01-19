@@ -210,12 +210,21 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             return newState;
         case EQUAL:
-           
-newState.queue.push(action.operand); //add the last operand into the queue
-            
-            //evaluate the queue expressions
-            newState.result = parseFloat(newState.queue.shift(),10);
+            newState.queue.push(newState.display); //add the last displayed number into the queue
 
+            //evaluate the queue expressions
+            let result = parseFloat(newState.queue.shift(),10);
+            while (newState.queue.length >= 2) {
+                let operator = newState.queue.shift();
+                let rightHand = parseFloat(newState.queue.shift(),10);
+                result = evaluate(result, operator, rightHand);
+                alert(result);
+            }
+            newState.result = result;
+            newState.display = result;
+            return newState;
+
+            /*
             while (newState.queue.length > 0) {
                 let operator = newState.queue.shift();
                 let rightHandOperand = parseFloat(newState.queue.shift(),10); 
@@ -238,6 +247,7 @@ newState.queue.push(action.operand); //add the last operand into the queue
                 }
             }
             return newState;
+            */
 
         case DECIMAL:
             let num = newState.queue.pop();

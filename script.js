@@ -210,7 +210,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             return newState;
         case EQUAL:
-           /* 
+           
 newState.queue.push(action.operand); //add the last operand into the queue
             
             //evaluate the queue expressions
@@ -238,7 +238,7 @@ newState.queue.push(action.operand); //add the last operand into the queue
                 }
             }
             return newState;
-*/
+
         case DECIMAL:
             let num = newState.queue.pop();
             if (isDigit(num) && !hasDecimal(num)) { // check if num is a digit or already has a decimal

@@ -1008,4 +1008,6 @@ JavaScript calculator to-do list:
     [X] Perform error checks for calcReducer decimal case 
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
     [ ] Debug decimal code
+    [ ] Implement CE (clear display)
+    [ ] Implement C (clear queue)
 */

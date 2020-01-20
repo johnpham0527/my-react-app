@@ -926,6 +926,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {},
+                        "Display: ",
                         this.props.storeState.display
                     )
                 )

@@ -116,7 +116,7 @@ const plusminus = () => {
     }
 }
 
-const evaluate = (leftHand, operator, righthand) => {
+const evaluate = (leftHand, operator, rightHand) => {
     switch (operator) {
         case ADD:
             return leftHand + rightHand;
@@ -212,45 +212,27 @@ const calcReducer = (state = defaultCalcState, action) => {
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
-            //evaluate the queue expressions
-            let result = parseFloat(newState.queue.shift(),10);
+            //let testEvaluate = evaluate(1,ADD,3);
+            newState.result = newState.queue.length;
+            newState.display = newState.queue.length;
 
-            /*
-            while (newState.queue.length >= 2) {
-                let operator = newState.queue.shift();
-                let rightHand = parseFloat(newState.queue.shift(),10);
-                result = evaluate(result, operator, rightHand);
-                alert(result);
+            let leftHand = parseFloat(newState.queue.shift(),10);
+            let operator = newState.queue.shift();
+            let rightHand = parseFloat(newState.queue.shift(),10);
+            let result = evaluate(leftHand, operator, rightHand) //evaluate the result
+            newState.queue.unshift(result); //add result back into the front of the queue
+            
+            while (newState.queue.length >= 3) { //process the rest of the queue
+                leftHand = parseFloat(newState.queue.shift(),10);
+                operator = newState.queue.shift();
+                rightHand = parseFloat(newState.queue.shift(),10);
+                result = evaluate(leftHand, operator, rightHand)
+                newState.queue.unshift(result);
             }
-            */
+            
             newState.result = result;
-            //newState.display = result;
+            newState.display = result;
             return newState;
-
-            /*
-            while (newState.queue.length > 0) {
-                let operator = newState.queue.shift();
-                let rightHandOperand = parseFloat(newState.queue.shift(),10); 
-                switch (operator) {
-                    case ADD:
-                        newState.result += rightHandOperand;
-                        break;
-                    case SUBTRACT:
-                        newState.result -= rightHandOperand;
-                        break;
-                    case MULTIPLY:
-                        newState.result *= rightHandOperand;
-                        break;
-                    case DIVIDE:
-                        newState.result /= rightHandOperand;
-                        break;
-                    default:
-                        newState.result = "ERROR: unknown operator";
-                        return newState;
-                }
-            }
-            return newState;
-            */
 
         case DECIMAL:
             let num = newState.queue.pop();

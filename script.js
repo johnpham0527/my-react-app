@@ -1025,4 +1025,5 @@ JavaScript calculator to-do list:
     [ ] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
     [X] Perform error checks for calcReducer decimal case 
     [ ] Debug equal operator code
+    [ ] Debug decimal code
 */

@@ -919,6 +919,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {},
+                        "Result: ",
                         this.props.storeState.result
                     ),
                     br,

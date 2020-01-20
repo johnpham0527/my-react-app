@@ -931,7 +931,14 @@ class MyComponent extends React.Component {
                         {},
                         "Display: ",
                         this.props.storeState.display
-                    )
+                    ),
+                    br,
+                    React.createElement(
+                        "div",
+                        {},
+                        "Queue Length: ",
+                        this.props.storeState.queue.length
+                    ),
                 )
             )
         )

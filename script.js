@@ -461,12 +461,13 @@ class MyComponent extends React.Component {
                 this.props.submitEqual();
                 break;
             case "decimal":
+                this.props.submitDecimal();
+                break;
                 /*
                         this.setState({
                             calcString: this.state.calcString + "."
                         })
                 */
-                break;
             case "C":
                         //I need to implement the case where the button is "C"
                 break;

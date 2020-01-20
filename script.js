@@ -1006,6 +1006,6 @@ JavaScript calculator to-do list:
     [ ] Re-implement the equal button code to test what I currently have
     [ ] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
     [X] Perform error checks for calcReducer decimal case 
-    [ ] Debug equal operator code
+    [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
     [ ] Debug decimal code
 */

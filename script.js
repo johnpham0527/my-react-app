@@ -1010,4 +1010,5 @@ JavaScript calculator to-do list:
     [ ] Debug decimal code
     [ ] Implement CE (clear display)
     [ ] Implement C (clear queue)
+    [ ] Implement Plus-Minus
 */

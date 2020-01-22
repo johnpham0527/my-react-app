@@ -247,6 +247,8 @@ const calcReducer = (state = defaultCalcState, action) => {
             return state;
         case CE:
             return state; 
+        case PLUSMINUS:
+            return state;
          default:
             return state;
     }

@@ -235,11 +235,9 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
 
         case DECIMAL:
-            let num = newState.queue.pop();
-            if (isDigit(num) && !hasDecimal(num)) { // check if num is a digit or already has a decimal
-                num = num + '.';
+            if (!hasDecimal(newState.display)) { // check if display variable already has a decimal
+                newState.display = newState.display + '.';
             }
-            newState.queue.push(num);
             return newState;
         case DEL:
             return state;
@@ -1009,7 +1007,7 @@ JavaScript calculator to-do list:
     [ ] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
     [X] Perform error checks for calcReducer decimal case 
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
-    [ ] Debug decimal code
+    [~] Debug decimal code: rounding errors
     [ ] Implement CE (clear display)
     [ ] Implement C (clear queue)
     [ ] Implement Plus-Minus

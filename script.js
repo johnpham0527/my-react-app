@@ -212,7 +212,6 @@ const calcReducer = (state = defaultCalcState, action) => {
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
-            //let testEvaluate = evaluate(1,ADD,3);
             newState.result = newState.queue.length;
             newState.display = newState.queue.length;
 
@@ -445,11 +444,6 @@ class MyComponent extends React.Component {
             case "decimal":
                 this.props.submitDecimal();
                 break;
-                /*
-                        this.setState({
-                            calcString: this.state.calcString + "."
-                        })
-                */
             case "C":
                         //I need to implement the case where the button is "C"
                 break;

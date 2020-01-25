@@ -177,8 +177,8 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.operatorPressed = false;
                 newState.display = "0";
             }
-            if (newState.display === "0") {
-                if (action.num === "0") {
+            if (newState.display == 0) {
+                if (action.num == 0) {
                     return newState;
                 }
                 else {

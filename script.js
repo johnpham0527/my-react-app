@@ -1006,5 +1006,5 @@ JavaScript calculator to-do list:
     [~] Debug decimal code: rounding errors
     [ ] Implement CE (clear display)
     [ ] Implement C (clear queue)
-    [ ] Implement Plus-Minus
+    [X] Implement Plus-Minus
 */

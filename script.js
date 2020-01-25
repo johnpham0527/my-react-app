@@ -245,7 +245,8 @@ const calcReducer = (state = defaultCalcState, action) => {
         case CE:
             return state; 
         case PLUSMINUS:
-            return state;
+            newState.display = -1 * parseFloat(newState.display,10);
+            return newState;
          default:
             return state;
     }
@@ -407,6 +408,7 @@ class MyComponent extends React.Component {
                 */
                 break;
             case "plusMinus":
+                this.props.submitPlusMinus();
                 /*
                         if (this.state.calcString !== "0") {        
                             if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign

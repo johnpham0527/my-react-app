@@ -241,7 +241,8 @@ const calcReducer = (state = defaultCalcState, action) => {
         case DEL:
             return state;
         case C:
-            return state;
+            newState.queue = [];
+            return newState;
         case CE:
             return state; 
         case PLUSMINUS:

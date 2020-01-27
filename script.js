@@ -244,7 +244,8 @@ const calcReducer = (state = defaultCalcState, action) => {
             newState.queue = [];
             return newState;
         case CE:
-            return state; 
+            newState.display = 0;
+            return newState; 
         case PLUSMINUS:
             newState.display = -1 * parseFloat(newState.display,10);
             return newState;

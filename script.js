@@ -169,6 +169,21 @@ const hasNegative = (numString) => {
     return numString[0] === '-';
 }
 
+const roundNumber = (numString) => {
+    let digitsBeforeDecimal = '';
+    let digitsAfterDecimal = '';
+    for (let i = 0; i < numString.length; i++) {
+        if (numString[i] === '.') {
+            //check to see if the decimal isn't the last character
+            //slice the digits before the decimal and store into digitsBeforeDecimal
+            //slice the digits after the decimal and store into digitsAfterDecimal
+            //cut off any digits (i.e. round) after the 8th digit in digitsAfterDecimal
+            //concatenate digitsBeforeDecimal and digitsAfterDecimal in a new numString
+            //return this new numString
+        }
+    }
+}
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

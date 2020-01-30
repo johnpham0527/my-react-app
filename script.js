@@ -169,6 +169,26 @@ const hasNegative = (numString) => {
     return numString[0] === '-';
 }
 
+const numObjectHelper = (numString) => {
+    let numObject = {left:"", decimal:"", right:""};
+    let foundDecimal = false;
+    for (let i = 0; i < numString.length; i++) {
+        if (foundDecimal === false) {
+            if (numString[i] === '.') {
+                numObject.decimal = ".";
+                foundDecimal = true;
+            }
+            else {
+                numObject.left = numObject.left + numString[i];
+            }
+        }
+        else {
+            numObject.right = numObject.right + numString[i];
+        }
+    }
+    return numObject;
+}
+
 const roundNumber = (numString) => {
     let digitsBeforeDecimal = '';
     let digitsAfterDecimal = '';

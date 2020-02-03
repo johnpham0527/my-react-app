@@ -800,6 +800,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "button",
                         {
+                            id: "one",
                             style: 
                             {
                                 width: "35px",

@@ -116,6 +116,12 @@ const plusminus = () => {
     }
 }
 
+const CE = () => {
+    return {
+        type: CE
+    }
+}
+
 const evaluate = (leftHand, operator, rightHand) => {
     switch (operator) {
         case ADD:
@@ -444,6 +450,7 @@ class MyComponent extends React.Component {
                             calcString: "0"
                         });
                 */
+                
                 break;
             case "plusMinus":
                 this.props.submitPlusMinus();

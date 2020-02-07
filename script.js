@@ -116,9 +116,15 @@ const plusminus = () => {
     }
 }
 
-const CE = () => {
+const ce = () => {
     return {
         type: CE
+    }
+}
+
+const c = () => {
+    return {
+        type: C
     }
 }
 

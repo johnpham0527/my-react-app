@@ -128,6 +128,12 @@ const c = () => {
     }
 }
 
+const del = () => {
+    return {
+        type: DEL
+    }
+}
+
 const evaluate = (leftHand, operator, rightHand) => {
     switch (operator) {
         case ADD:

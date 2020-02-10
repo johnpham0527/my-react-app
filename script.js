@@ -358,6 +358,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitPlusMinus: () => {
             return dispatch(plusminus())
+        },
+        submitC: () => {
+            return dispatch(c())
         }
     }
 }

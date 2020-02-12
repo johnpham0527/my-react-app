@@ -361,6 +361,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitC: () => {
             return dispatch(c())
+        },
+        submitCE: () => {
+            return dispatch(ce())
         }
     }
 }

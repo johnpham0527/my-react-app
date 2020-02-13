@@ -364,6 +364,9 @@ const mapDispatchToProps = dispatch => {
         },
         submitCE: () => {
             return dispatch(ce())
+        },
+        submitDel: () => {
+            return dispatch(del())
         }
     }
 }

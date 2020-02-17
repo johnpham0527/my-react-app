@@ -547,12 +547,7 @@ class MyComponent extends React.Component {
                     null
                 ),
                 br,
-                React.createElement(
-                    BadgeList, 
-                    null, 
-                    null
-                ),
-                br,
+      
                 React.createElement(
                     Button,
                     {

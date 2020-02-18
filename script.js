@@ -539,13 +539,6 @@ class MyComponent extends React.Component {
                 null,
                 React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
                 hello,
-                React.createElement(
-                    MyName,
-                    {
-                        name: "John Pham"
-                    },
-                    null
-                ),
                 br,
       
                 React.createElement(

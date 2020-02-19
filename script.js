@@ -466,24 +466,6 @@ class MyComponent extends React.Component {
                 break;
             case "plusMinus":
                 this.props.submitPlusMinus();
-                /*
-                        if (this.state.calcString !== "0") {        
-                            if (this.state.calcString[0] === "-") { //toggle negative to positive by removing negative sign
-                                this.setState({
-                                    calcString: this.state.calcString.slice(1)
-                                })
-                            }
-                            else { //toggle positive to negative by adding negative sign
-                                this.setState({
-                                    calcString: "-" + this.state.calcString
-                                })
-                            }
-                        }
-                        else {
-                            //I need to handle the case where calcString === "0"
-                            return;
-                        }
-                */
                 break;
             case "add":
                this.props.submitAdd();

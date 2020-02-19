@@ -486,7 +486,7 @@ class MyComponent extends React.Component {
                 this.props.submitDecimal();
                 break;
             case "C":
-                        //I need to implement the case where the button is "C"
+                this.props.submitC();
                 break;
             default: //the default case is a digit
                 this.props.submitDigit(buttonValue);

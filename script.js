@@ -459,11 +459,7 @@ class MyComponent extends React.Component {
     handleCalcButton(buttonValue) {
         switch (buttonValue) {
             case "Del":
-                /*
-                        this.setState({
-                            calcString: this.state.calcString.slice(0,this.state.calcString.length-1)
-                        })
-                */
+                //this.props.submitDel();
                 break;
             case "CE":
                 /*
@@ -471,7 +467,7 @@ class MyComponent extends React.Component {
                             calcString: "0"
                         });
                 */
-                
+                this.props.submitCE();
                 break;
             case "plusMinus":
                 this.props.submitPlusMinus();

@@ -462,11 +462,6 @@ class MyComponent extends React.Component {
                 //this.props.submitDel();
                 break;
             case "CE":
-                /*
-                        this.setState({
-                            calcString: "0"
-                        });
-                */
                 this.props.submitCE();
                 break;
             case "plusMinus":

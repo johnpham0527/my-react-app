@@ -1055,4 +1055,5 @@ JavaScript calculator to-do list:
     [ ] Implement CE (clear display)
     [ ] Implement C (clear queue)
     [X] Implement Plus-Minus
+    [ ] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
 */

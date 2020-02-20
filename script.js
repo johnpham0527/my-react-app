@@ -292,7 +292,10 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             return newState;
         case DEL:
-            newState.display.slice(0,-1); //remove last character 
+            newState.display = newState.display.substring(0, newState.display.length-1);
+            if (newState.display.length == 0) {
+                newState.display = 0;
+            }
             return newState;
         case C:
             newState.queue = [];

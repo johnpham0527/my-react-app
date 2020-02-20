@@ -459,7 +459,7 @@ class MyComponent extends React.Component {
     handleCalcButton(buttonValue) {
         switch (buttonValue) {
             case "Del":
-                //this.props.submitDel();
+                this.props.submitDel();
                 break;
             case "CE":
                 this.props.submitCE();

@@ -57,7 +57,7 @@ const DIGIT = "DIGIT";
 const DECIMAL = "DECIMAL";
 const PLUSMINUS = "PLUSMINUS";
 const CE = "CE";
-const C = "C";
+const CLEARALL = "CLEARALL";
 const DEL = "DEL";
 
 const defaultCalcState = {
@@ -122,9 +122,9 @@ const ce = () => {
     }
 }
 
-const c = () => {
+const clearall = () => {
     return {
-        type: C
+        type: CLEARALL
     }
 }
 
@@ -297,8 +297,10 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.display = 0;
             }
             return newState;
-        case C:
+        case CLEARALL:
             newState.queue = [];
+            newState.display = 0;
+            newState.result = 0;
             return newState;
         case CE:
             newState.display = 0;
@@ -362,8 +364,8 @@ const mapDispatchToProps = dispatch => {
         submitPlusMinus: () => {
             return dispatch(plusminus())
         },
-        submitC: () => {
-            return dispatch(c())
+        submitClearAll: () => {
+            return dispatch(clearall())
         },
         submitCE: () => {
             return dispatch(ce())
@@ -488,8 +490,8 @@ class MyComponent extends React.Component {
             case "decimal":
                 this.props.submitDecimal();
                 break;
-            case "C":
-                this.props.submitC();
+            case "clearAll":
+                this.props.submitClearAll();
                 break;
             default: //the default case is a digit
                 this.props.submitDigit(buttonValue);
@@ -622,7 +624,8 @@ class MyComponent extends React.Component {
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
                                 textAlign: "center"
-                            }
+                            },
+                            onClick: () => this.handleCalcButton("clearAll")
                         },
                         "C"
                     ),
@@ -1056,7 +1059,7 @@ JavaScript calculator to-do list:
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
     [~] Debug decimal code: rounding errors
     [ ] Implement CE (clear display)
-    [ ] Implement C (clear queue)
+    [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
     [ ] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
 */

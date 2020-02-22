@@ -1065,4 +1065,5 @@ JavaScript calculator to-do list:
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
+    [ ] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
 */

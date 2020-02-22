@@ -1046,7 +1046,7 @@ JavaScript calculator to-do list:
 [X] Display the result onto the calculator after the equal button is pressed
 [~] Implement the decimal function. ALMOST DONE: need to account for the default case where decimal is pressed immediately before any other digit has been entered
 [ ] Implement divs and classes for the calculator buttons
-[ ] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
+[X] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [ ] Debug the calc; I have spotted errors with the queue. NOTE: I should get rid of local state and let Redux handle all state variables.
 [X] Properly handle plus/minus when the default display is zero
 [~] Do not allow for there to be a leading zero in any whole number

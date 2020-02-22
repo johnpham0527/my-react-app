@@ -1055,7 +1055,7 @@ JavaScript calculator to-do list:
 [ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 [ ] Re-implement everything to avoid using calcString local state
     [X] Re-implement the divide button
-    [ ] Re-implement the equal button code to test what I currently have
+    [X] Re-implement the equal button code to test what I currently have
     [X] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
     [X] Perform error checks for calcReducer decimal case 
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue

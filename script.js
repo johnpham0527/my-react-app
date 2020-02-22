@@ -284,6 +284,8 @@ const calcReducer = (state = defaultCalcState, action) => {
             
             newState.result = result;
             newState.display = result;
+            newState.queue = [];
+            newState.operatorPressed = true;
             return newState;
 
         case DECIMAL:
@@ -1061,5 +1063,5 @@ JavaScript calculator to-do list:
     [ ] Implement CE (clear display)
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
-    [ ] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
+    [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
 */

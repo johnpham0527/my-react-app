@@ -1066,4 +1066,5 @@ JavaScript calculator to-do list:
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
     [ ] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
+    [ ] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
 */

@@ -1061,7 +1061,7 @@ JavaScript calculator to-do list:
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
         - In these situations, I will need to remove the last operator before doing the calculation
     [~] Debug decimal code: rounding errors
-    [ ] Implement CE (clear display)
+    [X] Implement CE (clear display)
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not

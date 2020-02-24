@@ -972,7 +972,8 @@ JavaScript calculator to-do list:
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
 [X] Implement subtract, multiply and divide cases for handleCalcButton
 [X] Display the result onto the calculator after the equal button is pressed
-[~] Implement the decimal function. ALMOST DONE: need to account for the default case where decimal is pressed immediately before any other digit has been entered
+[ ] Debug decimal: account for the default case where decimal is pressed immediately before any other digit has been entered
+    [ ] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
 [ ] Implement divs and classes for the calculator buttons
 [X] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [X] Debug the calc; I have spotted errors with the queue. NOTE: I should get rid of local state and let Redux handle all state variables.
@@ -994,6 +995,5 @@ JavaScript calculator to-do list:
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
-    [ ] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
     [ ] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
 */

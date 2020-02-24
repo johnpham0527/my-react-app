@@ -520,37 +520,6 @@ class MyComponent extends React.Component {
                 React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
                 hello,
                 br,
-      
-                React.createElement(
-                    Button,
-                    {
-                        handleClick: this.handleIncrement,
-                        name: "Increment"
-                    },
-                    null
-                ),
-                React.createElement(
-                    Button,
-                    {
-                        handleClick: this.handleDecrement,
-                        name: "Decrement"
-                    },
-                    null
-                ),
-                React.createElement(
-                    Button,
-                    {
-                        handleClick: this.handleReset,
-                        name: "Reset"
-                    },
-                    null
-                ),
-                React.createElement(
-                    DisplayCounter,
-                    {counter: this.props.storeState},
-                    null
-                ),
-                br,
                 React.createElement(
                     "div",
                     null,

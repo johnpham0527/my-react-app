@@ -510,7 +510,7 @@ class MyComponent extends React.Component {
             React.createElement(
                 "div",
                 null,
-                React.createElement("h1", {style: {color: "blue"}}, "Hi there!"),
+                React.createElement("h1", {style: {color: "blue"}}, "Calculator"),
                 React.createElement(
                     "div",
                     null,

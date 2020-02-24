@@ -552,28 +552,6 @@ class MyComponent extends React.Component {
                 ),
                 br,
                 React.createElement(
-                    "input",
-                    { 
-                        value: this.state.input,
-                        type: "text",
-                        onChange: this.handleInputChange
-                    },
-                    null
-                ),
-                br,
-                React.createElement(
-                    "div",
-                    null,
-                    `Your input: ${this.state.input}`
-                ),
-                React.createElement(
-                    "button",
-                    {
-                        onClick: this.handleFormSubmit
-                    },
-                    "Submit"
-                ),
-                React.createElement(
                     "div",
                     null,
                     this.state.printText

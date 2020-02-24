@@ -386,13 +386,6 @@ const br = React.createElement(
     null
 );
 
-const hello = React.createElement(
-    "h2",
-    {},
-    "Hello!"
-);
-
-
 function Button(props) {
     return React.createElement(
         "button",

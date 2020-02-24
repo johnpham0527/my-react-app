@@ -554,16 +554,6 @@ class MyComponent extends React.Component {
                 React.createElement(
                     "div",
                     null,
-                    this.state.printText
-                ),
-                React.createElement(
-                    "ul",
-                    null,
-                    React.createElement(listElement, {list: this.state.list}, null)
-                ),
-                React.createElement(
-                    "div",
-                    null,
                     React.createElement(
                         "div",
                         {

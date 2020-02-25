@@ -207,21 +207,6 @@ const numObjectHelper = (numString) => {
     return numObject;
 }
 
-const roundNumber = (numString) => {
-    let digitsBeforeDecimal = '';
-    let digitsAfterDecimal = '';
-    for (let i = 0; i < numString.length; i++) {
-        if (numString[i] === '.') {
-            //check to see if the decimal isn't the last character
-            //slice the digits before the decimal and store into digitsBeforeDecimal
-            //slice the digits after the decimal and store into digitsAfterDecimal
-            //cut off any digits (i.e. round) after the 8th digit in digitsAfterDecimal
-            //concatenate digitsBeforeDecimal and digitsAfterDecimal in a new numString
-            //return this new numString
-        }
-    }
-}
-
 const numDecimalPlacesToRound = (listOfNumStrings) => {
     //given a list of number strings, return the highest number of decimal places to round
     let maxDecimalRounding = 0;
@@ -287,13 +272,13 @@ const calcReducer = (state = defaultCalcState, action) => {
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
-            
+            let decimalRoundingPlaces = numDecimalPlacesToRound(newState.queue);
 
-            let leftHand = parseFloat(newState.queue.shift(),10);
+            let leftHand = parseFloat(newState.queue.shift(),10).toFixed(decimalRoundingPlaces);
             let operator = newState.queue.shift();
-            let rightHand = parseFloat(newState.queue.shift(),10);
+            let rightHand = parseFloat(newState.queue.shift(),10).toFixed(decimalRoundingPlaces);
             let result = evaluate(leftHand, operator, rightHand) //evaluate the result
-            newState.queue.unshift(result); //add result back into the front of the queue
+            newState.queue.unshift(result.toFixed(decimalRoundingPlaces)); //add result back into the front of the queue
             
             while (newState.queue.length >= 3) { //process the rest of the queue
                 leftHand = parseFloat(newState.queue.shift(),10);

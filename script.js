@@ -947,9 +947,9 @@ JavaScript calculator to-do list:
 [X] Debug the calc; I have spotted errors with the queue. NOTE: I should get rid of local state and let Redux handle all state variables.
 [X] Properly handle plus/minus when the default display is zero
 [~] Do not allow for there to be a leading zero in any whole number
-[ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
-    [ ] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
-    [ ] Debug this situation: .333 * 9 = 2.9970000000000...
+[X] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
+    [X] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
+    [X] Debug this situation: .333 * 9 = 2.9970000000000...
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
 [ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 [ ] Re-implement everything to avoid using calcString local state

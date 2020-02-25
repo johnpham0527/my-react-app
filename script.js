@@ -237,6 +237,12 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.operatorPressed = true;
                 return newState;
             }
+            else if (newState.operatorPressed === true) { //equal operator pressed immediately after another operator
+                newState.queue.pop();
+                newState.result = newState.display;
+                newState.queue = [];
+                return newState;
+            }
             
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
@@ -968,8 +974,8 @@ JavaScript calculator to-do list:
     [X] Re-implement the equal button code to test what I currently have
     [X] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
     [X] Perform error checks for calcReducer decimal case 
-    [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
-        - In these situations, I will need to remove the last operator before doing the calculation
+    [X] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
+        [X] Debug this situation: a digit and operator are pressed, followed by the equal operator. The result is not correct.
     [X] Debug decimal code: rounding errors
     [X] Implement CE (clear display)
     [X] Implement C (clear queue, result, and display)
@@ -977,5 +983,5 @@ JavaScript calculator to-do list:
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
     [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
     [X] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
-    [ ] Debug this situation: a digit and operator is pressed, followed by the equal operator. The result is not correct.
+    
 */

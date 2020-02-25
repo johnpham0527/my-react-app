@@ -226,7 +226,7 @@ const numDecimalPlacesToRound = (listOfNumStrings) => {
     //given a list of number strings, return the highest number of decimal places to round
     let maxDecimalRounding = 0;
     for (let i = 0; i < listOfNumStrings.length; i++) {
-        let numObj = numObjectHeper(listOfNumStrings[i]);
+        let numObj = numObjectHelper(listOfNumStrings[i]);
         let numObjRounding = numDecimalPlaces(numObj);
         if (numObjRounding > maxDecimalRounding) {
             maxDecimalRounding = numObjRounding;

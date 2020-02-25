@@ -893,33 +893,6 @@ class MyComponent extends React.Component {
     }
 }
 
-
-class Badge extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            React.createElement(
-                "div",
-                null,
-                this.props.name
-            )
-        )
-    }
-}
-
-class BadgeList extends React.Component {
-    render() {
-        return React.createElement(
-            "div",
-            {style: {color: "green"}},
-            React.createElement(Badge, { name: "Bill" }, null),
-            React.createElement(Badge, { name: "Tom" }, null)
-        )
-    }
-}
-
 const Container = connect(mapStateToProps,mapDispatchToProps)(MyComponent);
 
 class AppWrapper extends React.Component {

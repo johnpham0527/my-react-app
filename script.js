@@ -64,7 +64,7 @@ const defaultCalcState = {
     queue: [],
     result: 0,
     display: "0",
-    operatorPressed: false
+    operatorPressed: false,
 }
 
 const add = () => {
@@ -230,7 +230,11 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.operatorPressed = false;
                 newState.display = "0";
             }
-            if (newState.display == 0) {
+            if (newState.display == "0.") {
+                newState.display = newState.display + action.num;
+                return newState;
+            }
+            else if (newState.display == 0) {
                 if (action.num == 0) {
                     return newState;
                 }
@@ -972,8 +976,8 @@ JavaScript calculator to-do list:
 [X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
 [X] Implement subtract, multiply and divide cases for handleCalcButton
 [X] Display the result onto the calculator after the equal button is pressed
-[ ] Debug decimal: account for the default case where decimal is pressed immediately before any other digit has been entered
-    [ ] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
+[X] Debug decimal: account for the default case where decimal is pressed immediately before any other digit has been entered
+    [X] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
 [ ] Implement divs and classes for the calculator buttons
 [X] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
 [X] Debug the calc; I have spotted errors with the queue. NOTE: I should get rid of local state and let Redux handle all state variables.

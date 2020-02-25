@@ -187,44 +187,6 @@ const hasNegative = (numString) => {
     return numString[0] === '-';
 }
 
-const numObjectHelper = (numString) => {
-    let numObject = {left:"", decimal:"", right:""};
-    let foundDecimal = false;
-    for (let i = 0; i < numString.length; i++) {
-        if (foundDecimal === false) {
-            if (numString[i] === '.') {
-                numObject.decimal = ".";
-                foundDecimal = true;
-            }
-            else {
-                numObject.left = numObject.left + numString[i];
-            }
-        }
-        else {
-            numObject.right = numObject.right + numString[i];
-        }
-    }
-    return numObject;
-}
-
-const numDecimalPlacesToRound = (listOfNumStrings) => {
-    //given a list of number strings, return the highest number of decimal places to round
-    let maxDecimalRounding = 0;
-    for (let i = 0; i < listOfNumStrings.length; i++) {
-        let numObj = numObjectHelper(listOfNumStrings[i]);
-        let numObjRounding = numDecimalPlaces(numObj);
-        if (numObjRounding > maxDecimalRounding) {
-            maxDecimalRounding = numObjRounding;
-        }
-    }
-    return maxDecimalRounding;
-}
-
-const numDecimalPlaces = (numObject) => {
-    //given a numObject, return the number of decimal places
-    return numObject.right.length;
-}
-
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
@@ -271,8 +233,6 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
-
-            let decimalRoundingPlaces = numDecimalPlacesToRound(newState.queue);
 
             let leftHand = parseFloat(newState.queue.shift(),10);
             let operator = newState.queue.shift();

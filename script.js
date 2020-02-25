@@ -65,6 +65,7 @@ const defaultCalcState = {
     result: 0,
     display: "0",
     operatorPressed: false,
+    isNegative: false,
 }
 
 const add = () => {
@@ -197,6 +198,9 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             if (newState.display == "0.") {
                 newState.display = newState.display + action.num;
+                if (newState.isNegative) {
+                    newState.display = -1 * parseFloat(newState.display,10);
+                }
                 return newState;
             }
             else if (newState.display == 0) {
@@ -205,6 +209,9 @@ const calcReducer = (state = defaultCalcState, action) => {
                 }
                 else {
                     newState.display = action.num;
+                    if (newState.isNegative) {
+                        newState.display = -1 * parseFloat(newState.display,10);
+                    }
                     return newState;
                 }
             }
@@ -216,6 +223,7 @@ const calcReducer = (state = defaultCalcState, action) => {
         case SUBTRACT:
         case MULTIPLY:
         case DIVIDE:
+            newState.isNegative = false; //reset the plus/minus sign to positive
             if (newState.queue.length === 0) {
                 newState.queue.push(newState.display);
                 newState.queue.push(action.type);
@@ -293,6 +301,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             newState.display = 0;
             return newState; 
         case PLUSMINUS:
+            newState.isNegative = !newState.isNegative; //reverse true to false, or false to true
             if (newState.display != 0) { //don't multiply 0 by -1, or else a bug is introduced
                 newState.display = -1 * parseFloat(newState.display,10);
             }
@@ -942,8 +951,9 @@ JavaScript calculator to-do list:
 [X] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
     [X] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
     [X] Debug this situation: .333 * 9 = 2.9970000000000...
-[ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
+[X] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
     [X] Leading zero appears when plus/minus pressed, followed by a digit
+    [X] Debug this situation: 4 + 4 = ... CLEARALL... plus/minus 4... this shows a leading 0
 [X] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 [X] Re-implement everything to avoid using calcString local state
     [X] Re-implement the divide button

@@ -222,6 +222,24 @@ const roundNumber = (numString) => {
     }
 }
 
+const numDecimalPlacesToRound = (listOfNumStrings) => {
+    //given a list of number strings, return the highest number of decimal places to round
+    let maxDecimalRounding = 0;
+    for (let i = 0; i < listOfNumStrings.length; i++) {
+        let numObj = numObjectHeper(listOfNumStrings[i]);
+        let numObjRounding = numDecimalPlaces(numObj);
+        if (numObjRounding > maxDecimalRounding) {
+            maxDecimalRounding = numObjRounding;
+        }
+    }
+    return maxDecimalRounding;
+}
+
+const numDecimalPlaces = (numObject) => {
+    //given a numObject, return the number of decimal places
+    return numObject.right.length;
+}
+
 const calcReducer = (state = defaultCalcState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {

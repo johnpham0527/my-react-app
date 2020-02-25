@@ -257,6 +257,10 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
 
         case DECIMAL:
+            if (newState.operatorPressed === true) { //this handles the case where a decimal is placed immediately after an operator
+                newState.operatorPressed = false;
+                newState.display = "0";
+            }
             if (!hasDecimal(newState.display)) { // check if display variable already has a decimal
                 newState.display = newState.display + '.';
             }
@@ -966,5 +970,5 @@ JavaScript calculator to-do list:
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
     [ ] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
-    [ ] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
+    [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
 */

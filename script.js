@@ -970,5 +970,5 @@ JavaScript calculator to-do list:
     [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
     [X] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
 [ ] Remove all unnecessary code
-
+[ ] Remove debugger output
 */

@@ -232,6 +232,12 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             return newState;
         case EQUAL:
+            if (newState.queue.length === 0) { //empty queue, a number may be displayed, and equal button pressed
+                newState.result = newState.display;
+                newState.operatorPressed = true;
+                return newState;
+            }
+            
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
             let leftHand = parseFloat(newState.queue.shift(),10);
@@ -969,6 +975,7 @@ JavaScript calculator to-do list:
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
-    [ ] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
     [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
+    [X] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
+    [ ] Debug this situation: a digit and operator is pressed, followed by the equal operator. The result is not correct.
 */

@@ -968,6 +968,7 @@ JavaScript calculator to-do list:
     [X] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
     [X] Debug this situation: .333 * 9 = 2.9970000000000...
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
+    [ ] Leading zero appears when plus/minus pressed, followed by a digit
 [X] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 [X] Re-implement everything to avoid using calcString local state
     [X] Re-implement the divide button
@@ -983,5 +984,4 @@ JavaScript calculator to-do list:
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
     [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
     [X] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
-    
 */

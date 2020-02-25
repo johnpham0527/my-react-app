@@ -964,7 +964,7 @@ JavaScript calculator to-do list:
     [X] Perform error checks for calcReducer decimal case 
     [ ] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
         - In these situations, I will need to remove the last operator before doing the calculation
-    [~] Debug decimal code: rounding errors
+    [X] Debug decimal code: rounding errors
     [X] Implement CE (clear display)
     [X] Implement C (clear queue, result, and display)
     [X] Implement Plus-Minus

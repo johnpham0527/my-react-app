@@ -969,7 +969,7 @@ JavaScript calculator to-do list:
     [X] Debug this situation: .333 * 9 = 2.9970000000000...
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
 [ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
-[ ] Re-implement everything to avoid using calcString local state
+[X] Re-implement everything to avoid using calcString local state
     [X] Re-implement the divide button
     [X] Re-implement the equal button code to test what I currently have
     [X] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue

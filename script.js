@@ -274,17 +274,19 @@ const calcReducer = (state = defaultCalcState, action) => {
 
             let decimalRoundingPlaces = numDecimalPlacesToRound(newState.queue);
 
-            let leftHand = parseFloat(newState.queue.shift(),10).toFixed(decimalRoundingPlaces);
+            let leftHand = parseFloat(newState.queue.shift(),10);
             let operator = newState.queue.shift();
-            let rightHand = parseFloat(newState.queue.shift(),10).toFixed(decimalRoundingPlaces);
+            let rightHand = parseFloat(newState.queue.shift(),10);
             let result = evaluate(leftHand, operator, rightHand) //evaluate the result
-            newState.queue.unshift(result.toFixed(decimalRoundingPlaces)); //add result back into the front of the queue
+            result = Math.round(result * 1e8) / 1e8; //max decimal places: 8
+            newState.queue.unshift(result); //add result back into the front of the queue
             
             while (newState.queue.length >= 3) { //process the rest of the queue
                 leftHand = parseFloat(newState.queue.shift(),10);
                 operator = newState.queue.shift();
                 rightHand = parseFloat(newState.queue.shift(),10);
-                result = evaluate(leftHand, operator, rightHand)
+                result = evaluate(leftHand, operator, rightHand);
+                result = Math.round(result * 1e8) / 1e8; //max decimal places: 8
                 newState.queue.unshift(result);
             }
             

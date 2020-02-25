@@ -287,9 +287,6 @@ const calcReducer = (state = defaultCalcState, action) => {
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
-            newState.result = newState.queue.length;
-            newState.display = newState.queue.length;
-
             let leftHand = parseFloat(newState.queue.shift(),10);
             let operator = newState.queue.shift();
             let rightHand = parseFloat(newState.queue.shift(),10);

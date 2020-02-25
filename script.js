@@ -287,6 +287,8 @@ const calcReducer = (state = defaultCalcState, action) => {
         case EQUAL:
             newState.queue.push(newState.display); //add the last displayed number into the queue
 
+            
+
             let leftHand = parseFloat(newState.queue.shift(),10);
             let operator = newState.queue.shift();
             let rightHand = parseFloat(newState.queue.shift(),10);
@@ -1000,6 +1002,7 @@ JavaScript calculator to-do list:
 [~] Do not allow for there to be a leading zero in any whole number
 [ ] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
     [ ] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
+    [ ] Debug this situation: .333 * 9 = 2.9970000000000...
 [ ] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
 [ ] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
 [ ] Re-implement everything to avoid using calcString local state
@@ -1015,4 +1018,5 @@ JavaScript calculator to-do list:
     [X] Implement Plus-Minus
     [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
     [ ] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
+    [ ] Debug this situation: .33 * .9 ... displays 0.33.
 */

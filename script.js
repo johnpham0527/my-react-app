@@ -717,7 +717,9 @@ class MyComponent extends React.Component {
                     ),
                     React.createElement(
                         "button",
-                        {style: 
+                        {
+                            id: "subtract",
+                            style: 
                             {
                                 width: "35px",
                                 marginLeft: "5px",

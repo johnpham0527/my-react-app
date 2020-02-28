@@ -979,4 +979,5 @@ JavaScript calculator to-do list:
 [ ] Remove debugger output
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
+[ ] Add CSS and visuals to make the calculator look visually appealing
 */

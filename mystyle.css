@@ -5,3 +5,12 @@
     font-family: Arial;
     text-align: center;
 }
+
+.buttonStyle {
+    width: "35px",
+    marginRight: "5px",
+    borderRadius: "8px",
+    backgroundColor: "#eeeeee",
+    padding: "10px",
+    textAlign: "center"
+}

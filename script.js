@@ -983,5 +983,4 @@ JavaScript calculator to-do list:
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
 [ ] Add CSS and visuals to make the calculator look visually appealing
-    [ ] Implement active pseudo class to animate button upon press
 */

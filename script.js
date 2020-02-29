@@ -502,18 +502,6 @@ class MyComponent extends React.Component {
     };
 
     render() {
-        const buttonStyle = {
-            width: "35px",
-            marginRight: "5px",
-            borderRadius: "8px",
-            backgroundColor: "#eeeeee",
-            padding: "10px",
-            textAlign: "center"
-        };
-        const buttonStyle2 = {
-            fontSize: "12px"
-        }
-
         return(
             React.createElement(
                 "div",
@@ -531,7 +519,7 @@ class MyComponent extends React.Component {
                                 padding: "10px",
                                 textAlign: "right",
                                 marginTop: "10px",
-                                marginBottom: "-10px"
+                                marginBottom: "-10px",
                             }
                         },
                         this.props.storeState.display
@@ -541,7 +529,12 @@ class MyComponent extends React.Component {
                         "button",
                         {
                             style: {
-                                ...buttonStyle, ... buttonStyle2 //use spread operator to combine multiple inline style objects
+                                width: "35px",
+                                marginRight: "5px",
+                                borderRadius: "8px",
+                                backgroundColor: "#eeeeee",
+                                padding: "10px",
+                                textAlign: "center",
                             },
                             onClick: () => this.handleCalcButton("CE")
                         },

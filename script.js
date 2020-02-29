@@ -502,6 +502,14 @@ class MyComponent extends React.Component {
     };
 
     render() {
+        const buttonStyle = {
+            width: "35px",
+            marginRight: "5px",
+            borderRadius: "8px",
+            backgroundColor: "#eeeeee",
+            padding: "10px",
+            textAlign: "center"
+        }
         return(
             React.createElement(
                 "div",
@@ -528,14 +536,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "button",
                         {style: 
-                            {
-                                width: "35px",
-                                marginRight: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
+                            buttonStyle,
                             onClick: () => this.handleCalcButton("CE")
                         },
                         "CE"

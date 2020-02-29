@@ -543,7 +543,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "button",
                         {
-                            id = "clear",
+                            id: "clear",
                             style: 
                             {
                                 width: "35px",

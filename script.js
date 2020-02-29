@@ -427,7 +427,6 @@ class MyComponent extends React.Component {
         this.handleDecrement = this.handleDecrement.bind(this);
         this.handleReset = this.handleReset.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.handleCalcButton = this.handleCalcButton.bind(this);
     }
 
@@ -489,17 +488,6 @@ class MyComponent extends React.Component {
         }
     }
 
-    handleFormSubmit(event) {
-        event.preventDefault();
-        let newList = this.state.list.slice();
-        newList.push(this.state.input);
-        let newPrintText = newList.join(", ");
-        this.setState({
-            list: newList,
-            printText: newPrintText,
-            input: "",
-        })
-    };
 
     render() {
         return(

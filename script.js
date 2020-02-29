@@ -509,7 +509,11 @@ class MyComponent extends React.Component {
             backgroundColor: "#eeeeee",
             padding: "10px",
             textAlign: "center"
+        };
+        const buttonStyle2 = {
+            fontSize: "12px"
         }
+
         return(
             React.createElement(
                 "div",
@@ -535,8 +539,10 @@ class MyComponent extends React.Component {
                     br,
                     React.createElement(
                         "button",
-                        {style: 
-                            buttonStyle,
+                        {
+                            style: {
+                                ...buttonStyle, ... buttonStyle2 //use spread operator to combine multiple inline style objects
+                            },
                             onClick: () => this.handleCalcButton("CE")
                         },
                         "CE"
@@ -984,4 +990,5 @@ JavaScript calculator to-do list:
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
 [ ] Add CSS and visuals to make the calculator look visually appealing
+    
 */

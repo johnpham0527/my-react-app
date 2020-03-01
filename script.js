@@ -392,15 +392,6 @@ function Button(props) {
     )
 }
 
-const DisplayCounter = (props) => {
-    return React.createElement(
-        "div",
-        null,
-        "Count: ",
-        props.counter.count
-    )
-}
-
 const listElement = function listElement(props) {
     return props.list.map((element) => React.createElement("li",null,element));
 }

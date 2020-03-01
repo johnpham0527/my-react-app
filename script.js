@@ -144,7 +144,7 @@ const evaluate = (leftHand, operator, rightHand) => {
         case MULTIPLY:
             return leftHand * rightHand;
         case DIVIDE:
-            return leftHand - rightHand;
+            return leftHand / rightHand;
         default:
             return -1;
    } 

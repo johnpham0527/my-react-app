@@ -425,7 +425,6 @@ class MyComponent extends React.Component {
         };
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);
-        this.handleReset = this.handleReset.bind(this);
         this.handleCalcButton = this.handleCalcButton.bind(this);
     }
 
@@ -438,12 +437,6 @@ class MyComponent extends React.Component {
        event.preventDefault();
        this.props.submitDecrement();
     };
-
-    handleReset(event) {
-        event.preventDefault();
-        this.props.submitReset();
-    };
-
 
     handleCalcButton(buttonValue) {
         switch (buttonValue) {

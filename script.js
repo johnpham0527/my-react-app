@@ -293,7 +293,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             return newState;
         case CLEARALL:
             newState.queue = [];
-            newState.display = 0;
+            newState.display = "0";
             newState.result = 0;
             newState.operatorPressed = false;
             return newState;
@@ -805,6 +805,7 @@ class MyComponent extends React.Component {
                     br,
                     /*
                     Delete this code after exploring how to use the debugger:
+                    */
                     React.createElement(
                         "div",
                         {},
@@ -831,7 +832,7 @@ class MyComponent extends React.Component {
                         "Queue Length: ",
                         this.props.storeState.queue.length
                     ),
-                    */
+                    
                 )
             )
         )

@@ -5,3 +5,7 @@
     font-family: Arial;
     text-align: center;
 }
+
+#app {
+    padding-top: 100px;
+}

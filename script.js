@@ -18,12 +18,6 @@ const incrementCount = () => {
     }
 }
 
-const decrementCount = () => {
-    return {
-        type: DECREMENT
-    }
-}
-
 
 //JavaScript calculator
 const ADD = "ADD";

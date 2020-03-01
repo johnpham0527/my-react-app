@@ -310,12 +310,6 @@ const calcReducer = (state = defaultCalcState, action) => {
             return state;
     }
 }
-
-const rootReducer = Redux.combineReducers({
-    //I will need to debug rootReducer. Creating a Redux store with the rootReducer produces an unknown error"
-    count: countReducer,
-    calc: calcReducer
-});
   
 //const store = Redux.createStore(countReducer);
 const store = Redux.createStore(calcReducer);

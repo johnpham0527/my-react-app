@@ -382,16 +382,6 @@ const br = React.createElement(
     null
 );
 
-function Button(props) {
-    return React.createElement(
-        "button",
-        {
-            onClick: props.handleClick
-        },
-        props.name
-    )
-}
-
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);

@@ -401,15 +401,6 @@ const DisplayCounter = (props) => {
     )
 }
 
-let MyName = function MyName(props) {
-    return React.createElement(
-        "div",
-        null,
-        "Hello ",
-        props.name
-    );
-};
-
 const listElement = function listElement(props) {
     return props.list.map((element) => React.createElement("li",null,element));
 }

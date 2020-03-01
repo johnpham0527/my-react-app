@@ -389,6 +389,7 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
+                            id: "display",
                             style: {
                                 border: "1px solid black",
                                 width: "135px",
@@ -820,6 +821,9 @@ ReactDOM.render(
 
 /*
 JavaScript calculator to-do list:
+[ ] Debug this situation: typing in "8.6." displays a second decimal
+    [ ] 5 . 5 .5 should display 5.55
+[ ] Debug this situation: 5 * - 5 should equal -25. 
 [ ] Implement divs and classes for the calculator buttons
 [ ] Remove all unnecessary code
 [ ] Remove debugger output

@@ -3,7 +3,7 @@
 //Redux Code
 const { Provider, connect } = ReactRedux;
 //const { applyMiddleware, createStore, combineReducers, bindActionCreators} = Redux;
-const { createStore, combineReducers } = Redux;
+const { createStore } = Redux;
 
 //JavaScript calculator
 const ADD = "ADD";

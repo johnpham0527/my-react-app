@@ -385,12 +385,6 @@ const br = React.createElement(
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            input: "",
-            list: [],
-            printText: "",
-            calcString: "0"
-        };
         this.handleCalcButton = this.handleCalcButton.bind(this);
     }
 

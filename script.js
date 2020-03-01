@@ -814,41 +814,7 @@ ReactDOM.render(
 
 /*
 JavaScript calculator to-do list:
-[X] I'll create buttons for each of the 10 digits.
-[X] I'll add and style a display
-[X] The local React state will store each digit as the button is pressed into a string.
-[X] Once an operator (such as the plus sign) is pressed, the local string will be tranferred to a Redux queue along with the operator.
-[X] Once the equal button is pressed, the Redux queue operands and operators will be evaluated.
-[X] Implement subtract, multiply and divide cases for handleCalcButton
-[X] Display the result onto the calculator after the equal button is pressed
-[X] Debug decimal: account for the default case where decimal is pressed immediately before any other digit has been entered
-    [X] Debug decimal code: decimal 2 + 3 doesn't equal 3.2
 [ ] Implement divs and classes for the calculator buttons
-[X] Implement a feature where if the user presses two operators in a row, the second operator supercedes the prior operator
-[X] Debug the calc; I have spotted errors with the queue. NOTE: I should get rid of local state and let Redux handle all state variables.
-[X] Properly handle plus/minus when the default display is zero
-[X] Do not allow for there to be a leading zero in any whole number
-[X] There are "rounding" errors associated with how JavaScript handles decimals. Need to fix this.
-    [X] To fix this, I need to keep track of how many decimal places there are and use the toFixed(n) function
-    [X] Debug this situation: .333 * 9 = 2.9970000000000...
-[X] Implement plus/minus properly for the default case. Zero can't be negative, but what if user wants to input -0.3?
-    [X] Leading zero appears when plus/minus pressed, followed by a digit
-    [X] Debug this situation: 4 + 4 = ... CLEARALL... plus/minus 4... this shows a leading 0
-[X] After equal button is pressed, if user presses an operator, the operand continues chaining. If user presses a digit or decimal, reset the chain and build a new operand
-[X] Re-implement everything to avoid using calcString local state
-    [X] Re-implement the divide button
-    [X] Re-implement the equal button code to test what I currently have
-    [X] Insert code to "overwrite" operands and not allow two consecutive operands to be pushed into the queue
-    [X] Perform error checks for calcReducer decimal case 
-    [X] Debug equal operator code to handle cases such as where the equal operator is pressed immediately after another operator has entered the queue
-        [X] Debug this situation: a digit and operator are pressed, followed by the equal operator. The result is not correct.
-    [X] Debug decimal code: rounding errors
-    [X] Implement CE (clear display)
-    [X] Implement C (clear queue, result, and display)
-    [X] Implement Plus-Minus
-    [X] Debug this situation: 8*9= ... +3 = ... The answer should be 75, but it's not
-    [X] Debug this situation: .33 * .9 ... displays 0.33., followed by 9
-    [X] Debug this situation: a digit is pressed, followed by the equal operator. The result is -1.
 [ ] Remove all unnecessary code
 [ ] Remove debugger output
 [ ] Practice using the browser to debug using console.log

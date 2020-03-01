@@ -423,14 +423,8 @@ class MyComponent extends React.Component {
             printText: "",
             calcString: "0"
         };
-        this.handleIncrement = this.handleIncrement.bind(this);
         this.handleCalcButton = this.handleCalcButton.bind(this);
     }
-
-    handleIncrement(event) {
-       event.preventDefault();
-       this.props.submitIncrement();
-    };
 
     handleCalcButton(buttonValue) {
         switch (buttonValue) {

@@ -392,10 +392,6 @@ function Button(props) {
     )
 }
 
-const listElement = function listElement(props) {
-    return props.list.map((element) => React.createElement("li",null,element));
-}
-
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);

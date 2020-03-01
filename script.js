@@ -24,11 +24,6 @@ const decrementCount = () => {
     }
 }
 
-const resetCount = () => {
-    return {
-        type: RESET
-    }
-}
 
 //JavaScript calculator
 const ADD = "ADD";

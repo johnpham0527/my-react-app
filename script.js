@@ -12,12 +12,6 @@ const defaultState = {
     count: 0,
 }
 
-const incrementCount = () => {
-    return {
-        type: INCREMENT
-    }
-}
-
 
 //JavaScript calculator
 const ADD = "ADD";

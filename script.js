@@ -8,10 +8,6 @@ const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
 const RESET = "RESET";
 
-const defaultState = {
-    count: 0,
-}
-
 
 //JavaScript calculator
 const ADD = "ADD";

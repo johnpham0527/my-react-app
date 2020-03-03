@@ -138,7 +138,12 @@ const isOperator = (char) => {
 }
 
 const hasDecimal = (numString) => {
-    return numString[numString.length-1] === '.';
+    for (let i = 0; i < numString.length; i++) {
+        if (numString[i] === '.') {
+            return true;
+        }
+    }
+    return false;
 }
 
 const hasNegative = (numString) => {
@@ -821,8 +826,8 @@ ReactDOM.render(
 
 /*
 JavaScript calculator to-do list:
-[ ] Debug this situation: typing in "8.6." displays a second decimal
-    [ ] 5 . 5 .5 should display 5.55
+[X] Debug this situation: typing in "8.6." displays a second decimal
+    [X] 5 . 5 .5 should display 5.55
 [ ] Debug this situation: 5 * - 5 should equal -25. 
 [ ] Implement divs and classes for the calculator buttons
 [ ] Remove all unnecessary code

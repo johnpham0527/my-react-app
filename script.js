@@ -829,7 +829,7 @@ JavaScript calculator to-do list:
 [X] Debug this situation: typing in "8.6." displays a second decimal
     [X] 5 . 5 .5 should display 5.55
 [ ] Debug this situation: 5 * - 5 should equal -25. 
-[ ] Implement divs and classes for the calculator buttons
+[X] Implement divs and classes for the calculator buttons
 [X] Remove all unnecessary code
 [ ] Remove debugger output
 [ ] Practice using the browser to debug using console.log

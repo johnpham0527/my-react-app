@@ -391,6 +391,7 @@ class MyComponent extends React.Component {
                 React.createElement(
                     "div",
                     {
+                        id: "main",
                         style: {
                         border: "1px solid black",
                         width: "160px",

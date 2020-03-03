@@ -390,7 +390,15 @@ class MyComponent extends React.Component {
                 React.createElement("h1", {style: {color: "charcoal"}}, "Calculator"),
                 React.createElement(
                     "div",
-                    null,
+                    {
+                        style: {
+                        border: "1px solid black",
+                        width: "160px",
+                        padding: "10px",
+                        borderRadius: "10px",
+                        backgroundColor: "#eeeeee"
+                        }
+                    },
                     React.createElement(
                         "div",
                         {
@@ -400,8 +408,8 @@ class MyComponent extends React.Component {
                                 width: "135px",
                                 padding: "10px",
                                 textAlign: "right",
-                                marginTop: "10px",
-                                marginBottom: "-10px",
+                                marginTop: "5px",
+                                marginBottom: "-10px", 
                             }
                         },
                         this.props.storeState.display

@@ -396,7 +396,8 @@ class MyComponent extends React.Component {
                         width: "160px",
                         padding: "10px",
                         borderRadius: "10px",
-                        backgroundColor: "#eeeeee"
+                        backgroundColor: "#dddddd",
+                        boxShadow: "2px 2px #888888"
                         }
                     },
                     React.createElement(
@@ -410,6 +411,7 @@ class MyComponent extends React.Component {
                                 textAlign: "right",
                                 marginTop: "5px",
                                 marginBottom: "-10px", 
+                                backgroundColor: "#eeeeee"
                             }
                         },
                         this.props.storeState.display

@@ -830,7 +830,7 @@ JavaScript calculator to-do list:
     [X] 5 . 5 .5 should display 5.55
 [ ] Debug this situation: 5 * - 5 should equal -25. 
 [ ] Implement divs and classes for the calculator buttons
-[ ] Remove all unnecessary code
+[X] Remove all unnecessary code
 [ ] Remove debugger output
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints

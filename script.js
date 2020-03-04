@@ -18,11 +18,11 @@ const CLEARALL = "CLEARALL";
 const DEL = "DEL";
 
 const defaultCalcState = {
-    queue: [],
-    result: 0,
-    display: "0",
-    operatorPressed: false,
-    isNegative: false,
+    queue: [], //this is the expression queue
+    result: 0, //this number will be calculated after the equal button is pressed
+    display: "0", //outputs will be strings
+    operatorPressed: false, //this variable helps keep track of whether an operator was just pressed
+    isNegative: false, //this variable keeps track of whether the plus/minus sign or the minus/negative sign has been pressed
 }
 
 const add = () => {

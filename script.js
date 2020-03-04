@@ -212,10 +212,7 @@ const calcReducer = (state = defaultCalcState, action) => {
                 return newState;
             }
             else if (newState.operatorPressed === true) { //equal operator pressed immediately after another operator
-                newState.queue.pop();
-                newState.result = newState.display;
-                newState.queue = [];
-                return newState;
+                newState.queue.pop(); //remove the last operator and continue executing the code
             }
             
             newState.queue.push(newState.display); //add the last displayed number into the queue
@@ -781,7 +778,7 @@ class MyComponent extends React.Component {
                         "="
                     ),
                     br,
-                    /*
+                    
                     //Delete this code after exploring how to use the debugger:
                     
                     React.createElement(
@@ -810,7 +807,7 @@ class MyComponent extends React.Component {
                         "Queue Length: ",
                         this.props.storeState.queue.length
                     ),
-                    */
+                    
                 )
             )
         )
@@ -844,4 +841,5 @@ JavaScript calculator to-do list:
 [~] Debug this situation: 5 * - 5 should equal -25. 
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
+[ ] Debug this situation: 5 * - 5 + = " should equal -25.
 */

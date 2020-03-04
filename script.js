@@ -806,11 +806,3 @@ ReactDOM.render(
     React.createElement(AppWrapper),
     document.querySelector("#app")
 )
-
-/*
-JavaScript calculator to-do list:
-[~] Debug this situation: 5 * - 5 should equal -25. 
-[ ] Practice using the browser to debug using console.log
-    [ ] Practice using breakpoints
-[ ] Debug this situation: 5 * - 5 + = " should equal -25.
-*/

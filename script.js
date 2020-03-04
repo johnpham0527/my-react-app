@@ -781,7 +781,7 @@ class MyComponent extends React.Component {
                         "="
                     ),
                     br,
-                    
+                    /*
                     //Delete this code after exploring how to use the debugger:
                     
                     React.createElement(
@@ -810,7 +810,7 @@ class MyComponent extends React.Component {
                         "Queue Length: ",
                         this.props.storeState.queue.length
                     ),
-                    
+                    */
                 )
             )
         )

@@ -237,7 +237,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             
             newState.result = result;
-            newState.display = String(result);
+            newState.display = String(newState.result) ;
             newState.queue = [];
             newState.operatorPressed = true;
             return newState;

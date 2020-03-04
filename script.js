@@ -779,37 +779,6 @@ class MyComponent extends React.Component {
                         },
                         "="
                     ),
-                    br,
-                    
-                    //Delete this code after exploring how to use the debugger:
-                    
-                    React.createElement(
-                        "div",
-                        {},
-                        this.props.storeState.queue
-                    ),
-                    br,
-                    React.createElement(
-                        "div",
-                        {},
-                        "Result: ",
-                        this.props.storeState.result
-                    ),
-                    br,
-                    React.createElement(
-                        "div",
-                        {},
-                        "Display: ",
-                        this.props.storeState.display
-                    ),
-                    br,
-                    React.createElement(
-                        "div",
-                        {},
-                        "Queue Length: ",
-                        this.props.storeState.queue.length
-                    ),
-                    
                 )
             )
         )

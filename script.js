@@ -196,6 +196,10 @@ const calcReducer = (state = defaultCalcState, action) => {
                 newState.queue.push(action.type);
                 newState.operatorPressed = true;
             }
+            else if (action.type == SUBTRACT) { //instead of replacing previously pushed operator, change the plus/minus sign
+                newState.isNegative = !newState.isNegative; //reverse true to false, or false to true
+                return newState;
+            }
             else { //replace previously pushed operator with this new operator
                 newState.queue.pop();
                 newState.queue.push(action.type);
@@ -778,7 +782,7 @@ class MyComponent extends React.Component {
                     ),
                     br,
                     /*
-                    Delete this code after exploring how to use the debugger:
+                    //Delete this code after exploring how to use the debugger:
                     
                     React.createElement(
                         "div",

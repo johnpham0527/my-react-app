@@ -237,7 +237,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             
             newState.result = result;
-            newState.display = String(newState.result);
+            newState.display = String(result);
             newState.queue = [];
             newState.operatorPressed = true;
             return newState;
@@ -254,7 +254,7 @@ const calcReducer = (state = defaultCalcState, action) => {
         case DEL:
             newState.display = newState.display.substring(0, newState.display.length-1);
             if (newState.display.length == 0) {
-                newState.display = 0;
+                newState.display = "0";
             }
             return newState;
         case CLEARALL:

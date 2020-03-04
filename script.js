@@ -264,7 +264,7 @@ const calcReducer = (state = defaultCalcState, action) => {
             newState.operatorPressed = false;
             return newState;
         case CE:
-            newState.display = 0;
+            newState.display = "0";
             return newState; 
         case PLUSMINUS:
             newState.isNegative = !newState.isNegative; //reverse true to false, or false to true
@@ -850,5 +850,5 @@ JavaScript calculator to-do list:
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
 [X] Add CSS and visuals to make the calculator look visually appealing
-[ ] Debug this situation: CE 8 displays 08; leading zero error
+[X] Debug this situation: CE 8 displays 08; leading zero error
 */

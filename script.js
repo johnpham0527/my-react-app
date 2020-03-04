@@ -138,7 +138,12 @@ const isOperator = (char) => {
 }
 
 const hasDecimal = (numString) => {
-    return numString[numString.length-1] === '.';
+    for (let i = 0; i < numString.length; i++) {
+        if (numString[i] === '.') {
+            return true;
+        }
+    }
+    return false;
 }
 
 const hasNegative = (numString) => {
@@ -382,10 +387,20 @@ class MyComponent extends React.Component {
             React.createElement(
                 "div",
                 null,
-                React.createElement("h1", {style: {color: "blue"}}, "Calculator"),
+                React.createElement("h1", {style: {color: "charcoal"}}, "Calculator"),
                 React.createElement(
                     "div",
-                    null,
+                    {
+                        id: "main",
+                        style: {
+                        border: "1px solid black",
+                        width: "160px",
+                        padding: "10px",
+                        borderRadius: "10px",
+                        backgroundColor: "#dddddd",
+                        boxShadow: "2px 2px #888888"
+                        }
+                    },
                     React.createElement(
                         "div",
                         {
@@ -395,8 +410,9 @@ class MyComponent extends React.Component {
                                 width: "135px",
                                 padding: "10px",
                                 textAlign: "right",
-                                marginTop: "10px",
-                                marginBottom: "-10px",
+                                marginTop: "5px",
+                                marginBottom: "-10px", 
+                                backgroundColor: "#eeeeee"
                             }
                         },
                         this.props.storeState.display
@@ -821,13 +837,13 @@ ReactDOM.render(
 
 /*
 JavaScript calculator to-do list:
-[ ] Debug this situation: typing in "8.6." displays a second decimal
-    [ ] 5 . 5 .5 should display 5.55
+[X] Debug this situation: typing in "8.6." displays a second decimal
+    [X] 5 . 5 .5 should display 5.55
 [ ] Debug this situation: 5 * - 5 should equal -25. 
-[ ] Implement divs and classes for the calculator buttons
-[ ] Remove all unnecessary code
-[ ] Remove debugger output
+[X] Implement divs and classes for the calculator buttons
+[X] Remove all unnecessary code
+[X] Remove debugger output
 [ ] Practice using the browser to debug using console.log
     [ ] Practice using breakpoints
-[ ] Add CSS and visuals to make the calculator look visually appealing
+[X] Add CSS and visuals to make the calculator look visually appealing
 */

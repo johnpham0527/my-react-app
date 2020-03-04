@@ -234,9 +234,11 @@ const calcReducer = (state = defaultCalcState, action) => {
             }
             
             newState.result = result;
-            newState.display = String(newState.result) ;
+            newState.display = String(newState.result);
+            //the following code resets the rest of the state to their default values
             newState.queue = [];
             newState.operatorPressed = true;
+            newState.isNegative = false;
             return newState;
 
         case DECIMAL:

@@ -1,5 +1,15 @@
 'use strict';
 
+/*** Redux Code */
+
+
+/*** React-Redux Code */
+
+
+/*** React Code */
+
+
+
 /*
 Pomodoro Timer To-do's
 [ ] Implement Redux code

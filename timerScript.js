@@ -57,7 +57,7 @@ Pomodoro Timer To-do's
 [ ] Learn how to play an HTML5 audio file in React
     [ ] How did I implement this with the drum project?
 [ ] Implement CSS
-    [ ] Create pomodoro.css
+    [x] Create pomodoro.css
     [ ] Implement button styles
     [ ] Implement break session, set timer, and active alarm timer display styles
 

@@ -1,4 +1,4 @@
-
+'use strict';
 
 /*
 Pomodoro Timer To-do's

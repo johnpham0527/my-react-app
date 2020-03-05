@@ -430,7 +430,7 @@ class MyComponent extends React.Component {
                                 borderRadius: "8px",
                                 backgroundColor: "#eeeeee",
                                 padding: "10px",
-                                textAlign: "center",
+                                textAlign: "center"
                             },
                             onClick: () => this.handleCalcButton("CE")
                         },

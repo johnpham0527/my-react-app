@@ -2,8 +2,21 @@
 
 /*** Redux Code */
 
+/** Constants */
+
+
+/** Action Creators */
+
+
+/** Helper Functions */
+
+
+/** Reducer */
+
+
 
 /*** React-Redux Code */
+
 
 
 /*** React Code */

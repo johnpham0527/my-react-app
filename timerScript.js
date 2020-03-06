@@ -2,8 +2,11 @@
 
 /*** Redux Code */
 
-/** Constants */
 
+/** Constants */
+//Redux constants
+const { Provider, connect } = ReactRedux;
+const { createStore } = Redux;
 
 /** Action Creators */
 

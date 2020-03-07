@@ -14,10 +14,12 @@ const BREAKDECREMENT = "BREAKDECREMENT";
 const defaultTimerState = {
     setBreakMinutes: 5,
     setBreakSeconds: 0,
+    currentBreakMinutes: -1,
+    currentBreakSeconds: -1,
     setTimerMinutes: 25,
     setTimerSeconds: 0,
-    currentTimerMinutes: 0,
-    currentTimerSeconds: 0,
+    currentTimerMinutes: -1,
+    currentTimerSeconds: -1,
     isTimerActive: false,
 }
 

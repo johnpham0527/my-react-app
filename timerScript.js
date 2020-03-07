@@ -114,16 +114,21 @@ const br = React.createElement(
     null
 );
 
-class MyComponent extends React.Component {
+class PomodoroClock extends React.Component {
     constructor(props) {
         super(props);
-        this.handleTimerButtons = this.handleTimerButtons.bind(this);
+        this.handleClockButtons = this.handleClockButtons.bind(this);
     }
 
-
+    handleClockButtons(buttonValue) {
+        switch (buttonValue) {
+            default:
+                return -1;
+        }
+    }
 }
 
-/*** Pomodoro Timer To-do's
+/*** Pomodoro Clock To-do's
 [ ] Implement Redux code
     [ ] Implement constant variables
         [X] Implement MAX break session value

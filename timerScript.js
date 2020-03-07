@@ -173,7 +173,8 @@ class PomodoroClock extends React.Component {
     [ ] Map Redux state to React props
     [ ] Map Redux dispatchers to React props
 [ ] Implement React code template
-    [ ] Implement constructor
+    [X] Implement constructor
+    [X] Implement handleClockButtons method
     [ ] Implement break session increment and decrement buttons
     [ ] Implement break session display
     [ ] Implement set timer increment and decrement buttons

@@ -107,6 +107,12 @@ const timerReducer = (state = defaultTimerState, action) => {
 
 /*** React Code */
 
+/** HTML tag constants */
+const br = React.createElement(
+    "br",
+    null,
+    null
+);
 
 
 /*** Pomodoro Timer To-do's

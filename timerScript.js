@@ -69,6 +69,12 @@ const pauseAlarm = () => {
     };
 }
 
+const resetAlarm = () => {
+    return {
+        type: RESETALARM
+    };
+}
+
 /** Helper Functions */
 
 

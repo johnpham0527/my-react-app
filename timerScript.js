@@ -42,7 +42,17 @@ const decrementSetBreakValue = () => {
     };
 }
 
+const incrementSetAlarmValue = () => {
+    return {
+        type: SETALARMINCREMENT
+    };
+}
 
+const decrementSetAlarmValue = () => {
+    return {
+        type: SETALARMDECREMENT
+    };
+}
 
 /** Helper Functions */
 

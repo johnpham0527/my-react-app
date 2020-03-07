@@ -90,6 +90,12 @@ const timerReducer = (state = defaultTimerState, action) => {
             return newState;
         case SETALARMDECREMENT:
             return newState;
+        case STARTALARM:
+            return newState;
+        case PAUSEALARM:
+            return newState;
+        case RESETALARM:
+            return newState;
         default: 
             return state;
     }
@@ -112,14 +118,14 @@ Pomodoro Timer To-do's
         [X] Implement MIN break session value
         [X] Implement MAX alarm timer value
         [X] Implement MIN alarm timer value
-        [ ] Implement reducer function constants
+        [X] Implement reducer function constants
             [X] Break session increment
             [X] Break session decrement
             [X] Alarm timer set value increment
             [X] Alarm timer set value decrement
-            [ ] Alarm activated
-            [ ] Active alarm paused
-            [ ] Reset
+            [X] Alarm activated
+            [X] Active alarm paused
+            [X] Reset
     [ ] Implement default state object with the following properties
         [ ] Break session value ({minutes, seconds} object?)
         [ ] Alarm timer set value ({minutes, seconds} object?)

@@ -125,9 +125,9 @@ const timerReducer = (state = defaultTimerState, action) => {
             [X] Active alarm paused
             [X] Reset
     [ ] Implement default state object with the following properties
-        [ ] Break session value ({minutes, seconds} object?)
-        [ ] Alarm timer set value ({minutes, seconds} object?)
-        [ ] Is alarm active?
+        [X] Break session value ({minutes, seconds} object?)
+        [X] Alarm timer set value ({minutes, seconds} object?)
+        [X] Is alarm active?
         [ ] (Should the audio file be triggered?)
     [X] Implement action creators
         [X] Break session value increment

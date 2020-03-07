@@ -25,11 +25,15 @@ const defaultTimerState = {
 
 /** Action Creators */
 const incrementSetBreakValue = () => {
-    return SETBREAKINCREMENT;
+    return {
+        type: SETBREAKINCREMENT
+    };
 }
 
 const decrementSetBreakValue = () => {
-    return SETBREAKDECREMENT;
+    return {
+        type: SETBREAKDECREMENT
+    };
 }
 
 /** Helper Functions */

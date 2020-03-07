@@ -8,10 +8,10 @@
 const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
 //Timer constants
-const MAXBREAKSESSIONMINUTES = 99;
-const MAXBREAKSESSIONSECONDS = 59;
-const MINBREAKSESSIONMINUTES = 0;
-const MINBREAKSESSIONSECONDS = 0;
+const MAXMINUTES = 99;
+const MAXSECONDS = 59;
+const MINMINUTES = 0;
+const MINSECONDS = 0;
 const SETBREAKINCREMENT = "SETBREAKINCREMENT";
 const SETBREAKDECREMENT = "SETBREAKDECREMENT";
 //Default timer state
@@ -71,8 +71,8 @@ Pomodoro Timer To-do's
     [ ] Implement constant variables
         [X] Implement MAX break session value
         [X] Implement MIN break session value
-        [ ] Implement MAX alarm timer value
-        [ ] Implement MIN alarm timer value
+        [X] Implement MAX alarm timer value
+        [X] Implement MIN alarm timer value
         [ ] Implement reducer function constants
             [ ] Break session increment
             [ ] Break session decrement

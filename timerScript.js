@@ -8,8 +8,8 @@
 const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
 //Timer constants
-const BREAKINCREMENT = "BREAKINCREMENT";
-const BREAKDECREMENT = "BREAKDECREMENT";
+const SETBREAKINCREMENT = "SETBREAKINCREMENT";
+const SETBREAKDECREMENT = "SETBREAKDECREMENT";
 //Default timer state
 const defaultTimerState = {
     setBreakMinutes: 5,

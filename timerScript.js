@@ -57,6 +57,12 @@ const decrementSetAlarmValue = () => {
     };
 }
 
+const startAlarm = () => {
+    return {
+        type: STARTALARM
+    };
+}
+
 /** Helper Functions */
 
 

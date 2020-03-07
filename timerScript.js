@@ -63,6 +63,12 @@ const startAlarm = () => {
     };
 }
 
+const pauseAlarm = () => {
+    return {
+        type: PAUSEALARM
+    };
+}
+
 /** Helper Functions */
 
 

@@ -24,7 +24,13 @@ const defaultTimerState = {
 }
 
 /** Action Creators */
+const incrementSetBreakValue = () => {
+    return SETBREAKINCREMENT;
+}
 
+const decrementSetBreakValue = () => {
+    return SETBREAKDECREMENT;
+}
 
 /** Helper Functions */
 

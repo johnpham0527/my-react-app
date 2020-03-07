@@ -2,7 +2,6 @@
 
 /*** Redux Code */
 
-
 /** Constants */
 //Redux constants
 const { Provider, connect } = ReactRedux;
@@ -110,8 +109,7 @@ const timerReducer = (state = defaultTimerState, action) => {
 
 
 
-/*
-Pomodoro Timer To-do's
+/*** Pomodoro Timer To-do's
 [ ] Implement Redux code
     [ ] Implement constant variables
         [X] Implement MAX break session value
@@ -131,14 +129,14 @@ Pomodoro Timer To-do's
         [ ] Alarm timer set value ({minutes, seconds} object?)
         [ ] Is alarm active?
         [ ] (Should the audio file be triggered?)
-    [ ] Implement action creators
-        [ ] Break session value increment
-        [ ] Break session value decrement
-        [ ] Alarm timer set value increment
-        [ ] Alarm timer set value decrement
-        [ ] Alarm has been activated
-        [ ] Active alarm has been paused
-        [ ] Reset button has been pushed
+    [X] Implement action creators
+        [X] Break session value increment
+        [X] Break session value decrement
+        [X] Alarm timer set value increment
+        [X] Alarm timer set value decrement
+        [X] Alarm has been activated
+        [X] Active alarm has been paused
+        [X] Reset button has been pushed
     [ ] Implement pomodoro timer reducer
         [ ] Break session value increment
         [ ] Break session value decrement
@@ -170,5 +168,4 @@ Pomodoro Timer To-do's
     [x] Create pomodoro.css
     [ ] Implement button styles
     [ ] Implement break session, set timer, and active alarm timer display styles
-
 */

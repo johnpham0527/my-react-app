@@ -65,6 +65,10 @@ const timerReducer = (state = defaultTimerState, action) => {
             return newState;
         case SETBREAKDECREMENT:
             return newState;
+        case SETALARMINCREMENT:
+            return newState;
+        case SETALARMDECREMENT:
+            return newState;
         default: 
             return state;
     }

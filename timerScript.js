@@ -40,7 +40,14 @@ const decrementSetBreakValue = () => {
 
 
 /** Reducer */
-
+const timerReducer = (state = defaultTimerState, action) => {
+    switch (action.type) {
+        case SETBREAKINCREMENT:
+        case SETBREAKDECREMENT:
+        default: 
+            return state;
+    }
+}
 
 
 /*** React-Redux Code */

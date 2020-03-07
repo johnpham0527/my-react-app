@@ -41,9 +41,12 @@ const decrementSetBreakValue = () => {
 
 /** Reducer */
 const timerReducer = (state = defaultTimerState, action) => {
+    let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
+            return newState;
         case SETBREAKDECREMENT:
+            return newState;
         default: 
             return state;
     }

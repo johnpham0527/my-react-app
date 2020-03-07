@@ -10,6 +10,16 @@ const { createStore } = Redux;
 //Timer constants
 const BREAKINCREMENT = "BREAKINCREMENT";
 const BREAKDECREMENT = "BREAKDECREMENT";
+//Default timer state
+const defaultTimerState = {
+    setBreakMinutes: 5,
+    setBreakSeconds: 0,
+    setTimerMinutes: 25,
+    setTimerSeconds: 0,
+    currentTimerMinutes: 0,
+    currentTimerSeconds: 0,
+    isTimerActive: false,
+}
 
 /** Action Creators */
 

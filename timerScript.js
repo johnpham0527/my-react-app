@@ -7,6 +7,9 @@
 //Redux constants
 const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
+//Timer constants
+const BREAKINCREMENT = "BREAKINCREMENT";
+const BREAKDECREMENT = "BREAKDECREMENT";
 
 /** Action Creators */
 

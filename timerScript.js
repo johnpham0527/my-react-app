@@ -114,6 +114,14 @@ const br = React.createElement(
     null
 );
 
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleTimerButtons = this.handleTimerButtons.bind(this);
+    }
+
+
+}
 
 /*** Pomodoro Timer To-do's
 [ ] Implement Redux code

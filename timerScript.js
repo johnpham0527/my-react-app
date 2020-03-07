@@ -14,6 +14,8 @@ const MINMINUTES = 0;
 const MINSECONDS = 0;
 const SETBREAKINCREMENT = "SETBREAKINCREMENT";
 const SETBREAKDECREMENT = "SETBREAKDECREMENT";
+const SETALARMINCREMENT = "SETALARMINCREMENT";
+const SETALARMDECREMENT = "SETALARMDECREMENT";
 //Default timer state
 const defaultTimerState = {
     setBreakMinutes: 5,
@@ -39,6 +41,8 @@ const decrementSetBreakValue = () => {
         type: SETBREAKDECREMENT
     };
 }
+
+
 
 /** Helper Functions */
 
@@ -74,10 +78,10 @@ Pomodoro Timer To-do's
         [X] Implement MAX alarm timer value
         [X] Implement MIN alarm timer value
         [ ] Implement reducer function constants
-            [ ] Break session increment
-            [ ] Break session decrement
-            [ ] Alarm timer set value increment
-            [ ] Alarm timer set value decrement
+            [X] Break session increment
+            [X] Break session decrement
+            [X] Alarm timer set value increment
+            [X] Alarm timer set value decrement
             [ ] Alarm activated
             [ ] Active alarm paused
             [ ] Reset

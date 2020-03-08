@@ -352,6 +352,8 @@ ReactDOM.render(
     [ ] Learn about set interval
 [ ] Learn how to play an HTML5 audio file in React
     [ ] How did I implement this with the drum project?
+[ ] Implement images
+    [ ] Implement up and down arrow clickable images instead of using buttons
 [ ] Implement CSS
     [x] Create pomodoro.css
     [ ] Implement button styles

@@ -343,8 +343,8 @@ ReactDOM.render(
 [ ] Implement React code template
     [X] Implement constructor
     [X] Implement handleClockButtons method
-    [ ] Implement break session increment and decrement buttons
-    [ ] Implement break session display
+    [X] Implement break session increment and decrement buttons
+    [X] Implement break session display
     [ ] Implement set timer increment and decrement buttons
     [ ] Implement set timer display
     [ ] Implement active alarm timer

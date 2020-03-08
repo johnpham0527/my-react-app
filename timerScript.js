@@ -340,7 +340,9 @@ ReactDOM.render(
         [X] Reset button has been pushed
     [ ] Implement pomodoro timer reducer
         [ ] Break session value increment
+            [ ] Does FreeCodeCamp set a max value here?
         [ ] Break session value decrement
+            [ ] Check for min value (cannot be less than zero)
         [ ] Alarm timer set value increment
         [ ] Alarm timer set value decrement
         [ ] Alarm has been activated

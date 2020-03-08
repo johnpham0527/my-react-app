@@ -105,7 +105,23 @@ const store = Redux.createStore(timerReducer);
 
 
 /*** React-Redux Code */
+const mapStateToProps = state => {
+    return {
+        storeState: state
+    }
+}
 
+const mapDispatchToProps = dispatch => {
+    return {
+        submitIncrementSetBreakValue: () => {
+            return dispatch(incrementSetBreakValue)
+        },
+        submitDecrementSetBreakValue: () => {
+            return dispatch(decrementSetBreakValue)
+        },
+        
+    }
+}
 
 
 /*** React Code */

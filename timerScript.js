@@ -145,6 +145,13 @@ const br = React.createElement(
     null
 );
 
+/** Custom HTML markup */
+const colon = React.createElement(
+    "span",
+    null,
+    ": "
+);
+
 /** Pomodoro Clock class */
 class PomodoroClock extends React.Component {
     constructor(props) {
@@ -199,11 +206,12 @@ class PomodoroClock extends React.Component {
                         id: "main"
                     },
                     React.createElement(
-                        "div",
+                        "span",
                         {
                             id: "break-label"
                         },
                         "Break Length",
+                        colon,
                         br,
                         React.createElement(
                             "button",

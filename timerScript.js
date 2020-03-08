@@ -137,23 +137,6 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
-
-class AppWrapper extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            React.createElement(
-                Provider,
-                {store: store},
-                React.createElement(Container, null, null)
-            )
-        )
-    }
-}
-
 
 /*** React Code */
 
@@ -208,6 +191,25 @@ class PomodoroClock extends React.Component {
         )
     }
 
+}
+
+/** Container */
+const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
+
+/** AppWrapper */
+class AppWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            React.createElement(
+                Provider,
+                {store: store},
+                React.createElement(Container, null, null)
+            )
+        )
+    }
 }
 
 /** ReactDOM */

@@ -74,7 +74,10 @@ const resetAlarm = () => {
 
 
 /** Helper Functions */
-
+const playAlarm = () => {
+    let alarm = document.getElementById("alarm");
+    alarm.play();
+}
 
 /** Reducer */
 const timerReducer = (state = defaultTimerState, action) => {

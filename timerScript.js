@@ -194,6 +194,19 @@ class PomodoroClock extends React.Component {
                         }
                     },
                     "Pomodoro Clock"
+                ),
+                React.createElement(
+                    "div",
+                    {
+                        id: "pomodoroclock"
+                    },
+                    React.createElement(
+                        "div",
+                        {
+                            id: "break-label"
+                        },
+                        "Break Length"
+                    )
                 )
             )
         )

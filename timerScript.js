@@ -186,7 +186,7 @@ class PomodoroClock extends React.Component {
             React.createElement(
                 "div",
                 null,
-                "Hello world"
+                "Pomodoro Clock"
             )
         )
     }

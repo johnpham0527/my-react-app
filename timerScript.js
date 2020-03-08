@@ -155,6 +155,12 @@ class PomodoroClock extends React.Component {
 
     handleClockButtons(buttonValue) {
         switch (buttonValue) {
+            case "incrementSetBreakValue":
+                this.props.submitIncrementSetAlarmValue;
+                break;
+            case "decrementSetBreakValue":
+                this.props.submitDecrementSetBreakValue;
+                break;
             default:
                 return -1;
         }

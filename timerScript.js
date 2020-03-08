@@ -139,6 +139,22 @@ const mapDispatchToProps = dispatch => {
 
 const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
 
+class AppWrapper extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            React.createElement(
+                Provider,
+                {store: store},
+                React.createElement(Container, null, null)
+            )
+        )
+    }
+}
+
+
 /*** React Code */
 
 /** HTML tag constants */

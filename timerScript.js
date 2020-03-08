@@ -161,6 +161,13 @@ class PomodoroClock extends React.Component {
             case "decrementSetBreakValue":
                 this.props.submitDecrementSetBreakValue;
                 break;
+            case "incrementSetAlarmValue":
+                this.props.submitIncrementSetAlarmValue;
+                break;
+            case "decrementSetAlarmValue":
+                this.props.submitDecrementSetAlarmValue;
+                break;
+            
             default:
                 return -1;
         }

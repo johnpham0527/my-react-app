@@ -212,6 +212,13 @@ class PomodoroClock extends React.Component {
                         },
                         "Break Length",
                         colon,
+                        React.createElement(
+                            "span",
+                            {
+                                id: "break-length"
+                            },
+                            this.props.storeState.setBreakMinutes,
+                        ),
                         br,
                         React.createElement(
                             "button",

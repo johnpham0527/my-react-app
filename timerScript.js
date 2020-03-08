@@ -241,7 +241,15 @@ class PomodoroClock extends React.Component {
                                 onClick: () => this.handleClockButtons("incrementSetAlarmValue")
                             },
                             "Increment Session"
-                        )
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "session-decrement",
+                                onClick: () => this.handleClockButtons("decrementSetAlarmValue")
+                            },
+                            "Decrement Session"
+                        ),
                     )
                 )
             )

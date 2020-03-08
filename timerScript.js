@@ -119,7 +119,12 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetBreakValue: () => {
             return dispatch(decrementSetBreakValue)
         },
-        
+        submitIncrementSetAlarmValue: () => {
+            return dispatch(incrementSetAlarmValue)
+        },
+        submitDecrementSetAlarmValue: () => {
+            return dispatch(decrementSetAlarmValue)
+        },
     }
 }
 

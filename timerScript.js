@@ -137,6 +137,7 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
+const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
 
 /*** React Code */
 
@@ -183,7 +184,7 @@ class PomodoroClock extends React.Component {
 
 }
 
-const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
+
 
 /*** Pomodoro Clock To-do's
 [ ] Implement Redux code

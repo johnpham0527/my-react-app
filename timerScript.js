@@ -84,7 +84,6 @@ const timerReducer = (state = defaultTimerState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
-            //playAlarm();
             
             return newState;
         case SETBREAKDECREMENT:
@@ -167,7 +166,7 @@ class PomodoroClock extends React.Component {
     handleClockButtons(buttonValue) {
         switch (buttonValue) {
             case "incrementSetBreakValue":
-                this.props.submitIncrementSetAlarmValue;
+                this.props.submitIncrementSetBreakValue;
                 break;
             case "decrementSetBreakValue":
                 this.props.submitDecrementSetBreakValue;

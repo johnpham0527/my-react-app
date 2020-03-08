@@ -164,6 +164,7 @@ const br = React.createElement(
     null
 );
 
+/** Pomodoro Clock class */
 class PomodoroClock extends React.Component {
     constructor(props) {
         super(props);

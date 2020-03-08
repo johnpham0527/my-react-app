@@ -364,8 +364,8 @@ ReactDOM.render(
     [ ] Implement active alarm timer
 [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
-[ ] Learn how to play an HTML5 audio file in React
-    [ ] How did I implement this with the drum project?
+[X] Implement helper function to play audio
+    [X] Create playAudio helper function
 [ ] Implement images
     [ ] Implement up and down arrow clickable images instead of using buttons
 [ ] Implement CSS

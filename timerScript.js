@@ -198,15 +198,25 @@ class PomodoroClock extends React.Component {
                 React.createElement(
                     "div",
                     {
-                        id: "pomodoroclock"
+                        id: "main"
                     },
                     React.createElement(
                         "div",
                         {
                             id: "break-label"
                         },
-                        "Break Length"
-                    )
+                        "Break Length",
+                        br,
+                        React.createElement(
+                            "button",
+                            {
+                                id: "break-increment",
+                                onClick: () => this.handleClockButtons("incrementSetBreakValue")
+                            },
+                            "Increment Break"
+                        ),
+                    ),
+
                 )
             )
         )

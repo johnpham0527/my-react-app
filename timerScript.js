@@ -224,7 +224,17 @@ class PomodoroClock extends React.Component {
                             "Decrement Break"
                         ),
                     ),
-
+                    React.createElement(
+                        "div",
+                        {
+                            id: "session-label",
+                            style: {
+                                marginTop: "1em"
+                            }
+                        },
+                        "Session Length",
+                        br,
+                    )
                 )
             )
         )

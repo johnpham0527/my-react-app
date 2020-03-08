@@ -179,7 +179,11 @@ class PomodoroClock extends React.Component {
                 return -1;
         }
     }
+
+
 }
+
+const Container = connect(mapStateToProps,mapDispatchToProps)(PomodoroClock);
 
 /*** Pomodoro Clock To-do's
 [ ] Implement Redux code

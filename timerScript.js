@@ -84,9 +84,10 @@ const timerReducer = (state = defaultTimerState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
-            
+            newState.setBreakMinutes++;
             return newState;
         case SETBREAKDECREMENT:
+            newState.setBreakMinutes--;
             return newState;
         case SETALARMINCREMENT:
             return newState;

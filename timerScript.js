@@ -200,7 +200,11 @@ class PomodoroClock extends React.Component {
 
 }
 
-
+/** ReactDOM */
+ReactDOM.render(
+    React.createElement(AppWrapper),
+    document.querySelector("#app")
+)
 
 /*** Pomodoro Clock To-do's
 [ ] Implement Redux code

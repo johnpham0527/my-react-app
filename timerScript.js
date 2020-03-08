@@ -215,6 +215,14 @@ class PomodoroClock extends React.Component {
                             },
                             "Increment Break"
                         ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "break-decrement",
+                                onClick: () => this.handleClockButtons("decrementSetBreakValue")
+                            },
+                            "Decrement Break"
+                        ),
                     ),
 
                 )

@@ -117,25 +117,25 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         submitIncrementSetBreakValue: () => {
-            return dispatch(incrementSetBreakValue)
+            return dispatch(incrementSetBreakValue())
         },
         submitDecrementSetBreakValue: () => {
-            return dispatch(decrementSetBreakValue)
+            return dispatch(decrementSetBreakValue())
         },
         submitIncrementSetAlarmValue: () => {
-            return dispatch(incrementSetAlarmValue)
+            return dispatch(incrementSetAlarmValue())
         },
         submitDecrementSetAlarmValue: () => {
-            return dispatch(decrementSetAlarmValue)
+            return dispatch(decrementSetAlarmValue())
         },
         submitStartAlarm: () => {
-            return dispatch(startAlarm)
+            return dispatch(startAlarm())
         },
         submitPauseAlarm: () => {
-            return dispatch(pauseAlarm)
+            return dispatch(pauseAlarm())
         },
         submitResetAlarm: () => {
-            return dispatch(resetAlarm)
+            return dispatch(resetAlarm())
         },
     }
 }

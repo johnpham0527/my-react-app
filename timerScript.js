@@ -247,10 +247,10 @@ ReactDOM.render(
     [ ] Implement helper functions
         [ ] (Convert seconds to {minutes, seconds} object?)
         [ ] (Convert {minutes, seconds} object to seconds?)
-[ ] Implement React-Redux code
-    [ ] Implement app wrapper
-    [ ] Map Redux state to React props
-    [ ] Map Redux dispatchers to React props
+[X] Implement React-Redux code
+    [X] Implement app wrapper
+    [X] Map Redux state to React props
+    [X] Map Redux dispatchers to React props
 [ ] Implement React code template
     [X] Implement constructor
     [X] Implement handleClockButtons method

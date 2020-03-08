@@ -81,6 +81,8 @@ const timerReducer = (state = defaultTimerState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
+            //playAlarm();
+            
             return newState;
         case SETBREAKDECREMENT:
             return newState;
@@ -264,6 +266,15 @@ class PomodoroClock extends React.Component {
                             "Decrement Session"
                         ),
                     )
+                ),
+                React.createElement(
+                    "audio",
+                    {
+                        className: "clip",
+                        id: "alarm",
+                        src: "http://john-pham.com/freecodecamp/Organic_cloudcity.mp3"
+                    },
+                    null
                 )
             )
         )

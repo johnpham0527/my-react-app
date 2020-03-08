@@ -125,6 +125,15 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue)
         },
+        submitStartAlarm: () => {
+            return dispatch(startAlarm)
+        },
+        submitPauseAlarm: () => {
+            return dispatch(pauseAlarm)
+        },
+        submitResetAlarm: () => {
+            return dispatch(resetAlarm)
+        },
     }
 }
 

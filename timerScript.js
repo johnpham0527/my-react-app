@@ -74,6 +74,7 @@ const resetAlarm = () => {
     };
 }
 
+
 /** Helper Functions */
 
 
@@ -99,6 +100,8 @@ const timerReducer = (state = defaultTimerState, action) => {
             return state;
     }
 }
+
+const store = Redux.createStore(timerReducer);
 
 
 /*** React-Redux Code */
@@ -174,7 +177,7 @@ class PomodoroClock extends React.Component {
     [ ] Map Redux dispatchers to React props
 [ ] Implement React code template
     [X] Implement constructor
-    [X] Implement handleClockButtons method
+    [ ] Implement handleClockButtons method
     [ ] Implement break session increment and decrement buttons
     [ ] Implement break session display
     [ ] Implement set timer increment and decrement buttons

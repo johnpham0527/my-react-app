@@ -364,6 +364,7 @@ ReactDOM.render(
     [ ] Implement set timer increment and decrement buttons
     [ ] Implement set timer display
     [ ] Implement active alarm timer
+    [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
 [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
 [X] Implement helper function to play audio

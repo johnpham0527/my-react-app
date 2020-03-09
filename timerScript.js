@@ -253,6 +253,14 @@ class PomodoroClock extends React.Component {
                             }
                         },
                         "Session Length",
+                        colon,
+                        React.createElement(
+                            "span",
+                            {
+                                id: "session-length"
+                            },
+                            this.props.storeState.setTimerMinutes,
+                        ),
                         br,
                         React.createElement(
                             "button",

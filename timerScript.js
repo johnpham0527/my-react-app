@@ -90,8 +90,10 @@ const timerReducer = (state = defaultTimerState, action) => {
             newState.setBreakMinutes--;
             return newState;
         case SETALARMINCREMENT:
+            newState.setTimerMinutes++;
             return newState;
         case SETALARMDECREMENT:
+            newState.setTimerMinutes--;
             return newState;
         case STARTALARM:
             return newState;

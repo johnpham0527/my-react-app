@@ -358,7 +358,9 @@ ReactDOM.render(
         [ ] Break session value decrement
             [ ] Check for min value (cannot be less than zero)
         [ ] Alarm timer set value increment
+            [ ] Does FreeCodeCamp set a max value here?
         [ ] Alarm timer set value decrement
+            [ ] Check for min value (cannot be less than zero)
         [ ] Alarm has been activated
         [ ] Active alarm has been paused
         [ ] Reset button has been pushed

@@ -288,7 +288,7 @@ class PomodoroClock extends React.Component {
                     "audio",
                     {
                         className: "clip",
-                        id: "alarm",
+                        id: "beep",
                         src: "http://john-pham.com/freecodecamp/Organic_cloudcity.mp3"
                     },
                     null

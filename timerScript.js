@@ -364,7 +364,7 @@ ReactDOM.render(
         [ ] Alarm has been activated
         [ ] Active alarm has been paused
         [ ] Reset button has been pushed
-        [ ] Default state
+        [X] Default state
     [ ] Implement helper functions
         [ ] (Convert seconds to {minutes, seconds} object?)
         [ ] (Convert {minutes, seconds} object to seconds?)

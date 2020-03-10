@@ -25,9 +25,11 @@ const defaultTimerState = {
         minutes: -1,
         seconds: -1
     },
-
-    currentTimerMinutes: -1,
-    currentTimerSeconds: -1,
+    setTimerMinutes: 25,
+    currentTimerRemaining: {
+        minutes: -1,
+        seconds: -1
+    },
     isTimerActive: false,
 }
 
@@ -373,8 +375,8 @@ ReactDOM.render(
     [X] Implement handleClockButtons method
     [X] Implement break session increment and decrement buttons
     [X] Implement break session display
-    [ ] Implement set timer increment and decrement buttons
-    [ ] Implement set timer display
+    [X] Implement set timer increment and decrement buttons
+    [X] Implement set timer display
     [ ] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
 [ ] Learn how to implement a timer in vanilla JavaScript

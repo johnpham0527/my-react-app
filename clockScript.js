@@ -354,6 +354,7 @@ class PomodoroClock extends React.Component {
                     ),
                     br,
                     /** Play alarm button */
+                    /*
                     React.createElement(
                         "button",
                         {
@@ -362,6 +363,7 @@ class PomodoroClock extends React.Component {
                         "Play Alarm"
                     ),
                     br,
+                    */
                     /** Start session timer */
                     React.createElement(
                         "button",

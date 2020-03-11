@@ -110,8 +110,8 @@ const convertSecondsToTime = (seconds) => {
 const displayTimeText = (timeObject) => {
     //add leading zeros if minutes or seconds is a single digit number
     let timeText = {
-        minutes: timeObject.minutes,
-        seconds: timeObject.seconds
+        minutes: timeObject.minutes.toString(),
+        seconds: timeObject.seconds.toString()
     };
     
     if (timeObject.minutes < 10) {

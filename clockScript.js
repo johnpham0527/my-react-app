@@ -208,7 +208,7 @@ class PomodoroClock extends React.Component {
                 break;
             case "submitResetAlarm":
                 this.props.submitResetAlarm();
-            case "playAlarm":
+            case "submitPlayAlarm":
                 this.props.submitPlayAlarm();
             default:
                 return -1;
@@ -226,7 +226,7 @@ class PomodoroClock extends React.Component {
         const colon = React.createElement(
             "span",
             null,
-            ": "
+            ":"
         );
 
         return (
@@ -254,7 +254,7 @@ class PomodoroClock extends React.Component {
                             id: "break-label"
                         },
                         "Break Length",
-                        colon,
+                        colon, " ",
                         React.createElement(
                             "span",
                             {
@@ -290,7 +290,7 @@ class PomodoroClock extends React.Component {
                             }
                         },
                         "Session Length",
-                        colon,
+                        colon, " ",
                         React.createElement(
                             "span",
                             {
@@ -322,9 +322,9 @@ class PomodoroClock extends React.Component {
                         "div",
                         {},
                         "Remaining Session Time",
-                        colon,
+                        colon, " ",
                         this.props.storeState.currentSessionRemaining.minutes,
-                        colon,
+                        colon, " ",
                         this.props.storeState.currentSessionRemaining.seconds
                     ),
                     br,
@@ -333,20 +333,29 @@ class PomodoroClock extends React.Component {
                         "div",
                         {},
                         "Remaining Break Time",
-                        colon,
+                        colon, " ",
                         this.props.storeState.currentBreakRemaining.minutes,
-                        colon,
-                        this.props.storeState.currentBreakRemaining.seconds
+                        colon, " ",
+                        this.props.storeState.currentBreakRemaining.seconds,
                     ),
                     br,
                     /** Play alarm button */
                     React.createElement(
                         "button",
                         {
-                            onClick: () => this.handleClockButtons("playAlarm")
+                            onClick: () => this.handleClockButtons("submitPlayAlarm")
                         },
                         "Play Alarm"
                     ),
+                    br,
+                    /** Start session timer */
+                    React.createElement(
+                        "button",
+                        {
+                            onClick: () => this.handleClockButtons("submitStartAlarm")
+                        },
+                        "Start Session Timer"
+                    )
                 ),
                 React.createElement(
                     "audio",

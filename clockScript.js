@@ -343,13 +343,9 @@ class PomodoroClock extends React.Component {
                         {},
                         "Remaining Session Time",
                         colon, " ",
-                        this.props.storeState.currentSessionRemaining.minutes,
-                        colon, " ",
-                        this.props.storeState.currentSessionRemaining.seconds,
-                        br,
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
                         colon,
-                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds
+                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
                     ),
                     br,
                     /** Elements for displaying the break value from the Redux state */

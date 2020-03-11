@@ -19,6 +19,7 @@ const STARTALARM = "STARTALARM";
 const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
 const PLAYALARM = "PLAYALARM";
+const COUNTDOWN = "COUNTDOWN";
 //Default clock state
 const defaultClockState = {
     setBreakMinutes: 5,
@@ -146,6 +147,8 @@ const clockReducer = (state = defaultClockState, action) => {
         case PLAYALARM:
             playAlarmSound();
             return newState;
+        case COUNTDOWN:
+            totalRemainingSessionSeconds--;
         default: 
             return state;
     }

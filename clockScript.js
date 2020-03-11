@@ -90,6 +90,21 @@ const playAlarmSound = () => {
     alarm.play();
 }
 
+const convertSecondsToTimeObject = (seconds) => {
+    let minutesDivisor = seconds % (60 * 60);
+    let min = Math.floor(minutesDivisor / 60);
+    
+    let secondsDivisor = minutesDivisor % 60;
+    let sec = Math.ceil(secondsDivisor);
+
+    let timeObject = {
+        minutes: min,
+        seconds: sec
+    };
+
+    return timeObject;
+}
+
 /** Reducer */
 const clockReducer = (state = defaultClockState, action) => {
     let newState = Object.assign({}, state);

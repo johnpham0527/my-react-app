@@ -23,10 +23,6 @@ const COUNTDOWN = "COUNTDOWN";
 //Default clock state
 const defaultClockState = {
     setBreakMinutes: 5,
-    currentBreakRemaining: {
-        minutes: 5,
-        seconds: 0
-    },
     totalRemainingBreakSeconds: 5 * 60,
     setSessionMinutes: 25,
     currentSessionRemaining: {
@@ -139,6 +135,7 @@ const clockReducer = (state = defaultClockState, action) => {
             newState.setSessionMinutes--;
             return newState;
         case STARTALARM:
+
             return newState;
         case PAUSEALARM:
             return newState;

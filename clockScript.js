@@ -18,6 +18,7 @@ const SETALARMDECREMENT = "SETALARMDECREMENT";
 const STARTALARM = "STARTALARM";
 const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
+const PLAYALARM = "PLAYALARM";
 //Default clock state
 const defaultClockState = {
     setBreakMinutes: 5,
@@ -76,10 +77,16 @@ const resetAlarm = () => {
     };
 }
 
+const playAlarm = () => {
+    return {
+        type: PLAYALARM
+    };
+}
+
 
 /** Helper Functions */
-const playAlarm = () => {
-    let alarm = document.getElementById("alarm");
+const playAlarmSound = () => {
+    let alarm = document.getElementById("beep");
     alarm.play();
 }
 
@@ -106,7 +113,7 @@ const clockReducer = (state = defaultClockState, action) => {
         case RESETALARM:
             return newState;
         case PLAYALARM:
-            playAlarm();
+            playAlarmSound();
             return newState;
         default: 
             return state;
@@ -146,6 +153,9 @@ const mapDispatchToProps = dispatch => {
         submitResetAlarm: () => {
             return dispatch(resetAlarm())
         },
+        submitPlayAlarm: () => {
+            return dispatch(playAlarm())
+        },
     }
 }
 
@@ -183,6 +193,8 @@ class PomodoroClock extends React.Component {
                 break;
             case "submitResetAlarm":
                 this.props.submitResetAlarm();
+            case "playAlarm":
+                this.props.submitPlayAlarm();
             default:
                 return -1;
         }
@@ -293,9 +305,7 @@ class PomodoroClock extends React.Component {
                     /** Elements for displaying the clock value from the Redux state */
                     React.createElement(
                         "div",
-                        {
-
-                        },
+                        {},
                         "Remaining Session Time",
                         colon,
                         this.props.storeState.currentSessionRemaining.minutes,
@@ -306,14 +316,21 @@ class PomodoroClock extends React.Component {
                     /** Elements for displaying the break value from the Redux state */
                     React.createElement(
                         "div",
-                        {
-
-                        },
+                        {},
                         "Remaining Break Time",
                         colon,
                         this.props.storeState.currentBreakRemaining.minutes,
                         colon,
                         this.props.storeState.currentBreakRemaining.seconds
+                    ),
+                    br,
+                    /** Play alarm button */
+                    React.createElement(
+                        "button",
+                        {
+                            onClick: () => this.handleClockButtons("playAlarm")
+                        },
+                        "Play Alarm"
                     ),
                 ),
                 React.createElement(

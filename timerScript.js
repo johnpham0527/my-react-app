@@ -285,7 +285,22 @@ class PomodoroClock extends React.Component {
                             },
                             "Decrement Session"
                         ),
-                    )
+                    ),
+                    br,
+                    /** Elements for displaying the timer value from the Redux state */
+                    React.createElement(
+                        "div",
+                        {
+
+                        },
+                        "Remaining Session Time",
+                        colon,
+                        this.props.storeState.currentTimerRemaining.minutes,
+                        colon,
+                        this.props.storeState.currentTimerRemaining.seconds
+                    ),
+                    br,
+                    
                 ),
                 React.createElement(
                     "audio",

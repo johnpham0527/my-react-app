@@ -25,7 +25,7 @@ const defaultClockState = {
     setBreakMinutes: 5,
     totalRemainingBreakSeconds: 5 * 60,
     setSessionMinutes: 25,
-    totalRemainingSessionSeconds: 25 * 60,
+    totalRemainingSessionSeconds: 26 * 60,
     isClockActive: false,
 }
 
@@ -78,6 +78,11 @@ const playAlarm = () => {
     };
 }
 
+const countdown = () => {
+    return {
+        type: COUNTDOWN
+    };
+}
 
 /** Helper Functions */
 const playAlarmSound = () => {
@@ -142,7 +147,8 @@ const clockReducer = (state = defaultClockState, action) => {
             playAlarmSound();
             return newState;
         case COUNTDOWN:
-            totalRemainingSessionSeconds--;
+            newState.totalRemainingSessionSeconds--;
+            return newState;
         default: 
             return state;
     }
@@ -480,6 +486,9 @@ ReactDOM.render(
     [X] Implement set timer display
     [ ] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
+    [ ] Let the React code handle whether the clock is active or not in local state
+        [ ] The reducer should be a pure function with no side effects
+        [ ] If timer is active, there should be a way to call, within React, the set interval function with a function that counts down one second
 [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval

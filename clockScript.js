@@ -489,6 +489,8 @@ ReactDOM.render(
     [ ] Let the React code handle whether the clock is active or not in local state
         [ ] The reducer should be a pure function with no side effects
         [ ] If timer is active, there should be a way to call, within React, the set interval function with a function that counts down one second
+        [ ] Consider creating a component that is rendered only when the boolean local state is set to true by Start.
+        [ ] Consider creating a component that is rendered when the boolean local state is set to false by Pause or Reset.
 [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval

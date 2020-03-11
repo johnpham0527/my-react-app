@@ -397,6 +397,7 @@ ReactDOM.render(
     [ ] Implement helper functions
         [ ] (Convert seconds to {minutes, seconds} object?)
         [ ] (Convert {minutes, seconds} object to seconds?)
+        [ ] Write a function that checks a value, converts it to text, and adds a leading zero if necessary
 [X] Implement React-Redux code
     [X] Implement app wrapper
     [X] Map Redux state to React props

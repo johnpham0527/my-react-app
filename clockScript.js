@@ -493,6 +493,7 @@ ReactDOM.render(
         [ ] Consider creating a component that is rendered when the boolean local state is set to false by Pause or Reset.
         [ ] Read this carefully, particularly on how to handle the store: https://stackoverflow.com/questions/39562317/react-js-redux-setinterval-and-clearinterval-in-reducers
         [ ] Research on Google: https://www.google.com/search?client=firefox-b-1-d&q=how+to+use+set+interval+in+redux
+        [ ] This seems like the solution: https://codesandbox.io/s/vigilant-wildflower-3yvux. Look at mapDispatchToProps
         [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval

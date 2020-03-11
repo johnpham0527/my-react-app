@@ -22,13 +22,13 @@ const RESETALARM = "RESETALARM";
 const defaultTimerState = {
     setBreakMinutes: 5,
     currentBreakRemaining: {
-        minutes: -1,
-        seconds: -1
+        minutes: 5,
+        seconds: 0
     },
     setTimerMinutes: 25,
     currentTimerRemaining: {
-        minutes: -1,
-        seconds: -1
+        minutes: 25,
+        seconds: 0
     },
     isTimerActive: false,
 }

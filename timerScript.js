@@ -25,8 +25,8 @@ const defaultTimerState = {
         minutes: 5,
         seconds: 0
     },
-    setTimerMinutes: 25,
-    currentTimerRemaining: {
+    setSessionMinutes: 25,
+    currentSessionRemaining: {
         minutes: 25,
         seconds: 0
     },
@@ -94,10 +94,10 @@ const timerReducer = (state = defaultTimerState, action) => {
             newState.setBreakMinutes--;
             return newState;
         case SETALARMINCREMENT:
-            newState.setTimerMinutes++;
+            newState.setSessionMinutes++;
             return newState;
         case SETALARMDECREMENT:
-            newState.setTimerMinutes--;
+            newState.setSessionMinutes--;
             return newState;
         case STARTALARM:
             return newState;
@@ -266,7 +266,7 @@ class PomodoroClock extends React.Component {
                             {
                                 id: "session-length"
                             },
-                            this.props.storeState.setTimerMinutes,
+                            this.props.storeState.setSessionMinutes,
                         ),
                         br,
                         React.createElement(
@@ -295,9 +295,9 @@ class PomodoroClock extends React.Component {
                         },
                         "Remaining Session Time",
                         colon,
-                        this.props.storeState.currentTimerRemaining.minutes,
+                        this.props.storeState.currentSessionRemaining.minutes,
                         colon,
-                        this.props.storeState.currentTimerRemaining.seconds
+                        this.props.storeState.currentSessionRemaining.seconds
                     ),
                     br,
                     /** Elements for displaying the break value from the Redux state */

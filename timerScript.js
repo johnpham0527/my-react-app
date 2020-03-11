@@ -199,8 +199,6 @@ class PomodoroClock extends React.Component {
             ": "
         );
 
-
-        
         return (
             React.createElement(
                 "div",
@@ -219,6 +217,7 @@ class PomodoroClock extends React.Component {
                     {
                         id: "main"
                     },
+                    /** Elements for setting the break length */
                     React.createElement(
                         "span",
                         {
@@ -251,6 +250,7 @@ class PomodoroClock extends React.Component {
                             "Decrement Break"
                         ),
                     ),
+                    /** Elements for setting the session length */
                     React.createElement(
                         "div",
                         {

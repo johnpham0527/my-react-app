@@ -110,16 +110,17 @@ const convertSecondsToTime = (seconds) => {
 const displayTimeText = (timeObject) => {
     //add leading zeros if minutes or seconds is a single digit number
     let timeText = {
-        minutes: toString(timeObject.minutes),
-        seconds: toString(timeObject.seconds)
+        minutes: timeObject.minutes,
+        seconds: timeObject.seconds
     };
+    
     if (timeObject.minutes < 10) {
         timeText.minutes = "0" + timeText.minutes;
     }
+    
     if (timeObject.seconds < 10) {
         timeText.seconds = "0" + timeText.seconds;
     }
-
     //return an object containing the minutes and seconds in text format
     return timeText;
 }
@@ -346,9 +347,9 @@ class PomodoroClock extends React.Component {
                         colon, " ",
                         this.props.storeState.currentSessionRemaining.seconds,
                         br,
-                        convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds).minutes,
+                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
                         colon,
-                        convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds).seconds
+                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds
                     ),
                     br,
                     /** Elements for displaying the break value from the Redux state */

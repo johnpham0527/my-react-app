@@ -149,19 +149,7 @@ const mapDispatchToProps = dispatch => {
 
 /*** React Code */
 
-/** HTML tag constants */
-const br = React.createElement(
-    "br",
-    null,
-    null
-);
 
-/** Custom HTML markup */
-const colon = React.createElement(
-    "span",
-    null,
-    ": "
-);
 
 /** Pomodoro Clock class */
 class PomodoroClock extends React.Component {
@@ -198,6 +186,21 @@ class PomodoroClock extends React.Component {
     }
 
     render() {
+        /** HTML tag constants */
+        const br = React.createElement(
+            "br",
+            null,
+            null
+        );
+
+        const colon = React.createElement(
+            "span",
+            null,
+            ": "
+        );
+
+
+        
         return (
             React.createElement(
                 "div",

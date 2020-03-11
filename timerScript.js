@@ -6,7 +6,7 @@
 //Redux constants
 const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
-//Timer constants
+//Clock constants
 const MAXMINUTES = 99;
 const MAXSECONDS = 59;
 const MINMINUTES = 0;
@@ -18,8 +18,8 @@ const SETALARMDECREMENT = "SETALARMDECREMENT";
 const STARTALARM = "STARTALARM";
 const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
-//Default timer state
-const defaultTimerState = {
+//Default clock state
+const defaultClockState = {
     setBreakMinutes: 5,
     currentBreakRemaining: {
         minutes: 5,
@@ -30,7 +30,7 @@ const defaultTimerState = {
         minutes: 25,
         seconds: 0
     },
-    isTimerActive: false,
+    isClockActive: false,
 }
 
 /** Action Creators */
@@ -84,7 +84,7 @@ const playAlarm = () => {
 }
 
 /** Reducer */
-const timerReducer = (state = defaultTimerState, action) => {
+const clockReducer = (state = defaultClockState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
@@ -110,7 +110,7 @@ const timerReducer = (state = defaultTimerState, action) => {
     }
 }
 
-const store = Redux.createStore(timerReducer);
+const store = Redux.createStore(clockReducer);
 
 
 /*** React-Redux Code */
@@ -287,7 +287,7 @@ class PomodoroClock extends React.Component {
                         ),
                     ),
                     br,
-                    /** Elements for displaying the timer value from the Redux state */
+                    /** Elements for displaying the clock value from the Redux state */
                     React.createElement(
                         "div",
                         {

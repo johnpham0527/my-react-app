@@ -92,7 +92,7 @@ const playAlarmSound = () => {
     alarm.play();
 }
 
-const convertSecondsToTimeObject = (seconds) => {
+const convertSecondsToTime = (seconds) => {
     let minutesDivisor = seconds % (60 * 60);
     let min = Math.floor(minutesDivisor / 60);
     
@@ -327,7 +327,9 @@ class PomodoroClock extends React.Component {
                         colon, " ",
                         this.props.storeState.currentSessionRemaining.minutes,
                         colon, " ",
-                        this.props.storeState.currentSessionRemaining.seconds
+                        this.props.storeState.currentSessionRemaining.seconds,
+                        br,
+                        this.props.storeState.totalRemainingSessionSeconds
                     ),
                     br,
                     /** Elements for displaying the break value from the Redux state */

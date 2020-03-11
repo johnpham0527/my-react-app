@@ -300,7 +300,18 @@ class PomodoroClock extends React.Component {
                         this.props.storeState.currentTimerRemaining.seconds
                     ),
                     br,
-                    
+                    /** Elements for displaying the break value from the Redux state */
+                    React.createElement(
+                        "div",
+                        {
+
+                        },
+                        "Remaining Break Time",
+                        colon,
+                        this.props.storeState.currentBreakRemaining.minutes,
+                        colon,
+                        this.props.storeState.currentBreakRemaining.seconds
+                    ),
                 ),
                 React.createElement(
                     "audio",

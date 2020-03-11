@@ -492,7 +492,8 @@ ReactDOM.render(
         [ ] Consider creating a component that is rendered only when the boolean local state is set to true by Start.
         [ ] Consider creating a component that is rendered when the boolean local state is set to false by Pause or Reset.
         [ ] Read this carefully, particularly on how to handle the store: https://stackoverflow.com/questions/39562317/react-js-redux-setinterval-and-clearinterval-in-reducers
-[ ] Learn how to implement a timer in vanilla JavaScript
+        [ ] Research on Google: https://www.google.com/search?client=firefox-b-1-d&q=how+to+use+set+interval+in+redux
+        [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval
 [X] Implement helper function to play audio

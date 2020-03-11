@@ -496,6 +496,8 @@ ReactDOM.render(
         [ ] Learn how to implement a timer in vanilla JavaScript
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval
+    [ ] Implement reset timer button
+    [ ] Implement button IDs (FreeCodeCamp)
 [X] Implement helper function to play audio
     [X] Create playAudio helper function
 [ ] Implement images

@@ -131,7 +131,7 @@ const clockReducer = (state = defaultClockState, action) => {
             newState.setSessionMinutes--;
             return newState;
         case STARTALARM:
-
+            newState.isClockActive = true;
             return newState;
         case PAUSEALARM:
             return newState;

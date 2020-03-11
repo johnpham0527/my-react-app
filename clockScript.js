@@ -105,6 +105,9 @@ const clockReducer = (state = defaultClockState, action) => {
             return newState;
         case RESETALARM:
             return newState;
+        case PLAYALARM:
+            playAlarm();
+            return newState;
         default: 
             return state;
     }

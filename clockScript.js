@@ -25,7 +25,7 @@ const defaultClockState = {
     setBreakMinutes: 5,
     totalRemainingBreakSeconds: 5 * 60,
     setSessionMinutes: 25,
-    totalRemainingSessionSeconds: 26 * 60,
+    totalRemainingSessionSeconds: 25 * 60,
     isClockActive: false,
 }
 

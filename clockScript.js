@@ -248,6 +248,16 @@ class PomodoroClock extends React.Component {
             ":"
         );
 
+        const beep = React.createElement(
+            "audio",
+            {
+                className: "clip",
+                id: "beep",
+                src: "http://john-pham.com/freecodecamp/Organic_cloudcity.mp3"
+            },
+            null
+        );
+
         return (
             React.createElement(
                 "div",
@@ -361,7 +371,7 @@ class PomodoroClock extends React.Component {
                     ),
                     br,
                     /** Play alarm button */
-                    /*
+
                     React.createElement(
                         "button",
                         {
@@ -370,7 +380,7 @@ class PomodoroClock extends React.Component {
                         "Play Alarm"
                     ),
                     br,
-                    */
+
                     /** Start session timer */
                     React.createElement(
                         "button",
@@ -388,15 +398,7 @@ class PomodoroClock extends React.Component {
                         "Pause Session Timer"
                     )
                 ),
-                React.createElement(
-                    "audio",
-                    {
-                        className: "clip",
-                        id: "beep",
-                        src: "http://john-pham.com/freecodecamp/Organic_cloudcity.mp3"
-                    },
-                    null
-                )
+                beep
             )
         )
     }

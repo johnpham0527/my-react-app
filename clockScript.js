@@ -258,6 +258,15 @@ class PomodoroClock extends React.Component {
             null
         );
 
+        /** Pause session timer */
+        const pauseTimerButton = React.createElement(
+            "button",
+            {
+                onClick: () => this.handleClockButtons("submitPauseAlarm")
+            },
+            "Pause Session Timer"
+        );
+
         return (
             React.createElement(
                 "div",
@@ -389,14 +398,7 @@ class PomodoroClock extends React.Component {
                         },
                         "Start Session Timer"
                     ),
-                    /** Pause session timer */
-                    React.createElement(
-                        "button",
-                        {
-                            onClick: () => this.handleClockButtons("submitPauseAlarm")
-                        },
-                        "Pause Session Timer"
-                    )
+                    pauseTimerButton
                 ),
                 beep
             )

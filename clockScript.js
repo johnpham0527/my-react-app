@@ -259,6 +259,15 @@ class PomodoroClock extends React.Component {
             null
         );
 
+        //Play alarm button
+        const playAlarmButton = React.createElement(
+            "button",
+            {
+                onClick: () => this.handleClockButtons("submitPlayAlarm")
+            },
+            "Play Alarm"
+        );
+
         //Pause button
         const pauseTimerButton = React.createElement(
             "button",
@@ -383,17 +392,8 @@ class PomodoroClock extends React.Component {
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
                     ),
                     br,
-                    /** Play alarm button */
-
-                    React.createElement(
-                        "button",
-                        {
-                            onClick: () => this.handleClockButtons("submitPlayAlarm")
-                        },
-                        "Play Alarm"
-                    ),
+                    playAlarmButton,
                     br,
-
                     /** Start session timer */
                     React.createElement(
                         "button",

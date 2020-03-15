@@ -242,6 +242,15 @@ class PomodoroClock extends React.Component {
             null
         );
 
+        //Display h1 header
+        const displayPomodoroClockHeader = React.createElement(
+            "h1",
+            {
+                style: { color: "charcoal" }
+            },
+            "Pomodoro Clock"
+        );
+
         //Display play alarm button
         const displayPlayAlarmButton = React.createElement(
             "button",
@@ -337,15 +346,7 @@ class PomodoroClock extends React.Component {
             React.createElement(
                 "div",
                 null,
-                React.createElement(
-                    "h1",
-                    {
-                        style: {
-                            color: "charcoal"
-                        }
-                    },
-                    "Pomodoro Clock"
-                ),
+                displayPomodoroClockHeader,
                 React.createElement(
                     "div",
                     {

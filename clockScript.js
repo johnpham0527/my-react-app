@@ -469,11 +469,10 @@ ReactDOM.render(
             [X] Alarm activated
             [X] Active alarm paused
             [X] Reset
-    [ ] Implement default state object with the following properties
+    [X] Implement default state object with the following properties
         [X] Break session value ({minutes, seconds} object?)
         [X] Alarm timer set value ({minutes, seconds} object?)
         [X] Is alarm active?
-        [ ] (Should the audio file be triggered?)
     [X] Implement action creators
         [X] Break session value increment
         [X] Break session value decrement

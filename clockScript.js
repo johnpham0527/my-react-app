@@ -54,9 +54,10 @@ const decrementSetAlarmValue = () => {
     };
 }
 
-const startAlarm = () => {
+const startAlarm = (timer_ID) => {
     return {
-        type: STARTALARM
+        type: STARTALARM,
+        timerID: timer_ID
     };
 }
 
@@ -179,7 +180,8 @@ const mapDispatchToProps = dispatch => {
             return dispatch(decrementSetAlarmValue())
         },
         submitStartAlarm: () => {
-            return dispatch(startAlarm())
+            const timerID = setInterval(() => dispatch(countdown()), 10);
+            return dispatch(startAlarm(timerID))
         },
         submitPauseAlarm: () => {
             return dispatch(pauseAlarm())

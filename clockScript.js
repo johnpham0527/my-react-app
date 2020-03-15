@@ -280,7 +280,12 @@ class PomodoroClock extends React.Component {
         // Display remaining session time */
         const displayRemainingSessionTime = React.createElement(
             "div",
-            {},
+            {
+                style: {
+                    marginTop: "1em",
+                    display: "block"
+                }
+            },
             "Remaining Session Time: ",
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
             ":",
@@ -292,6 +297,7 @@ class PomodoroClock extends React.Component {
             "div",
             {
                 style: {
+                    marginTop: "1em",
                     display: "block"
                 }
             },

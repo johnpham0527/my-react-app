@@ -499,10 +499,10 @@ ReactDOM.render(
     [X] Implement set timer display
     [ ] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
-    [ ] Let the React code handle whether the clock is active or not in local state
+    [] Let the React code handle whether the clock is active or not in local state
         [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux
-    [ ] Learn about set interval
-    [ ] Implement a simple countdown timer using set interval
+    [X] Learn about set interval
+    [X] Implement a simple countdown timer using set interval
     [ ] Implement reset timer button
     [ ] Implement button IDs (FreeCodeCamp)
 [X] Implement helper function to play audio

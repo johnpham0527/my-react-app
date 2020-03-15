@@ -209,11 +209,6 @@ class PomodoroClock extends React.Component {
     constructor(props) {
         super(props);
         this.handleClockButtons = this.handleClockButtons.bind(this);
-        this.handlePause = this.handlePause.bind(this);
-    }
-
-    handlePause() {
-        clearInterval(this.props.storeState.timerID);
     }
 
     handleClockButtons(buttonValue) {
@@ -234,7 +229,7 @@ class PomodoroClock extends React.Component {
                 this.props.submitStartAlarm(this.props.storeState.isSessionActive);
                 break;
             case "submitPauseAlarm":
-                this.handlePause();
+                clearInterval(this.props.storeState.timerID);
                 this.props.submitPauseAlarm();
                 break;
             case "submitResetAlarm":

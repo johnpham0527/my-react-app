@@ -500,14 +500,7 @@ ReactDOM.render(
     [ ] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
     [ ] Let the React code handle whether the clock is active or not in local state
-        [ ] The reducer should be a pure function with no side effects
-        [ ] If timer is active, there should be a way to call, within React, the set interval function with a function that counts down one second
-        [ ] Consider creating a component that is rendered only when the boolean local state is set to true by Start.
-        [ ] Consider creating a component that is rendered when the boolean local state is set to false by Pause or Reset.
-        [ ] Read this carefully, particularly on how to handle the store: https://stackoverflow.com/questions/39562317/react-js-redux-setinterval-and-clearinterval-in-reducers
-        [ ] Research on Google: https://www.google.com/search?client=firefox-b-1-d&q=how+to+use+set+interval+in+redux
-        [ ] This seems like the solution: https://codesandbox.io/s/vigilant-wildflower-3yvux. Look at mapDispatchToProps
-        [ ] Learn how to implement a timer in vanilla JavaScript
+        [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux
     [ ] Learn about set interval
     [ ] Implement a simple countdown timer using set interval
     [ ] Implement reset timer button

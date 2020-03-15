@@ -146,9 +146,7 @@ const store = Redux.createStore(clockReducer);
 
 /*** React-Redux Code */
 const mapStateToProps = state => {
-    return {
-        storeState: state
-    }
+    return { storeState: state }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -185,8 +183,6 @@ const mapDispatchToProps = dispatch => {
 
 
 /*** React Code */
-
-
 
 /** Pomodoro Clock class */
 class PomodoroClock extends React.Component {

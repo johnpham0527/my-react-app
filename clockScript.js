@@ -266,7 +266,7 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 style: {
-                    display: "inline-block"
+                    display: "block"
                 },
                 onClick: () => this.handleClockButtons("submitPlayAlarm")
             },
@@ -413,7 +413,6 @@ class PomodoroClock extends React.Component {
                     ),
                     br,
                     displayPlayAlarmButton,
-                    br,
                     displayStartSessionButton,
                     displayPauseTimerButton,
                     displayTimerID,

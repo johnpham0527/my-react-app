@@ -145,7 +145,6 @@ const clockReducer = (state = defaultClockState, action) => {
             newState.isSessionActive = false;
             return newState;
         case RESETALARM:
-            newState.setBreakMinutes = 999;
             return newState;
         case PLAYALARM:
             playAlarmSound();
@@ -311,10 +310,7 @@ class PomodoroClock extends React.Component {
         const displayStartSessionButton = React.createElement(
             "button",
             {
-                style: { 
-                    marginTop: "1em",
-                    display: "inline-block" 
-                },
+                style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitStartAlarm")
             },
             "Start Session Timer"
@@ -338,6 +334,16 @@ class PomodoroClock extends React.Component {
                 onClick: () => this.handleClockButtons("submitResetAlarm")
             },
             "Reset Session Timer"
+        );
+
+        const displayStartPauseAndResetButtons = React.createElement(
+            "div",
+            {
+                style: { marginTop: "1em" }
+            },
+            displayStartSessionButton,
+            displayPauseTimerButton,
+            displayResetTimerButton
         );
 
         // Display timerID
@@ -438,9 +444,7 @@ class PomodoroClock extends React.Component {
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,
                     //displayPlayAlarmButton,
-                    displayStartSessionButton,
-                    displayPauseTimerButton,
-                    displayResetTimerButton,
+                    displayStartPauseAndResetButtons,
                     //displayTimerID,
                 ),
                 beepAudioElement

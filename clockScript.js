@@ -27,6 +27,7 @@ const defaultClockState = {
     setSessionMinutes: 25,
     totalRemainingSessionSeconds: 25 * 60,
     isSessionActive: false,
+    timerID: 0,
 }
 
 /** Action Creators */

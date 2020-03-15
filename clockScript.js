@@ -251,7 +251,7 @@ class PomodoroClock extends React.Component {
         );
 
         //HTML audio tag
-        const beep = React.createElement(
+        const beepAudioElement = React.createElement(
             "audio",
             {
                 className: "clip",
@@ -408,7 +408,7 @@ class PomodoroClock extends React.Component {
                     br,
                     displayTimerID,
                 ),
-                beep
+                beepAudioElement
             )
         )
     }

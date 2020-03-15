@@ -480,6 +480,11 @@ ReactDOM.render(
                 [ ] Can I keep the same setInterval timer?
     [ ] After the break timer is equal to zero seconds, I need to start the session timer
         [ ] Should the audio be played? See FreeCodeCamp instructions
+    [ ] What happens after the reset button is pressed?
+        [ ] Break length resets to 5
+        [ ] Session length resets to 25
+        [ ] Active timer variables are set to false
+        [ ] Clear the timer interval
 [ ] Implement Redux code
     [X] Implement constant variables
         [X] Implement MAX break session value

@@ -405,7 +405,11 @@ class PomodoroClock extends React.Component {
                     /** Elements for displaying the break value from the Redux state */
                     React.createElement(
                         "div",
-                        {},
+                        {
+                            style: {
+                                display: "block"
+                            }
+                        },
                         "Remaining Break Time: ",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes,
                         ":",

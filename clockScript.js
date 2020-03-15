@@ -287,6 +287,20 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
         );
 
+        // Display remaining break time
+        const displayRemainingBreakTime = React.createElement(
+            "div",
+            {
+                style: {
+                    display: "block"
+                }
+            },
+            "Remaining Break Time: ",
+            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes,
+            ":",
+            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
+        );
+
         //Display start session button
         const displayStartSessionButton = React.createElement(
             "button",
@@ -416,20 +430,7 @@ class PomodoroClock extends React.Component {
                     ),
                     br,
                     displayRemainingSessionTime,
-                    br,
-                    /** Elements for displaying the break value from the Redux state */
-                    React.createElement(
-                        "div",
-                        {
-                            style: {
-                                display: "block"
-                            }
-                        },
-                        "Remaining Break Time: ",
-                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes,
-                        ":",
-                        displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
-                    ),
+                    displayRemainingBreakTime,
                     //displayPlayAlarmButton,
                     displayStartSessionButton,
                     displayPauseTimerButton,

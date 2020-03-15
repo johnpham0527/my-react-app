@@ -243,12 +243,14 @@ class PomodoroClock extends React.Component {
 
     render() {
         /** HTML tag constants */
+        //HTML line break tag
         const br = React.createElement(
             "br",
             null,
             null
         );
 
+        //HTML audio tag
         const beep = React.createElement(
             "audio",
             {

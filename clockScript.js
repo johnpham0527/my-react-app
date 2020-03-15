@@ -428,11 +428,11 @@ class PomodoroClock extends React.Component {
                         ":",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
                     ),
-                    displayPlayAlarmButton,
+                    //displayPlayAlarmButton,
                     displayStartSessionButton,
                     displayPauseTimerButton,
                     displayResetTimerButton,
-                    displayTimerID,
+                    //displayTimerID,
                 ),
                 beepAudioElement
             )

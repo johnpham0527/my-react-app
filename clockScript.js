@@ -185,7 +185,7 @@ const mapDispatchToProps = dispatch => {
         submitStartAlarm: (isSessionActive) => {
             if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
                 const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
-                return dispatch(startAlarm(timerID)) //keep track of the timer's ID
+                return dispatch(startAlarm(timerID)); //keep track of the timer's ID
             }
         },
         submitPauseAlarm: () => {
@@ -268,9 +268,7 @@ class PomodoroClock extends React.Component {
         const displayPlayAlarmButton = React.createElement(
             "button",
             {
-                style: {
-                    display: "block"
-                },
+                style: { display: "block" },
                 onClick: () => this.handleClockButtons("submitPlayAlarm")
             },
             "Play Alarm"
@@ -280,9 +278,7 @@ class PomodoroClock extends React.Component {
         const displayStartSessionButton = React.createElement(
             "button",
             {
-                style: {
-                    display: "inline-block"
-                },
+                style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitStartAlarm")
             },
             "Start Session Timer"
@@ -292,9 +288,7 @@ class PomodoroClock extends React.Component {
         const displayPauseTimerButton = React.createElement(
             "button",
             {
-                style: {
-                    display: "inline-block"
-                },
+                style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitPauseAlarm")
             },
             "Pause Session Timer"
@@ -304,9 +298,7 @@ class PomodoroClock extends React.Component {
         const displayResetTimerButton = React.createElement(
             "button",
             {
-                style: {
-                    display: "inline-block"
-                },
+                style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitResetAlarm")
             },
             "Reset Session Timer"

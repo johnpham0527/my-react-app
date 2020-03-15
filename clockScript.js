@@ -454,7 +454,7 @@ ReactDOM.render(
                 [ ] Can I keep the same setInterval timer?
     [ ] After the break timer is equal to zero seconds, I need to start the session timer
 [ ] Implement Redux code
-    [ ] Implement constant variables
+    [X] Implement constant variables
         [X] Implement MAX break session value
         [X] Implement MIN break session value
         [X] Implement MAX alarm timer value

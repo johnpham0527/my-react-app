@@ -261,7 +261,7 @@ class PomodoroClock extends React.Component {
             null
         );
 
-        /** Pause session timer */
+        //Pause button
         const pauseTimerButton = React.createElement(
             "button",
             {

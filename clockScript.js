@@ -440,7 +440,6 @@ class PomodoroClock extends React.Component {
                             "Decrement Session"
                         ),
                     ),
-                    br,
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,
                     //displayPlayAlarmButton,

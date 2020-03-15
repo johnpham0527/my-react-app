@@ -237,7 +237,7 @@ class PomodoroClock extends React.Component {
             case "submitPlayAlarm":
                 this.props.submitPlayAlarm();
             default:
-                return -1;
+                break;
         }
     }
 

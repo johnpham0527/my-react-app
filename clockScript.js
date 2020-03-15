@@ -32,27 +32,19 @@ const defaultClockState = {
 
 /** Action Creators */
 const incrementSetBreakValue = () => {
-    return {
-        type: SETBREAKINCREMENT
-    };
+    return { type: SETBREAKINCREMENT };
 }
 
 const decrementSetBreakValue = () => {
-    return {
-        type: SETBREAKDECREMENT
-    };
+    return { type: SETBREAKDECREMENT };
 }
 
 const incrementSetAlarmValue = () => {
-    return {
-        type: SETALARMINCREMENT
-    };
+    return { type: SETALARMINCREMENT };
 }
 
 const decrementSetAlarmValue = () => {
-    return {
-        type: SETALARMDECREMENT
-    };
+    return { type: SETALARMDECREMENT };
 }
 
 const startAlarm = (timer_ID) => {
@@ -63,27 +55,19 @@ const startAlarm = (timer_ID) => {
 }
 
 const pauseAlarm = () => {
-    return {
-        type: PAUSEALARM
-    };
+    return { type: PAUSEALARM };
 }
 
 const resetAlarm = () => {
-    return {
-        type: RESETALARM
-    };
+    return { type: RESETALARM };
 }
 
 const playAlarm = () => {
-    return {
-        type: PLAYALARM
-    };
+    return { type: PLAYALARM };
 }
 
 const countdown = () => {
-    return {
-        type: COUNTDOWN
-    };
+    return { type: COUNTDOWN };
 }
 
 /** Helper Functions */

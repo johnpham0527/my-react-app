@@ -411,7 +411,6 @@ class PomodoroClock extends React.Component {
                         "Start Session Timer"
                     ),
                     displayPauseTimerButton,
-                    br,
                     displayTimerID,
                 ),
                 beepAudioElement

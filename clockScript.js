@@ -336,6 +336,7 @@ class PomodoroClock extends React.Component {
             "Reset Session Timer"
         );
 
+        //Div that displays the start, pause, and reset buttons
         const displayStartPauseAndResetButtons = React.createElement(
             "div",
             {

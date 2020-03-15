@@ -181,7 +181,7 @@ const mapDispatchToProps = dispatch => {
         },
         submitStartAlarm: () => {
             const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
-            return dispatch(startAlarm(timerID))
+            return dispatch(startAlarm(timerID)) //keep track of the timer's ID
         },
         submitPauseAlarm: () => {
             return dispatch(pauseAlarm())

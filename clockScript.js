@@ -521,8 +521,8 @@ ReactDOM.render(
         [ ] Alarm timer set value decrement
             [ ] Check for min value (cannot be less than zero)
         [ ] Alarm has been activated
-        [ ] Active alarm has been paused
         [ ] Reset button has been pushed
+        [X] Active alarm has been paused
         [X] Default state
     [X] Implement helper functions
         [X] Write a function that checks a value, converts it to text, and adds a leading zero if necessary
@@ -539,7 +539,7 @@ ReactDOM.render(
     [X] Implement set timer display
     [ ] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
-    [] Let the React code handle whether the clock is active or not in local state
+    [ ] Let the React code handle whether the clock is active or not in local state
         [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux
     [X] Learn about set interval
     [X] Implement a simple countdown timer using set interval

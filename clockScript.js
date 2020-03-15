@@ -444,6 +444,15 @@ ReactDOM.render(
 );
 
 /*** Pomodoro Clock To-do's
+[ ] Pomodoro Clock Logic
+    [ ] How and where should I check to see if the session variable is equal to zero seconds?
+        [ ] Should I check for this in the reducer? If so, in the countdown case?
+        [ ] What exactly should happen?
+            [ ] Which variables need to change?
+                [ ] What needs to be done to start the break timer?
+                [ ] How can the break timer left be displayed? Can I reuse the same variable, but change it to the break session number of seconds?
+                [ ] Can I keep the same setInterval timer?
+    [ ] After the break timer is equal to zero seconds, I need to start the session timer
 [ ] Implement Redux code
     [ ] Implement constant variables
         [X] Implement MAX break session value

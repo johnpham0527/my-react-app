@@ -242,12 +242,6 @@ class PomodoroClock extends React.Component {
             null
         );
 
-        const colon = React.createElement(
-            "span",
-            null,
-            ":"
-        );
-
         const beep = React.createElement(
             "audio",
             {
@@ -292,7 +286,7 @@ class PomodoroClock extends React.Component {
                             id: "break-label"
                         },
                         "Break Length",
-                        colon, " ",
+                        ": ",
                         React.createElement(
                             "span",
                             {
@@ -328,7 +322,7 @@ class PomodoroClock extends React.Component {
                             }
                         },
                         "Session Length",
-                        colon, " ",
+                        ": ",
                         React.createElement(
                             "span",
                             {
@@ -359,11 +353,9 @@ class PomodoroClock extends React.Component {
                     React.createElement(
                         "div",
                         {},
-                        "Remaining Session Time",
-                        colon,
-                        " ",
+                        "Remaining Session Time: ",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
-                        colon,
+                        ":",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
                     ),
                     br,
@@ -371,11 +363,9 @@ class PomodoroClock extends React.Component {
                     React.createElement(
                         "div",
                         {},
-                        "Remaining Break Time",
-                        colon,
-                        " ",
+                        "Remaining Break Time: ",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes,
-                        colon,
+                        ":",
                         displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
                     ),
                     br,

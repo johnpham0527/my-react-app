@@ -180,7 +180,7 @@ const mapDispatchToProps = dispatch => {
             return dispatch(decrementSetAlarmValue())
         },
         submitStartAlarm: () => {
-            const timerID = setInterval(() => dispatch(countdown()), 1000);
+            const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
             return dispatch(startAlarm(timerID))
         },
         submitPauseAlarm: () => {

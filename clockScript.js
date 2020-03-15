@@ -6,6 +6,7 @@
 //Redux constants
 const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
+
 //Clock constants
 const MAXMINUTES = 99;
 const MAXSECONDS = 59;
@@ -20,6 +21,7 @@ const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
 const PLAYALARM = "PLAYALARM";
 const COUNTDOWN = "COUNTDOWN";
+
 //Default clock state
 const defaultClockState = {
     setBreakMinutes: 5,

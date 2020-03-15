@@ -236,7 +236,6 @@ class PomodoroClock extends React.Component {
         const beepAudioElement = React.createElement(
             "audio",
             {
-                className: "clip",
                 id: "beep",
                 src: "http://john-pham.com/freecodecamp/Organic_cloudcity.mp3"
             },

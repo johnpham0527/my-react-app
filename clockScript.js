@@ -181,9 +181,11 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue())
         },
-        submitStartAlarm: () => {
-            const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
-            return dispatch(startAlarm(timerID)) //keep track of the timer's ID
+        submitStartAlarm: (isSessionActive) => {
+            if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
+                const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
+                return dispatch(startAlarm(timerID)) //keep track of the timer's ID
+            }
         },
         submitPauseAlarm: () => {
             return dispatch(pauseAlarm())
@@ -229,7 +231,7 @@ class PomodoroClock extends React.Component {
                 this.props.submitDecrementSetAlarmValue();
                 break;
             case "submitStartAlarm":
-                this.props.submitStartAlarm();
+                this.props.submitStartAlarm(this.props.storeState.isSessionActive);
                 break;
             case "submitPauseAlarm":
                 this.handlePause();

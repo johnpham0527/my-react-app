@@ -139,6 +139,7 @@ const clockReducer = (state = defaultClockState, action) => {
             return newState;
         case STARTALARM:
             newState.isSessionActive = true;
+            newState.timerID = action.timerID;
             return newState;
         case PAUSEALARM:
             newState.isSessionActive = false;
@@ -210,7 +211,7 @@ class PomodoroClock extends React.Component {
     }
 
     handlePause() {
-        clearInterval(this.props.timerID);
+        clearInterval(this.props.storeState.timerID);
     }
 
     handleClockButtons(buttonValue) {
@@ -268,6 +269,13 @@ class PomodoroClock extends React.Component {
                 onClick: () => this.handleClockButtons("submitPauseAlarm")
             },
             "Pause Session Timer"
+        );
+
+        // Display timerID
+        const displayTimerID = React.createElement(
+            "div",
+            null,
+            this.props.storeState.timerID
         );
 
         return (
@@ -397,7 +405,9 @@ class PomodoroClock extends React.Component {
                         },
                         "Start Session Timer"
                     ),
-                    pauseTimerButton
+                    pauseTimerButton,
+                    br,
+                    displayTimerID,
                 ),
                 beep
             )

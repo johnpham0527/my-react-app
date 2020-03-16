@@ -266,6 +266,16 @@ class PomodoroClock extends React.Component {
             "Play Alarm"
         );
 
+        // Display session decrement button
+        const displaySessionDecrementButton = React.createElement(
+            "button",
+            {
+                id: "session-decrement",
+                onClick: () => this.handleClockButtons("decrementSetAlarmValue")
+            },
+            "Decrement Session"
+        );
+
         // Display remaining session time */
         const displayRemainingSessionTime = React.createElement(
             "div",
@@ -414,14 +424,7 @@ class PomodoroClock extends React.Component {
                             },
                             "Increment Session"
                         ),
-                        React.createElement(
-                            "button",
-                            {
-                                id: "session-decrement",
-                                onClick: () => this.handleClockButtons("decrementSetAlarmValue")
-                            },
-                            "Decrement Session"
-                        ),
+                        displaySessionDecrementButton,
                     ),
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,

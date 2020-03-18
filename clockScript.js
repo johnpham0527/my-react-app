@@ -253,7 +253,7 @@ class PomodoroClock extends React.Component {
             "Pomodoro Clock"
         );
 
-        //Display play alarm button
+        // Display play alarm button
         const displayPlayAlarmButton = React.createElement(
             "button",
             {
@@ -264,6 +264,17 @@ class PomodoroClock extends React.Component {
                 onClick: () => this.handleClockButtons("submitPlayAlarm")
             },
             "Play Alarm"
+        );
+
+        // Display session length
+        const displaySessionLength = React.createElement(
+            "div",
+            {
+                id: "session-length"
+            },
+            "Session Length",
+            ": ",
+            this.props.storeState.setSessionMinutes,
         );
 
         // Display session increment button
@@ -420,15 +431,7 @@ class PomodoroClock extends React.Component {
                                 marginTop: "1em"
                             }
                         },
-                        "Session Length",
-                        ": ",
-                        React.createElement(
-                            "span",
-                            {
-                                id: "session-length"
-                            },
-                            this.props.storeState.setSessionMinutes,
-                        ),
+                        displaySessionLength,
                         displaySessionIncrementButton,
                         displaySessionDecrementButton,
                     ),

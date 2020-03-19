@@ -231,6 +231,9 @@ class PomodoroClock extends React.Component {
                 this.props.submitDecrementSetAlarmValue();
                 break;
             case "submitStartPauseAlarm":
+                if (this.props.storeState.isSessionActive === true) { //If there is an active session, clear the interval
+                    clearInterval(this.props.storeState.timerID);
+                }
                 this.props.submitStartPauseAlarm(this.props.storeState.isSessionActive, this.props.storeState.timerID);
                 break;
             case "submitStartAlarm":

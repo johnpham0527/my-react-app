@@ -220,6 +220,7 @@ class PomodoroClock extends React.Component {
                 this.props.submitPauseAlarm();
                 break;
             case "submitResetAlarm":
+                clearInterval(this.props.storeState.timerID);
                 this.props.submitResetAlarm();
                 break;
             case "submitPlayAlarm":
@@ -531,8 +532,8 @@ ReactDOM.render(
             [X] Does FreeCodeCamp set a max value here?
         [X] Alarm timer set value decrement
             [X] Check for min value (cannot be less than zero)
-        [ ] Alarm has been activated
         [X] Reset button has been implemented
+        [ ] Activate alarm when timer reaches 00:00
         [ ] Implement start and stop as one button
         [X] Active alarm has been paused
         [X] Default state

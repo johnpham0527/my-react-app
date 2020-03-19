@@ -366,6 +366,7 @@ class PomodoroClock extends React.Component {
         const displayResetTimerButton = React.createElement(
             "button",
             {
+                id: "reset",
                 style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitResetAlarm")
             },
@@ -433,7 +434,6 @@ class PomodoroClock extends React.Component {
                             "Decrement Break"
                         ),
                     ),
-                    /** Elements for setting the session length */
                     displaySessionContainer,
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,

@@ -135,6 +135,7 @@ const clockReducer = (state = defaultClockState, action) => {
             newState.isSessionActive = false;
             return newState;
         case RESETALARM:
+            newState = defaultClockState;
             return newState;
         case PLAYALARM:
             playAlarmSound();

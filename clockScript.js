@@ -220,6 +220,9 @@ class PomodoroClock extends React.Component {
             case "decrementSetAlarmValue":
                 this.props.submitDecrementSetAlarmValue();
                 break;
+            case "submitStartPauseAlarm":
+                this.props.submitStartPauseAlarm(this.props.storeState.isSessionActive, this.props.storeState.timerID);
+                break;
             case "submitStartAlarm":
                 this.props.submitStartAlarm(this.props.storeState.isSessionActive);
                 break;
@@ -356,6 +359,16 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
         );
 
+        //Display start/pause button
+        const displayStartPauseSessionButton = React.createElement(
+            "button",
+            {
+                style: { display: "inline-block" },
+                onClick: () => this.handleClockButtons("submitStartPauseAlarm")
+            },
+            "Start/Pause Session Timer"
+        );
+
         //Display start session button
         const displayStartSessionButton = React.createElement(
             "button",
@@ -393,6 +406,7 @@ class PomodoroClock extends React.Component {
             {
                 style: { marginTop: "1em" }
             },
+            displayStartPauseSessionButton,
             displayStartSessionButton,
             displayPauseTimerButton,
             displayResetTimerButton

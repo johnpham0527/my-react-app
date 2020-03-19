@@ -532,6 +532,7 @@ ReactDOM.render(
             [X] Check for min value (cannot be less than zero)
         [ ] Alarm has been activated
         [ ] Reset button has been pushed
+        [ ] Implement start and stop as one button
         [X] Active alarm has been paused
         [X] Default state
     [X] Implement helper functions

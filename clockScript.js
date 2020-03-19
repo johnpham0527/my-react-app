@@ -532,7 +532,7 @@ ReactDOM.render(
         [X] Alarm timer set value decrement
             [X] Check for min value (cannot be less than zero)
         [ ] Alarm has been activated
-        [ ] Reset button has been pushed
+        [X] Reset button has been implemented
         [ ] Implement start and stop as one button
         [X] Active alarm has been paused
         [X] Default state
@@ -555,7 +555,7 @@ ReactDOM.render(
         [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux
     [X] Learn about set interval
     [X] Implement a simple countdown timer using set interval
-    [ ] Implement reset timer button
+    [X] Implement reset timer button
     [ ] Implement button IDs (FreeCodeCamp)
 [X] Implement helper function to play audio
     [X] Create playAudio helper function

@@ -178,6 +178,15 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue())
         },
+        submitStartPauseAlarm: (isSessionActive, timerID) => {
+            if (isSessionActive) { //if the session is active, pause it
+                return dispatch(pauseAlarm())
+            }
+            else { //if the session isn't active, then start one
+                const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
+                return dispatch(startAlarm(timerID)); //keep track of the timer's ID
+            }
+        },
         submitStartAlarm: (isSessionActive) => {
             if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
                 const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second

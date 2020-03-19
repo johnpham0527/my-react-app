@@ -112,10 +112,14 @@ const clockReducer = (state = defaultClockState, action) => {
     let newState = Object.assign({}, state);
     switch (action.type) {
         case SETBREAKINCREMENT:
-            newState.setBreakMinutes++;
+            if (newState.setBreakMinutes < 60) {
+                newState.setBreakMinutes++;
+            }
             return newState;
         case SETBREAKDECREMENT:
-            newState.setBreakMinutes--;
+            if (newState.setBreakMinutes > 0) {
+                newState.setBreakMinutes--;
+            }
             return newState;
         case SETALARMINCREMENT:
             newState.setSessionMinutes++;

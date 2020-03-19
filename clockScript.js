@@ -376,6 +376,7 @@ class PomodoroClock extends React.Component {
         const displayStartPauseSessionButton = React.createElement(
             "button",
             {
+                id: "start_stop",
                 style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitStartPauseAlarm")
             },

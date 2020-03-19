@@ -8,10 +8,6 @@ const { Provider, connect } = ReactRedux;
 const { createStore } = Redux;
 
 //Clock constants
-const MAXMINUTES = 99;
-const MAXSECONDS = 59;
-const MINMINUTES = 0;
-const MINSECONDS = 0;
 const SETBREAKINCREMENT = "SETBREAKINCREMENT";
 const SETBREAKDECREMENT = "SETBREAKDECREMENT";
 const SETALARMINCREMENT = "SETALARMINCREMENT";

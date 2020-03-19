@@ -96,6 +96,10 @@ const displayTimeText = (timeObject) => {
         seconds: timeObject.seconds.toString()
     };
     
+    if (timeObject.minutes < 10) {
+        timeText.minutes = "0" + timeText.minutes;
+    }
+
     if (timeObject.seconds < 10) {
         timeText.seconds = "0" + timeText.seconds;
     }

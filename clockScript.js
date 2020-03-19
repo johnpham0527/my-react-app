@@ -114,21 +114,25 @@ const clockReducer = (state = defaultClockState, action) => {
         case SETBREAKINCREMENT:
             if (newState.setBreakMinutes < 60) { //breaks cannot be greater than 60 minutes
                 newState.setBreakMinutes++;
+                newState.totalRemainingBreakSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETBREAKDECREMENT:
             if (newState.setBreakMinutes > 0) { //breaks cannot be less than 0 minutes
                 newState.setBreakMinutes--;
+                newState.totalRemainingBreakSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETALARMINCREMENT:
             if (newState.setSessionMinutes < 60) { //sessions cannot be greater than 60 minutes
                 newState.setSessionMinutes++;
+                newState.totalRemainingSessionSeconds = newState.setSessionMinutes * 60;
             }
             return newState;
         case SETALARMDECREMENT:
             if (newState.setSessionMinutes > 0) { //sessions cannot be less than 0 minutes
                 newState.setSessionMinutes--;
+                newState.totalRemainingSessionSeconds = newState.setSessionMinutes * 60;
             }
             return newState;
         case STARTALARM:

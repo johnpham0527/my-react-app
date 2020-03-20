@@ -12,7 +12,7 @@ const SETBREAKINCREMENT = "SETBREAKINCREMENT";
 const SETBREAKDECREMENT = "SETBREAKDECREMENT";
 const SETALARMINCREMENT = "SETALARMINCREMENT";
 const SETALARMDECREMENT = "SETALARMDECREMENT";
-const STARTPAUSEALARM = "STARTPAUSEALARM";
+//const STARTPAUSEALARM = "STARTPAUSEALARM";
 const STARTALARM = "STARTALARM";
 const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
@@ -179,6 +179,7 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue())
         },
+        /*
         submitStartPauseAlarm: (isSessionActive, timerID) => {
             if (isSessionActive) { //if the session is active, pause it
                 return dispatch(pauseAlarm())
@@ -188,6 +189,7 @@ const mapDispatchToProps = dispatch => {
                 return dispatch(startAlarm(timerID)); //keep track of the timer's ID
             }
         },
+        */
         submitStartAlarm: (isSessionActive) => {
             if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
                 const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
@@ -233,8 +235,12 @@ class PomodoroClock extends React.Component {
             case "submitStartPauseAlarm":
                 if (this.props.storeState.isSessionActive === true) { //If there is an active session, clear the interval
                     clearInterval(this.props.storeState.timerID);
+                    this.props.submitPauseAlarm();
                 }
-                this.props.submitStartPauseAlarm(this.props.storeState.isSessionActive, this.props.storeState.timerID);
+                else {
+                    this.props.submitStartAlarm(this.props.storeState.isSessionActive);
+                }
+                //this.props.submitStartPauseAlarm(this.props.storeState.isSessionActive, this.props.storeState.timerID);
                 break;
             case "submitStartAlarm":
                 this.props.submitStartAlarm(this.props.storeState.isSessionActive);

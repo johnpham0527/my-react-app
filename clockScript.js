@@ -296,15 +296,34 @@ class PomodoroClock extends React.Component {
             "Play Alarm"
         );
 
+        // Display session length text
+        const displaySessionLengthText = React.createElement(
+            "div",
+            { 
+                style: { display: "inline" } 
+            },
+            "Session Length: ",
+        );
+
         // Display session length
-        const displaySessionLength = React.createElement(
+        const displaySessionLengthValue = React.createElement(
             "div",
             {
+                style: { display: "inline" },
                 id: "session-length"
             },
-            "Session Length",
-            ": ",
             this.props.storeState.setSessionMinutes,
+        );
+
+        // Display container for session length text and value
+        const displaySessionLength = React.createElement(
+            "div",
+            { 
+                style: { display: "block" }
+            },
+            displaySessionLengthText,
+            displaySessionLengthValue
+
         );
 
         // Display session increment button

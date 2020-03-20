@@ -119,7 +119,7 @@ const clockReducer = (state = defaultClockState, action) => {
             }
             return newState;
         case SETBREAKDECREMENT:
-            if (newState.setBreakMinutes > 0) { //breaks cannot be less than 0 minutes
+            if (newState.setBreakMinutes > 1) { //breaks cannot be less than 0 minutes
                 newState.setBreakMinutes--;
                 newState.totalRemainingBreakSeconds = newState.setBreakMinutes * 60;
             }
@@ -131,7 +131,7 @@ const clockReducer = (state = defaultClockState, action) => {
             }
             return newState;
         case SETALARMDECREMENT:
-            if (newState.setSessionMinutes > 0) { //sessions cannot be less than 0 minutes
+            if (newState.setSessionMinutes > 1) { //sessions cannot be less than 0 minutes
                 newState.setSessionMinutes--;
                 newState.totalRemainingSessionSeconds = newState.setSessionMinutes * 60;
             }

@@ -433,8 +433,8 @@ class PomodoroClock extends React.Component {
                 style: { marginTop: "1em" }
             },
             displayStartPauseSessionButton,
-            displayStartSessionButton,
-            displayPauseTimerButton,
+            //displayStartSessionButton,
+            //displayPauseTimerButton,
             displayResetTimerButton
         );
 

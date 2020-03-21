@@ -385,22 +385,42 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
         );
 
-        // Display remaining session or break time
+        // Display remaining session or break time label
         const displayRemainingTimeLabel = React.createElement(
             "div",
             {
                 id: "timer-label",
                 style: {
+
+                }
+            },
+            "Remaining Time: "
+        );
+
+        // Display remaining session or break time value
+        const displayRemainingTimeValue = React.createElement(
+            "div",
+            {
+                id: "timer-left",
+                style: {}
+            },
+            this.props.storeState.isBreakActive ?
+            "Break is active" :
+            "Session is active",
+        )
+
+        // Display remaining time container
+        const displayRemainingTimeContainer = React.createElement(
+            "div",
+            {
+                style: {
                     marginTop: "1em",
                     display: "block"
                 }
             },
-            "Remaining Time: ",
-            this.props.storeState.isBreakActive ?
-                "Break is active" :
-                "Session is active",
-        );
-
+            displayRemainingTimeLabel,
+            displayRemainingTimeValue
+        )
         
 
         //Display start/pause button
@@ -510,7 +530,7 @@ class PomodoroClock extends React.Component {
                     displaySessionContainer,
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,
-                    displayRemainingTimeLabel,
+                    displayRemainingTimeContainer,
                     //displayPlayAlarmButton,
                     displayStartPauseAndResetButtons,
                     //displayTimerID,

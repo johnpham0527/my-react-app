@@ -385,43 +385,30 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
         );
 
-        // Display remaining session or break time label
-        const displayRemainingTimeLabel = React.createElement(
-            "div",
-            {
-                id: "timer-label",
-                style: {
-
-                }
-            },
-            "Remaining Time: "
-        );
-
         // Display remaining session or break time value
         const displayRemainingTimeValue = React.createElement(
-            "div",
+            "span",
             {
                 id: "time-left",
-                style: {}
             },
             this.props.storeState.isBreakActive ?
             "Break is active" :
             "Session is active",
         )
 
-        // Display remaining time container
-        const displayRemainingTimeContainer = React.createElement(
+        // Display remaining session or break time label
+        const displayRemainingTime = React.createElement(
             "div",
             {
-                style: {
+                id: "timer-label",
+                style: { 
                     marginTop: "1em",
-                    display: "block"
+                    display: "block" 
                 }
             },
-            displayRemainingTimeLabel,
+            "Remaining Time: ",
             displayRemainingTimeValue
-        )
-        
+        );
 
         //Display start/pause button
         const displayStartPauseSessionButton = React.createElement(
@@ -530,7 +517,7 @@ class PomodoroClock extends React.Component {
                     displaySessionContainer,
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,
-                    displayRemainingTimeContainer,
+                    displayRemainingTime,
                     //displayPlayAlarmButton,
                     displayStartPauseAndResetButtons,
                     //displayTimerID,

@@ -153,6 +153,10 @@ const clockReducer = (state = defaultClockState, action) => {
             playAlarmSound();
             return newState;
         case COUNTDOWN:
+            switch (action.timerType) {
+                default:
+                    break;
+            }
             newState.totalRemainingSessionSeconds--;
             return newState;
         default: 

@@ -386,7 +386,7 @@ class PomodoroClock extends React.Component {
         );
 
         // Display remaining session or break time
-        const displayRemainingTime = React.createElement(
+        const displayRemainingTimeLabel = React.createElement(
             "div",
             {
                 id: "timer-label",
@@ -510,7 +510,7 @@ class PomodoroClock extends React.Component {
                     displaySessionContainer,
                     displayRemainingSessionTime,
                     displayRemainingBreakTime,
-                    displayRemainingTime,
+                    displayRemainingTimeLabel,
                     //displayPlayAlarmButton,
                     displayStartPauseAndResetButtons,
                     //displayTimerID,

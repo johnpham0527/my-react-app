@@ -389,6 +389,7 @@ class PomodoroClock extends React.Component {
         const displayRemainingTime = React.createElement(
             "div",
             {
+                id: "timer-label",
                 style: {
                     marginTop: "1em",
                     display: "block"
@@ -399,6 +400,8 @@ class PomodoroClock extends React.Component {
                 "Break is active" :
                 "Session is active",
         );
+
+        
 
         //Display start/pause button
         const displayStartPauseSessionButton = React.createElement(

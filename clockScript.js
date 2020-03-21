@@ -17,6 +17,7 @@ const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
 const PLAYALARM = "PLAYALARM";
 const COUNTDOWN = "COUNTDOWN";
+const INACTIVE = "INACTIVE"
 const SESSION = "SESSION";
 const BREAK = "BREAK";
 
@@ -28,6 +29,7 @@ const defaultClockState = {
     totalRemainingSessionSeconds: 25 * 60,
     isSessionActive: false,
     isBreakActive: false,
+    status: INACTIVE, //status can be one of three values: INACTIVE, SESSION, or BREAK
     timerID: 0,
 }
 
@@ -194,7 +196,7 @@ const mapDispatchToProps = dispatch => {
         },
         submitStartAlarm: (isSessionActive) => {
             if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
-                const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
+                const timerID = setInterval(() => dispatch(countdown(SESSION)), 1000); //dispatch countdown every second
                 return dispatch(startAlarm(timerID)); //keep track of the timer's ID
             }
         },
@@ -583,6 +585,7 @@ ReactDOM.render(
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
     [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
     [ ] When session length is equal to 60, the remaining session time should display 60:00
+    [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [ ] Should I check for this in the reducer? If so, in the countdown case?
         [ ] What exactly should happen?

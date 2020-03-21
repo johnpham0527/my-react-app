@@ -85,6 +85,10 @@ const playAlarmSound = () => {
 const convertSecondsToTime = (seconds) => {
     let minutesDivisor = seconds % (60 * 60);
     let min = Math.floor(minutesDivisor / 60);
+
+    if (seconds > 0 && min === 0) {
+        min = 60; //Allow 60 minutes to appear as 60:00
+    }
     
     let secondsDivisor = minutesDivisor % 60;
     let sec = Math.ceil(secondsDivisor);
@@ -584,7 +588,7 @@ ReactDOM.render(
 [ ] Pomodoro Clock Logic
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
     [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
-    [ ] When session length is equal to 60, the remaining session time should display 60:00
+    [X] When session length is equal to 60, the remaining session time should display 60:00
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [ ] Should I check for this in the reducer? If so, in the countdown case?

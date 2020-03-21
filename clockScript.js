@@ -401,7 +401,7 @@ class PomodoroClock extends React.Component {
         const displayRemainingTimeValue = React.createElement(
             "div",
             {
-                id: "timer-left",
+                id: "time-left",
                 style: {}
             },
             this.props.storeState.isBreakActive ?

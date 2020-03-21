@@ -395,6 +395,9 @@ class PomodoroClock extends React.Component {
                 }
             },
             "Remaining Time: ",
+            this.props.storeState.isBreakActive ?
+                "Break is active" :
+                "Session is active",
         );
 
         //Display start/pause button

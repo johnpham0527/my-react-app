@@ -568,6 +568,7 @@ ReactDOM.render(
 /*** Pomodoro Clock To-do's
 [ ] Pomodoro Clock Logic
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
+    [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [ ] Should I check for this in the reducer? If so, in the countdown case?
         [ ] What exactly should happen?

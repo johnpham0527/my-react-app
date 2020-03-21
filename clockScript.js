@@ -17,6 +17,8 @@ const PAUSEALARM = "PAUSEALARM";
 const RESETALARM = "RESETALARM";
 const PLAYALARM = "PLAYALARM";
 const COUNTDOWN = "COUNTDOWN";
+const SESSION = "SESSION";
+const BREAK = "BREAK";
 
 //Default clock state
 const defaultClockState = {

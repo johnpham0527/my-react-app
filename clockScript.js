@@ -391,9 +391,16 @@ class PomodoroClock extends React.Component {
             {
                 id: "time-left",
             },
-            this.props.storeState.isBreakActive ?
-            "Break is active" :
-            "Session is active",
+            this.props.storeState.isBreakActive ? //Is break currently active? Use the ternary operator here
+                // If so, concatenate current break minutes and seconds
+                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes +
+                ":" +
+                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds 
+                : // ternary operator colon
+                // If not, concatenate current session minutes and seconds
+                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes +
+                ":" +
+                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
         )
 
         // Display remaining session or break time label

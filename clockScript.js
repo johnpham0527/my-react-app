@@ -29,6 +29,7 @@ const defaultClockState = {
     totalRemainingSessionSeconds: 25 * 60,
     isSessionActive: false,
     isBreakActive: false,
+    totalRemainingSeconds: 25 * 60, //use one variable to track total remaining seconds, whether session or break
     status: INACTIVE, //status can be one of three values: INACTIVE, SESSION, or BREAK
     timerID: 0,
 }

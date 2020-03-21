@@ -65,8 +65,11 @@ const playAlarm = () => {
     return { type: PLAYALARM };
 }
 
-const countdown = () => {
-    return { type: COUNTDOWN };
+const countdown = (timer_type) => {
+    return { 
+        type: COUNTDOWN,
+        timerType: timer_type
+    };
 }
 
 /** Helper Functions */

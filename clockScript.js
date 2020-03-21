@@ -156,11 +156,15 @@ const clockReducer = (state = defaultClockState, action) => {
             return newState;
         case COUNTDOWN:
             switch (action.timerType) {
+                case SESSION:
+                    newState.totalRemainingSessionSeconds--;
+                    return newState;
+                case BREAK:
+                    newState.totalRemainingBreakSeconds--;
+                    return newState;
                 default:
-                    break;
+                    return newState;
             }
-            newState.totalRemainingSessionSeconds--;
-            return newState;
         default: 
             return state;
     }

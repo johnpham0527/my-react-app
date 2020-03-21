@@ -340,6 +340,20 @@ class PomodoroClock extends React.Component {
             "Decrement Session"
         );
 
+        // Display container for session elements
+        const displaySessionContainer = React.createElement(
+            "div",
+            {
+                id: "session-label",
+                style: {
+                    marginTop: "1em"
+                }
+            },
+            displaySessionLength,
+            displaySessionIncrementButton,
+            displaySessionDecrementButton,
+        );
+
         // Display remaining session time */
         const displayRemainingSessionTime = React.createElement(
             "div",
@@ -353,20 +367,6 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
             ":",
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
-        );
-
-        // Display container for session elements
-        const displaySessionContainer = React.createElement(
-            "div",
-            {
-                id: "session-label",
-                style: {
-                    marginTop: "1em"
-                }
-            },
-            displaySessionLength,
-            displaySessionIncrementButton,
-            displaySessionDecrementButton,
         );
 
         // Display remaining break time
@@ -384,6 +384,7 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
         );
 
+        
         //Display start/pause button
         const displayStartPauseSessionButton = React.createElement(
             "button",

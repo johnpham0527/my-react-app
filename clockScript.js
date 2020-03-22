@@ -494,7 +494,7 @@ class PomodoroClock extends React.Component {
                 style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitStartPauseAlarm")
             },
-            "Start/Pause Session Timer"
+            "Start/Pause"
         );
 
         //Display reset button
@@ -505,7 +505,7 @@ class PomodoroClock extends React.Component {
                 style: { display: "inline-block" },
                 onClick: () => this.handleClockButtons("submitResetAlarm")
             },
-            "Reset Session Timer"
+            "Reset"
         );
 
         //Div that displays the start, pause, and reset buttons

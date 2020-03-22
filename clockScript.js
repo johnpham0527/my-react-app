@@ -652,9 +652,9 @@ ReactDOM.render(
 );
 
 /*** Pomodoro Clock To-do's
-[ ] Pomodoro Clock Logic
+[X] Pomodoro Clock Logic
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
-    [ ] The alarm must stop playing and be rewound to the beginning when reset button is clicked
+    [X] The alarm must stop playing and be rewound to the beginning when reset button is clicked
     [X] When session length is equal to 60, the remaining session time should display 60:00
     [X] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
         [X] Potential fix: implement hours
@@ -675,7 +675,7 @@ ReactDOM.render(
         [X] Session length resets to 25
         [X] Active timer variables are set to false
         [X] Clear the timer interval
-[ ] Implement Redux code
+[X] Implement Redux code
     [X] Implement constant variables
         [X] Implement MAX break session value
         [X] Implement MIN break session value
@@ -701,7 +701,7 @@ ReactDOM.render(
         [X] Alarm has been activated
         [X] Active alarm has been paused
         [X] Reset button has been pushed
-    [ ] Implement pomodoro timer reducer
+    [X] Implement pomodoro timer reducer
         [X] Break session value increment
             [X] Does FreeCodeCamp set a max value here?
         [X] Break session value decrement

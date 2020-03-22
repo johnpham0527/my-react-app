@@ -496,7 +496,7 @@ class PomodoroClock extends React.Component {
             displayRemainingTimeValue
         );
 
-        //Display start/pause button
+        // Display start/pause button
         const displayStartPauseSessionButton = React.createElement(
             "button",
             {
@@ -507,7 +507,7 @@ class PomodoroClock extends React.Component {
             "Start/Pause"
         );
 
-        //Display reset button
+        // Display reset button
         const displayResetTimerButton = React.createElement(
             "button",
             {
@@ -518,7 +518,7 @@ class PomodoroClock extends React.Component {
             "Reset"
         );
 
-        //Div that displays the start, pause, and reset buttons
+        // Div that displays the start, pause, and reset buttons
         const displayStartPauseAndResetButtons = React.createElement(
             "div",
             {
@@ -526,6 +526,16 @@ class PomodoroClock extends React.Component {
             },
             displayStartPauseSessionButton,
             displayResetTimerButton
+        );
+
+        // Div that displays clock elements: time left, start/pause, and reset buttons
+        const displayClockElements = React.createElement(
+            "div",
+            {
+                style: { margin: "1em" }
+            },
+            displayRemainingTime,
+            displayStartPauseAndResetButtons,
         );
 
         return (
@@ -540,8 +550,7 @@ class PomodoroClock extends React.Component {
                     },
                     displayBreakContainer,
                     displaySessionContainer,
-                    displayRemainingTime,
-                    displayStartPauseAndResetButtons,
+                    displayClockElements,
                 ),
                 beepAudioElement
             )

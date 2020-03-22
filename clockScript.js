@@ -503,26 +503,6 @@ class PomodoroClock extends React.Component {
             "Start/Pause Session Timer"
         );
 
-        //Display start session button
-        const displayStartSessionButton = React.createElement(
-            "button",
-            {
-                style: { display: "inline-block" },
-                onClick: () => this.handleClockButtons("submitStartAlarm")
-            },
-            "Start Session Timer"
-        );
-
-        //Display pause button
-        const displayPauseTimerButton = React.createElement(
-            "button",
-            {
-                style: { display: "inline-block" },
-                onClick: () => this.handleClockButtons("submitPauseAlarm")
-            },
-            "Pause Session Timer"
-        );
-
         //Display reset button
         const displayResetTimerButton = React.createElement(
             "button",
@@ -565,7 +545,6 @@ class PomodoroClock extends React.Component {
             "Pause: ",
             this.props.storeState.pause ?
                 "True" : "False",
-
         )
 
         return (

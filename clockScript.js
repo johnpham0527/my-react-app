@@ -584,8 +584,7 @@ class PomodoroClock extends React.Component {
                         {
                             id: "break-label"
                         },
-                        "Break Length",
-                        ": ",
+                        "Break Length: ",
                         React.createElement(
                             "span",
                             {

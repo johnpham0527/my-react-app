@@ -487,7 +487,6 @@ class PomodoroClock extends React.Component {
             {
                 id: "timer-label",
                 style: { 
-                    marginTop: "1em",
                     display: "block" 
                 }
             },
@@ -532,7 +531,15 @@ class PomodoroClock extends React.Component {
         const displayClockElements = React.createElement(
             "div",
             {
-                style: { margin: "1em" }
+                style: {
+                    display: "block",
+                    width: "164px",
+                    margin: "1em",
+                    padding: "1em",
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                    borderRadius: "1em"
+            }
             },
             displayRemainingTime,
             displayStartPauseAndResetButtons,

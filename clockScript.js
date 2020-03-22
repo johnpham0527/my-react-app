@@ -726,11 +726,11 @@ ReactDOM.render(
 [X] Implement helper function to play audio
     [X] Create playAudio helper function
 [X] Implement up and down arrows
-[ ] Implement CSS
+[X] Implement CSS
     [X] Create pomodoro.css
-    [ ] Implement button styles
+    [X] Implement button styles
         [X] Use red text when less than one minute is left
-    [ ] Implement break session, set timer, and active alarm timer display styles
+    [X] Implement break session, set timer, and active alarm timer display styles
 [ ] Add comments in my code so that readers can understand what is going on
 [X] Remove commented out code
 [ ] Remove code that isn't used anywhere in the final solution

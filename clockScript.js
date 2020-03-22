@@ -607,11 +607,11 @@ class PomodoroClock extends React.Component {
                     displayStartPauseAndResetButtons,
                     /* The following variables are for debugging */
                     //displayPlayAlarmButton,
-                    displayTimerID,
+                    //displayTimerID,
                     //displayRemainingSessionTime,
                     //displayRemainingBreakTime,
-                    displayClockStatus,
-                    displayPauseStatus,
+                    //displayClockStatus,
+                    //displayPauseStatus,
                 ),
                 beepAudioElement
             )

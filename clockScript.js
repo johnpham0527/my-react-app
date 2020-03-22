@@ -616,7 +616,7 @@ ReactDOM.render(
 /*** Pomodoro Clock To-do's
 [ ] Pomodoro Clock Logic
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
-    [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
+    [ ] The alarm must stop playing and be rewound to the beginning when reset button is clicked
     [X] When session length is equal to 60, the remaining session time should display 60:00
     [X] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
         [X] Potential fix: implement hours
@@ -630,8 +630,8 @@ ReactDOM.render(
                 [ ] What needs to be done to start the break timer?
                 [ ] How can the break timer left be displayed? Can I reuse the same variable, but change it to the break session number of seconds?
                 [ ] Can I keep the same setInterval timer?
-    [ ] After the break timer is equal to zero seconds, I need to start the session timer
-        [ ] Should the audio be played? See FreeCodeCamp instructions
+    [X] After the break timer is equal to zero seconds, I need to start the session timer
+        [X] Should the audio be played? See FreeCodeCamp instructions
     [X] What happens after the reset button is pressed?
         [X] Break length resets to 5
         [X] Session length resets to 25
@@ -673,7 +673,7 @@ ReactDOM.render(
         [X] Alarm timer set value decrement
             [X] Check for min value (cannot be less than zero)
         [X] Reset button has been implemented
-        [ ] Activate alarm when timer reaches 00:00
+        [X] Activate alarm when timer reaches 00:00
         [X] Implement start and stop as one button
         [X] Active alarm has been paused
         [X] Default state
@@ -690,7 +690,7 @@ ReactDOM.render(
     [X] Implement break session display
     [X] Implement set timer increment and decrement buttons
     [X] Implement set timer display
-    [ ] Implement active alarm timer
+    [X] Implement active alarm timer
     [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
     [ ] Let the React code handle whether the clock is active or not in local state
         [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux

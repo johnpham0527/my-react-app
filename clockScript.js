@@ -647,15 +647,15 @@ ReactDOM.render(
     [X] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
         [X] Potential fix: implement hours
     [X] Bug: start/pause button doesn't work properly when the break timer is playing
-    [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
-    [ ] How and where should I check to see if the session variable is equal to zero seconds?
+    [X] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
+    [X] How and where should I check to see if the session variable is equal to zero seconds?
         [X] Should I check for this in the reducer? If so, in the countdown case?
         [X] What exactly should happen?
             [X] The audio needs to be played
-            [ ] Which variables need to change?
-                [ ] What needs to be done to start the break timer?
-                [ ] How can the break timer left be displayed? Can I reuse the same variable, but change it to the break session number of seconds?
-                [ ] Can I keep the same setInterval timer?
+            [X] Which variables need to change?
+                [X] What needs to be done to start the break timer?
+                [X] How can the break timer left be displayed? Can I reuse the same variable, but change it to the break session number of seconds?
+                [X] Can I keep the same setInterval timer?
     [X] After the break timer is equal to zero seconds, I need to start the session timer
         [X] Should the audio be played? See FreeCodeCamp instructions
     [X] What happens after the reset button is pressed?

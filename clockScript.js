@@ -487,6 +487,7 @@ class PomodoroClock extends React.Component {
                     style: { 
                         color: "red",
                         display: "block",
+                        fontSize: "2em",
                     },
                 }
                 :
@@ -494,6 +495,7 @@ class PomodoroClock extends React.Component {
                     id: "time-left",
                     style: {
                         display: "block",
+                        fontSize: "2em",
                     },
                 },
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +
@@ -507,7 +509,8 @@ class PomodoroClock extends React.Component {
             {
                 id: "timer-label",
                 style: { 
-                    display: "block" 
+                    display: "block",
+                    fontSize: "2em",
                 }
             },
             this.props.storeState.status === INACTIVE || this.props.storeState.status === SESSION ? //If status is inactive or session, display session as the label

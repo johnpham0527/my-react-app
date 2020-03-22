@@ -538,6 +538,16 @@ class PomodoroClock extends React.Component {
             this.props.storeState.status
         )
 
+        // Display pause status
+        const displayPauseStatus = React.createElement(
+            "div",
+            null,
+            "Pause: ",
+            this.props.storeState.pause ?
+                "True" : "False",
+
+        )
+
         return (
             React.createElement(
                 "div",
@@ -590,6 +600,7 @@ class PomodoroClock extends React.Component {
                     //displayRemainingSessionTime,
                     //displayRemainingBreakTime,
                     displayClockStatus,
+                    displayPauseStatus,
                 ),
                 beepAudioElement
             )

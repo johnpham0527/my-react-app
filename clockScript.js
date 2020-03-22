@@ -307,7 +307,7 @@ class PomodoroClock extends React.Component {
 
     render() {
         /** HTML tag constants */
-        
+
         //HTML audio tag
         const beepAudioElement = React.createElement(
             "audio",
@@ -363,7 +363,7 @@ class PomodoroClock extends React.Component {
                 id: "break-decrement",
                 onClick: () => this.handleClockButtons("decrementSetBreakValue")
             },
-            "Decrement Break"
+            "Decrease"
         );
 
         // Display increment break button
@@ -373,7 +373,7 @@ class PomodoroClock extends React.Component {
                 id: "break-increment",
                 onClick: () => this.handleClockButtons("incrementSetBreakValue")
             },
-            "Increment Break"
+            "Increase"
         );
 
         // Display container for break elements
@@ -427,7 +427,7 @@ class PomodoroClock extends React.Component {
                 id: "session-increment",
                 onClick: () => this.handleClockButtons("incrementSetAlarmValue")
             },
-            "Increment Session"
+            "Increase"
         );
 
         // Display session decrement button
@@ -437,7 +437,7 @@ class PomodoroClock extends React.Component {
                 id: "session-decrement",
                 onClick: () => this.handleClockButtons("decrementSetAlarmValue")
             },
-            "Decrement Session"
+            "Decrease"
         );
 
         // Display container for session elements

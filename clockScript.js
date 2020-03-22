@@ -372,7 +372,7 @@ class PomodoroClock extends React.Component {
                 id: "break-decrement",
                 onClick: () => this.handleClockButtons("decrementSetBreakValue")
             },
-            "Decrease"
+            "\u2193" //down arrow
         );
 
         // Display increment break button
@@ -382,7 +382,7 @@ class PomodoroClock extends React.Component {
                 id: "break-increment",
                 onClick: () => this.handleClockButtons("incrementSetBreakValue")
             },
-            "Increase"
+            "\u2191" //up arrow
         );
 
         // Display container for break elements
@@ -445,7 +445,7 @@ class PomodoroClock extends React.Component {
                 id: "session-increment",
                 onClick: () => this.handleClockButtons("incrementSetAlarmValue")
             },
-            "Increase"
+            "\u2191" //up arrow
         );
 
         // Display session decrement button
@@ -455,7 +455,7 @@ class PomodoroClock extends React.Component {
                 id: "session-decrement",
                 onClick: () => this.handleClockButtons("decrementSetAlarmValue")
             },
-            "Decrease"
+            "\u2193"
         );
 
         // Display container for session elements

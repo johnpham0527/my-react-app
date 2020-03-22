@@ -226,11 +226,11 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue())
         },
-        submitStartAlarm: (status) => {
-            if (status === INACTIVE) { //dispatch only if there isn't an active session or break
+        submitStartAlarm: () => {
+            //if (status === INACTIVE) { //dispatch only if there isn't an active session or break
                 const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
                 return dispatch(startAlarm(timerID)); //keep track of the timer's ID
-            }
+            //}
         },
         submitPauseAlarm: () => {
             return dispatch(pauseAlarm())
@@ -269,12 +269,17 @@ class PomodoroClock extends React.Component {
                 this.props.submitDecrementSetAlarmValue();
                 break;
             case "submitStartPauseAlarm":
-                if (this.props.storeState.status === SESSION || this.props.storeState.status === BREAK) { //If there is an active session, clear the interval
-                    clearInterval(this.props.storeState.timerID);
-                    this.props.submitPauseAlarm();
+                if (this.props.storeState.status === INACTIVE) { //If there isn't an active session, start one up
+                    this.props.submitStartAlarm(); 
                 }
-                else {
-                    this.props.submitStartAlarm(this.props.storeState.status);
+                else { //There is an active session
+                    if (this.props.storeState.pause) { //if the timer is on pause, start it up again
+                        this.props.submitStartAlarm(); 
+                    }
+                    else { //otherwise, pause it
+                        clearInterval(this.props.storeState.timerID);
+                        this.props.submitPauseAlarm();
+                    }
                 }
                 break;
             case "submitStartAlarm":
@@ -641,7 +646,7 @@ ReactDOM.render(
     [X] When session length is equal to 60, the remaining session time should display 60:00
     [X] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
         [X] Potential fix: implement hours
-    [ ] Bug: start/pause button doesn't work properly when the break timer is playing
+    [X] Bug: start/pause button doesn't work properly when the break timer is playing
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [X] Should I check for this in the reducer? If so, in the countdown case?

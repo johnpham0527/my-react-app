@@ -623,9 +623,9 @@ ReactDOM.render(
     [ ] Bug: start/pause button doesn't work properly when the break timer is playing
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
-        [ ] Should I check for this in the reducer? If so, in the countdown case?
-        [ ] What exactly should happen?
-            [ ] The audio needs to be played
+        [X] Should I check for this in the reducer? If so, in the countdown case?
+        [X] What exactly should happen?
+            [X] The audio needs to be played
             [ ] Which variables need to change?
                 [ ] What needs to be done to start the break timer?
                 [ ] How can the break timer left be displayed? Can I reuse the same variable, but change it to the break session number of seconds?

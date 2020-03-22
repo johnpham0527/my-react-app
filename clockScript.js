@@ -710,8 +710,7 @@ ReactDOM.render(
     [X] Implement button IDs (FreeCodeCamp)
 [X] Implement helper function to play audio
     [X] Create playAudio helper function
-[ ] Implement images
-    [ ] Implement up and down arrow clickable images instead of using buttons
+[X] Implement up and down arrows
 [ ] Implement CSS
     [X] Create pomodoro.css
     [ ] Implement button styles

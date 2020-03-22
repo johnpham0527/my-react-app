@@ -370,6 +370,10 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "break-decrement",
+                style: { 
+                    display: "inline-block",
+                    fontSize: "1.1em",
+                },
                 onClick: () => this.handleClockButtons("decrementSetBreakValue")
             },
             "\u2193" //down arrow
@@ -380,6 +384,10 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "break-increment",
+                style: { 
+                    display: "inline-block",
+                    fontSize: "1.1em",
+                },
                 onClick: () => this.handleClockButtons("incrementSetBreakValue")
             },
             "\u2191" //up arrow

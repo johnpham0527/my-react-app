@@ -534,24 +534,7 @@ class PomodoroClock extends React.Component {
                     {
                         id: "main"
                     },
-                    /** Elements for setting the break length */
-                    React.createElement(
-                        "span",
-                        {
-                            id: "break-label"
-                        },
-                        "Break Length: ",
-                        React.createElement(
-                            "span",
-                            {
-                                id: "break-length"
-                            },
-                            this.props.storeState.setBreakMinutes,
-                        ),
-                        br,
-                        displayBreakIncrementButton,
-                        displayBreakDecrementButton,
-                    ),
+                    displayBreakContainer,
                     displaySessionContainer,
                     displayRemainingTime,
                     displayStartPauseAndResetButtons,

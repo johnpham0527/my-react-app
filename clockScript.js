@@ -433,10 +433,8 @@ class PomodoroClock extends React.Component {
                     display: "block" 
                 }
             },
-            "Remaining ",
-            this.props.storeState.isBreakActive ? // Is break currently active? Use ternary operator here
-                "Break " : "Session ",  // Display either break or session
-            "Time: ",
+            this.props.storeState.status === INACTIVE || this.props.storeState.status === SESSION ? //If status is inactive or session, display session as the label
+                "Session Time Left: " : "Break Time Left: ", //Otherwise, display break as the label
             displayRemainingTimeValue
         );
 

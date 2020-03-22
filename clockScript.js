@@ -126,36 +126,37 @@ const clockReducer = (state = defaultClockState, action) => {
         case SETBREAKINCREMENT:
             if (newState.setBreakMinutes < 60) { //breaks cannot be greater than 60 minutes
                 newState.setBreakMinutes++;
-                newState.totalRemainingBreakSeconds = newState.setBreakMinutes * 60;
+                newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETBREAKDECREMENT:
             if (newState.setBreakMinutes > 1) { //breaks cannot be less than 0 minutes
                 newState.setBreakMinutes--;
-                newState.totalRemainingBreakSeconds = newState.setBreakMinutes * 60;
+                newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETALARMINCREMENT:
             if (newState.setSessionMinutes < 60) { //sessions cannot be greater than 60 minutes
                 newState.setSessionMinutes++;
-                newState.totalRemainingSessionSeconds = newState.setSessionMinutes * 60;
+                newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
             }
             return newState;
         case SETALARMDECREMENT:
             if (newState.setSessionMinutes > 1) { //sessions cannot be less than 0 minutes
                 newState.setSessionMinutes--;
-                newState.totalRemainingSessionSeconds = newState.setSessionMinutes * 60;
+                newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
             }
             return newState;
         case STARTALARM:
-            newState.isSessionActive = true;
+            newState.status = SESSION;
             newState.timerID = action.timerID;
             return newState;
         case PAUSEALARM:
-            newState.isSessionActive = false;
+            //newState.status = INACTIVE;
             return newState;
         case RESETALARM:
             newState = defaultClockState;
+            // insert code here to check to see if the alarm is playing. If so, stop it and rewind it.
             return newState;
         case PLAYALARM:
             playAlarmSound();
@@ -163,20 +164,29 @@ const clockReducer = (state = defaultClockState, action) => {
         case COUNTDOWN:
             switch (newState.status) {
                 case INACTIVE: 
+                    newState.totalRemainingSeconds--;
+                    return newState;
                 case SESSION: 
+                    if (newState.totalRemainingSeconds === 0) {
+                        newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
+                        newState.status = BREAK;
+                    }
+                    else {
+                        newState.totalRemainingSeconds--;
+                    }
+                    return newState;
                 case BREAK: 
-                default:
-                    break;
-            }
-            switch (action.timerType) {
-                case SESSION:
-                    newState.totalRemainingSessionSeconds--;
-                    return newState;
-                case BREAK:
-                    newState.totalRemainingBreakSeconds--;
+                    if (newState.totalRemainingSeconds === 0) {
+                        newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
+                        newState.status = SESSION;
+                    }
+                    else {
+                        newState.totalRemainingSeconds--;
+                    }
                     return newState;
                 default:
-                    return newState;
+                    newState.totalRemainingSeconds--;
+                    return state;
             }
         default: 
             return state;
@@ -205,8 +215,8 @@ const mapDispatchToProps = dispatch => {
         submitDecrementSetAlarmValue: () => {
             return dispatch(decrementSetAlarmValue())
         },
-        submitStartAlarm: (isSessionActive) => {
-            if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
+        submitStartAlarm: (status) => {
+            if (status === INACTIVE) { //dispatch only if there isn't an active session or break
                 const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
                 return dispatch(startAlarm(timerID)); //keep track of the timer's ID
             }
@@ -248,16 +258,16 @@ class PomodoroClock extends React.Component {
                 this.props.submitDecrementSetAlarmValue();
                 break;
             case "submitStartPauseAlarm":
-                if (this.props.storeState.isSessionActive === true) { //If there is an active session, clear the interval
+                if (this.props.storeState.status === SESSION || this.props.storeState.status === BREAK) { //If there is an active session, clear the interval
                     clearInterval(this.props.storeState.timerID);
                     this.props.submitPauseAlarm();
                 }
                 else {
-                    this.props.submitStartAlarm(this.props.storeState.isSessionActive);
+                    this.props.submitStartAlarm(this.props.storeState.status);
                 }
                 break;
             case "submitStartAlarm":
-                this.props.submitStartAlarm(this.props.storeState.isSessionActive);
+                this.props.submitStartAlarm(this.props.storeState.status);
                 break;
             case "submitPauseAlarm":
                 clearInterval(this.props.storeState.timerID);
@@ -417,6 +427,10 @@ class PomodoroClock extends React.Component {
             {
                 id: "time-left",
             },
+            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +
+                ":" +
+                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).seconds 
+            /*
             this.props.storeState.isBreakActive ? //Is break currently active? Use the ternary operator here
                 // If so, concatenate current break minutes and seconds
                 displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes +
@@ -427,6 +441,7 @@ class PomodoroClock extends React.Component {
                 displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes +
                 ":" +
                 displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
+            */
         )
 
         // Display remaining session or break time label
@@ -553,7 +568,7 @@ class PomodoroClock extends React.Component {
                     displayStartPauseAndResetButtons,
                     /* The following variables are for debugging */
                     //displayPlayAlarmButton,
-                    //displayTimerID,
+                    displayTimerID,
                     //displayRemainingSessionTime,
                     //displayRemainingBreakTime,
                 ),

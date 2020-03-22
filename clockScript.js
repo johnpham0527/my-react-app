@@ -707,4 +707,5 @@ ReactDOM.render(
     [ ] Implement button styles
     [ ] Implement break session, set timer, and active alarm timer display styles
 [ ] Add comments in my code so that readers can understand what is going on
+[ ] Remove commented out code
 */

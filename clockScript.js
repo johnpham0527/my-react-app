@@ -83,6 +83,12 @@ const playAlarmSound = () => {
     alarm.play();
 }
 
+const pauseAndRewindAlarmSound = () => {
+    let alarm = document.getElementById("beep");
+    alarm.pause();
+    alarm.currentTime = 0;
+}
+
 const convertSecondsToTime = (seconds) => {
 
     let minutesDivisor = seconds % (60 * 60);
@@ -165,7 +171,7 @@ const clockReducer = (state = defaultClockState, action) => {
             return newState;
         case RESETALARM:
             newState = defaultClockState;
-            // insert code here to check to see if the alarm is playing. If so, stop it and rewind it.
+            pauseAndRewindAlarmSound();
             return newState;
         case PLAYALARM:
             playAlarmSound();

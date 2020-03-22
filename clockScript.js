@@ -440,9 +440,15 @@ class PomodoroClock extends React.Component {
         // Display remaining session or break time value
         const displayRemainingTimeValue = React.createElement(
             "span",
-            {
-                id: "time-left",
-            },
+            this.props.storeState.totalRemainingSeconds < 60 ? // display red text if less than 60 seconds left
+                {
+                    id: "time-left",
+                    style: { color: "red" },
+                }
+                :
+                {
+                    id: "time-left",
+                },
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +
                 ":" +
                 displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).seconds 
@@ -729,8 +735,9 @@ ReactDOM.render(
 [ ] Implement images
     [ ] Implement up and down arrow clickable images instead of using buttons
 [ ] Implement CSS
-    [x] Create pomodoro.css
+    [X] Create pomodoro.css
     [ ] Implement button styles
+        [X] Use red text when less than one minute is left
     [ ] Implement break session, set timer, and active alarm timer display styles
 [ ] Add comments in my code so that readers can understand what is going on
 [ ] Remove commented out code

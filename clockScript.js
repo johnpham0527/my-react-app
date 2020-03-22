@@ -407,10 +407,11 @@ class PomodoroClock extends React.Component {
             "div",
             { 
                 style: { 
-                    display: "inline"
+                    display: "inline",
+                    fontSize: "1.1em",
                 } 
             },
-            "Session Length: ",
+            "Session Length",
         );
 
         // Display session length
@@ -418,7 +419,10 @@ class PomodoroClock extends React.Component {
             "div",
             {
                 id: "session-length",
-                style: { display: "inline" },
+                style: { 
+                    display: "block",
+                    fontSize: "1.5em",
+                },
             },
             this.props.storeState.setSessionMinutes,
         );
@@ -463,9 +467,6 @@ class PomodoroClock extends React.Component {
                     display: "inline-block",
                     margin: "1em",
                     padding: "1em",
-                    borderStyle: "solid",
-                    borderWidth: "1px",
-                    borderRadius: "1em",
                 }
             },
             displaySessionLength,

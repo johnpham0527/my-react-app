@@ -126,25 +126,31 @@ const clockReducer = (state = defaultClockState, action) => {
         case SETBREAKINCREMENT:
             if (newState.setBreakMinutes < 60) { //breaks cannot be greater than 60 minutes
                 newState.setBreakMinutes++;
-                newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
+                //newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETBREAKDECREMENT:
             if (newState.setBreakMinutes > 1) { //breaks cannot be less than 0 minutes
                 newState.setBreakMinutes--;
-                newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
+                //newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETALARMINCREMENT:
             if (newState.setSessionMinutes < 60) { //sessions cannot be greater than 60 minutes
                 newState.setSessionMinutes++;
-                newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
+                if (newState.status === INACTIVE) {
+                    newState.totalRemainingSeconds = newState.setSessionMinutes * 60; //total remaining seconds only changes if the timer is inactive
+                }
+                
             }
             return newState;
         case SETALARMDECREMENT:
             if (newState.setSessionMinutes > 1) { //sessions cannot be less than 0 minutes
                 newState.setSessionMinutes--;
-                newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
+                if (newState.status === INACTIVE) {
+                    newState.totalRemainingSeconds = newState.setSessionMinutes * 60; //total remaining seconds only changes if the timer is inactive
+                }
+                
             }
             return newState;
         case STARTALARM:
@@ -168,6 +174,7 @@ const clockReducer = (state = defaultClockState, action) => {
                     return newState;
                 case SESSION: 
                     if (newState.totalRemainingSeconds === 0) {
+                        playAlarmSound();
                         newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
                         newState.status = BREAK;
                     }
@@ -177,6 +184,7 @@ const clockReducer = (state = defaultClockState, action) => {
                     return newState;
                 case BREAK: 
                     if (newState.totalRemainingSeconds === 0) {
+                        playAlarmSound();
                         newState.totalRemainingSeconds = newState.setSessionMinutes * 60;
                         newState.status = SESSION;
                     }
@@ -609,6 +617,8 @@ ReactDOM.render(
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
     [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
     [X] When session length is equal to 60, the remaining session time should display 60:00
+    [ ] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
+        [ ] Potential fix: implement hours
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [ ] Should I check for this in the reducer? If so, in the countdown case?

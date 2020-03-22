@@ -505,7 +505,7 @@ class PomodoroClock extends React.Component {
                 }
             },
             this.props.storeState.status === INACTIVE || this.props.storeState.status === SESSION ? //If status is inactive or session, display session as the label
-                "Session Time Left: " : "Break Time Left: ", //Otherwise, display break as the label
+                "Session: " : "Break: ", //Otherwise, display break as the label
             displayRemainingTimeValue
         );
 

@@ -134,13 +134,11 @@ const clockReducer = (state = defaultClockState, action) => {
         case SETBREAKINCREMENT:
             if (newState.setBreakMinutes < 60) { //breaks cannot be greater than 60 minutes
                 newState.setBreakMinutes++;
-                //newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETBREAKDECREMENT:
             if (newState.setBreakMinutes > 1) { //breaks cannot be less than 0 minutes
                 newState.setBreakMinutes--;
-                //newState.totalRemainingSeconds = newState.setBreakMinutes * 60;
             }
             return newState;
         case SETALARMINCREMENT:
@@ -326,7 +324,7 @@ class PomodoroClock extends React.Component {
             null
         );
 
-        //Display h1 header
+        // Display h1 header
         const displayPomodoroClockHeader = React.createElement(
             "h1",
             {
@@ -346,6 +344,16 @@ class PomodoroClock extends React.Component {
                 onClick: () => this.handleClockButtons("submitPlayAlarm")
             },
             "Play Alarm"
+        );
+
+        // Display decrement break button
+        const displayBreakDecrementButton = React.createElement(
+            "button",
+            {
+                id: "break-decrement",
+                onClick: () => this.handleClockButtons("decrementSetBreakValue")
+            },
+            "Decrement Break"
         );
 
         // Display session length text
@@ -458,18 +466,6 @@ class PomodoroClock extends React.Component {
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +
                 ":" +
                 displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).seconds 
-            /*
-            this.props.storeState.isBreakActive ? //Is break currently active? Use the ternary operator here
-                // If so, concatenate current break minutes and seconds
-                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes +
-                ":" +
-                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds 
-                : // ternary operator colon
-                // If not, concatenate current session minutes and seconds
-                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes +
-                ":" +
-                displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
-            */
         )
 
         // Display remaining session or break time label
@@ -536,8 +532,6 @@ class PomodoroClock extends React.Component {
                 style: { marginTop: "0em" }
             },
             displayStartPauseSessionButton,
-            //displayStartSessionButton,
-            //displayPauseTimerButton,
             displayResetTimerButton
         );
 
@@ -599,14 +593,7 @@ class PomodoroClock extends React.Component {
                             },
                             "Increment Break"
                         ),
-                        React.createElement(
-                            "button",
-                            {
-                                id: "break-decrement",
-                                onClick: () => this.handleClockButtons("decrementSetBreakValue")
-                            },
-                            "Decrement Break"
-                        ),
+                        displayBreakDecrementButton,
                     ),
                     displaySessionContainer,
                     displayRemainingTime,
@@ -746,6 +733,6 @@ ReactDOM.render(
         [X] Use red text when less than one minute is left
     [ ] Implement break session, set timer, and active alarm timer display styles
 [ ] Add comments in my code so that readers can understand what is going on
-[ ] Remove commented out code
+[X] Remove commented out code
 [ ] Remove code that isn't used anywhere in the final solution
 */

@@ -31,6 +31,7 @@ const defaultClockState = {
     isBreakActive: false,
     totalRemainingSeconds: 25 * 60, //use one variable to track total remaining seconds, whether session or break
     status: INACTIVE, //status can be one of three values: INACTIVE, SESSION, or BREAK
+    pause: false,
     timerID: 0,
 }
 
@@ -155,11 +156,12 @@ const clockReducer = (state = defaultClockState, action) => {
             }
             return newState;
         case STARTALARM:
+            newState.pause = false;
             newState.status = SESSION;
             newState.timerID = action.timerID;
             return newState;
         case PAUSEALARM:
-            //newState.status = INACTIVE;
+            newState.pause = true;
             return newState;
         case RESETALARM:
             newState = defaultClockState;

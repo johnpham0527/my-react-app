@@ -333,19 +333,6 @@ class PomodoroClock extends React.Component {
             "Pomodoro Clock"
         );
 
-        // Display play alarm button
-        const displayPlayAlarmButton = React.createElement(
-            "button",
-            {
-                style: { 
-                    marginTop: "1em",
-                    display: "block" 
-                },
-                onClick: () => this.handleClockButtons("submitPlayAlarm")
-            },
-            "Play Alarm"
-        );
-
         // Display decrement break button
         const displayBreakDecrementButton = React.createElement(
             "button",
@@ -428,36 +415,6 @@ class PomodoroClock extends React.Component {
             displaySessionLength,
             displaySessionIncrementButton,
             displaySessionDecrementButton,
-        );
-
-        // Display remaining session time */
-        const displayRemainingSessionTime = React.createElement(
-            "div",
-            {
-                style: {
-                    marginTop: "1em",
-                    display: "block"
-                }
-            },
-            "Remaining Session Time: ",
-            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).minutes,
-            ":",
-            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSessionSeconds)).seconds,
-        );
-
-        // Display remaining break time
-        const displayRemainingBreakTime = React.createElement(
-            "div",
-            {
-                style: {
-                    marginTop: "1em",
-                    display: "block"
-                }
-            },
-            "Remaining Break Time: ",
-            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).minutes,
-            ":",
-            displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingBreakSeconds)).seconds,
         );
 
         // Display remaining session or break time value
@@ -555,13 +512,6 @@ class PomodoroClock extends React.Component {
                     displaySessionContainer,
                     displayRemainingTime,
                     displayStartPauseAndResetButtons,
-                    /* The following variables are for debugging */
-                    //displayPlayAlarmButton,
-                    //displayTimerID,
-                    //displayRemainingSessionTime,
-                    //displayRemainingBreakTime,
-                    //displayClockStatus,
-                    //displayPauseStatus,
                 ),
                 beepAudioElement
             )

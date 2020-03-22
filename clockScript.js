@@ -446,7 +446,12 @@ class PomodoroClock extends React.Component {
             {
                 id: "session-label",
                 style: {
-                    marginTop: "1em"
+                    display: "inline-block",
+                    marginTop: "1em",
+                    padding: "1em",
+                    borderStyle: "solid",
+                    borderWidth: "1px",
+                    borderRadius: "1em"
                 }
             },
             displaySessionLength,

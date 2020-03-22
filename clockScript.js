@@ -322,7 +322,10 @@ class PomodoroClock extends React.Component {
         const displayPomodoroClockHeader = React.createElement(
             "h1",
             {
-                style: { color: "charcoal" }
+                style: { 
+                    color: "charcoal",
+                    textAlign: "center",
+                }
             },
             "Pomodoro Clock"
         );
@@ -387,7 +390,7 @@ class PomodoroClock extends React.Component {
                     padding: "1em",
                     borderStyle: "solid",
                     borderWidth: "1px",
-                    borderRadius: "1em"
+                    borderRadius: "1em",
                 }
             },
             displayBreakLength,
@@ -456,13 +459,24 @@ class PomodoroClock extends React.Component {
                     padding: "1em",
                     borderStyle: "solid",
                     borderWidth: "1px",
-                    borderRadius: "1em"
+                    borderRadius: "1em",
                 }
             },
             displaySessionLength,
             displaySessionIncrementButton,
             displaySessionDecrementButton,
         );
+
+        const displayBreakAndSessionContainers = React.createElement(
+            "div",
+            {
+                style: {
+                    textAlign: "center"
+                }
+            },
+            displayBreakContainer,
+            displaySessionContainer,
+        )
 
         // Display remaining session or break time value
         const displayRemainingTimeValue = React.createElement(
@@ -538,7 +552,10 @@ class PomodoroClock extends React.Component {
                     padding: "1em",
                     borderStyle: "solid",
                     borderWidth: "1px",
-                    borderRadius: "1em"
+                    borderRadius: "1em",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    textAlign: "center",
             }
             },
             displayRemainingTime,
@@ -555,8 +572,7 @@ class PomodoroClock extends React.Component {
                     {
                         id: "main"
                     },
-                    displayBreakContainer,
-                    displaySessionContainer,
+                    displayBreakAndSessionContainers,
                     displayClockElements,
                 ),
                 beepAudioElement

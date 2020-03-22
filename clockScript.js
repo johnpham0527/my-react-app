@@ -484,11 +484,17 @@ class PomodoroClock extends React.Component {
             this.props.storeState.totalRemainingSeconds < 60 ? // display red text if less than 60 seconds left
                 {
                     id: "time-left",
-                    style: { color: "red" },
+                    style: { 
+                        color: "red",
+                        display: "block",
+                    },
                 }
                 :
                 {
                     id: "time-left",
+                    style: {
+                        display: "block",
+                    },
                 },
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +
                 ":" +
@@ -505,7 +511,7 @@ class PomodoroClock extends React.Component {
                 }
             },
             this.props.storeState.status === INACTIVE || this.props.storeState.status === SESSION ? //If status is inactive or session, display session as the label
-                "Session: " : "Break: ", //Otherwise, display break as the label
+                "Session" : "Break", //Otherwise, display break as the label
             displayRemainingTimeValue
         );
 

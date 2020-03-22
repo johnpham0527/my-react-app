@@ -24,11 +24,7 @@ const BREAK = "BREAK";
 //Default clock state
 const defaultClockState = {
     setBreakMinutes: 5,
-    totalRemainingBreakSeconds: 5 * 60,
     setSessionMinutes: 25,
-    totalRemainingSessionSeconds: 25 * 60,
-    isSessionActive: false,
-    isBreakActive: false,
     totalRemainingSeconds: 25 * 60, //use one variable to track total remaining seconds, whether session or break
     status: INACTIVE, //status can be one of three values: INACTIVE, SESSION, or BREAK
     pause: false,
@@ -90,7 +86,6 @@ const pauseAndRewindAlarmSound = () => {
 }
 
 const convertSecondsToTime = (seconds) => {
-
     let minutesDivisor = seconds % (60 * 60);
     let min = Math.floor(minutesDivisor / 60);
 
@@ -156,7 +151,6 @@ const clockReducer = (state = defaultClockState, action) => {
                 if (newState.status === INACTIVE) {
                     newState.totalRemainingSeconds = newState.setSessionMinutes * 60; //total remaining seconds only changes if the timer is inactive
                 }
-                
             }
             return newState;
         case STARTALARM:
@@ -708,7 +702,7 @@ ReactDOM.render(
     [X] Implement app wrapper
     [X] Map Redux state to React props
     [X] Map Redux dispatchers to React props
-[ ] Implement React code template
+[X] Implement React code template
     [X] Implement constructor
     [X] Implement handleClockButtons method
     [X] Implement break session increment and decrement buttons
@@ -716,7 +710,7 @@ ReactDOM.render(
     [X] Implement set timer increment and decrement buttons
     [X] Implement set timer display
     [X] Implement active alarm timer
-    [ ] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
+    [X] Clean up HTML: break up the huge block of createElements into smaller HTML const variables
     [X] Let the React code handle whether the clock is active or not
     [X] React Redux timer example: https://codesandbox.io/s/vigilant-wildflower-3yvux
     [X] Learn about set interval
@@ -733,5 +727,5 @@ ReactDOM.render(
     [X] Implement break session, set timer, and active alarm timer display styles
 [ ] Add comments in my code so that readers can understand what is going on
 [X] Remove commented out code
-[ ] Remove code that isn't used anywhere in the final solution
+[X] Remove code that isn't used anywhere in the final solution
 */

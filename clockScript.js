@@ -334,9 +334,12 @@ class PomodoroClock extends React.Component {
         const displayBreakLengthText = React.createElement(
             "div",
             { 
-                style: { display: "inline" } 
+                style: { 
+                    display: "inline",
+                    fontSize: "1.1em",
+                } 
             },
-            "Break Length: ",
+            "Break Length",
         )
 
         // Display break length value
@@ -344,7 +347,10 @@ class PomodoroClock extends React.Component {
             "div",
             {
                 id: "break-length",
-                style: { display: "inline" },
+                style: { 
+                    display: "block",
+                    fontSize: "1.5em",
+                },
             },
             this.props.storeState.setBreakMinutes,
         );
@@ -388,9 +394,7 @@ class PomodoroClock extends React.Component {
                     display: "inline-block",
                     margin: "1em",
                     padding: "1em",
-                    borderStyle: "solid",
-                    borderWidth: "1px",
-                    borderRadius: "1em",
+
                 }
             },
             displayBreakLength,
@@ -402,7 +406,9 @@ class PomodoroClock extends React.Component {
         const displaySessionLengthText = React.createElement(
             "div",
             { 
-                style: { display: "inline" } 
+                style: { 
+                    display: "inline"
+                } 
             },
             "Session Length: ",
         );

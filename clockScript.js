@@ -382,6 +382,20 @@ class PomodoroClock extends React.Component {
             "Increment Break"
         );
 
+        // Display container for break elements
+        const displayBreakContainer = React.createElement(
+            "div",
+            {
+                id: "break-label",
+                style: {
+                    marginTop: "1em"
+                }
+            },
+            displayBreakLength,
+            displayBreakIncrementButton,
+            displayBreakDecrementButton,
+        );
+
         // Display session length text
         const displaySessionLengthText = React.createElement(
             "div",

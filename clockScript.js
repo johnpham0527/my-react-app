@@ -83,6 +83,7 @@ const playAlarmSound = () => {
 }
 
 const convertSecondsToTime = (seconds) => {
+
     let minutesDivisor = seconds % (60 * 60);
     let min = Math.floor(minutesDivisor / 60);
 
@@ -619,6 +620,7 @@ ReactDOM.render(
     [X] When session length is equal to 60, the remaining session time should display 60:00
     [ ] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
         [ ] Potential fix: implement hours
+    [ ] Bug: start/pause button doesn't work properly when the break timer is playing
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?
         [ ] Should I check for this in the reducer? If so, in the countdown case?

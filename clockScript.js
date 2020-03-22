@@ -87,7 +87,7 @@ const convertSecondsToTime = (seconds) => {
     let minutesDivisor = seconds % (60 * 60);
     let min = Math.floor(minutesDivisor / 60);
 
-    if (seconds > 0 && min === 0) {
+    if (seconds === 3600) {
         min = 60; //Allow 60 minutes to appear as 60:00
     }
     
@@ -618,8 +618,8 @@ ReactDOM.render(
     [X] Either remaining session time or remaining break time should be displayed, but not both at the same time
     [ ] Theh alarm must stop playing and be rewound to the beginning when reset button is clicked
     [X] When session length is equal to 60, the remaining session time should display 60:00
-    [ ] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
-        [ ] Potential fix: implement hours
+    [X] Bug: when session length is 1 and the alarm begins, Session Time Left displays 60:00
+        [X] Potential fix: implement hours
     [ ] Bug: start/pause button doesn't work properly when the break timer is playing
     [ ] There are three statuses: INACTIVE, SESSION, and BREAK. What should happen with each one?
     [ ] How and where should I check to see if the session variable is equal to zero seconds?

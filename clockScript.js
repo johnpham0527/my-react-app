@@ -524,29 +524,6 @@ class PomodoroClock extends React.Component {
             displayResetTimerButton
         );
 
-        // Display timerID
-        const displayTimerID = React.createElement(
-            "div",
-            null,
-            this.props.storeState.timerID
-        );
-
-        // Display clock status
-        const displayClockStatus = React.createElement(
-            "div",
-            null,
-            this.props.storeState.status
-        )
-
-        // Display pause status
-        const displayPauseStatus = React.createElement(
-            "div",
-            null,
-            "Pause: ",
-            this.props.storeState.pause ?
-                "True" : "False",
-        )
-
         return (
             React.createElement(
                 "div",

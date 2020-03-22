@@ -356,6 +356,16 @@ class PomodoroClock extends React.Component {
             "Decrement Break"
         );
 
+        // Display increment break button
+        const displayBreakIncrementButton = React.createElement(
+            "button",
+            {
+                id: "break-increment",
+                onClick: () => this.handleClockButtons("incrementSetBreakValue")
+            },
+            "Increment Break"
+        );
+
         // Display session length text
         const displaySessionLengthText = React.createElement(
             "div",
@@ -383,7 +393,6 @@ class PomodoroClock extends React.Component {
             },
             displaySessionLengthText,
             displaySessionLengthValue
-
         );
 
         // Display session increment button
@@ -585,14 +594,7 @@ class PomodoroClock extends React.Component {
                             this.props.storeState.setBreakMinutes,
                         ),
                         br,
-                        React.createElement(
-                            "button",
-                            {
-                                id: "break-increment",
-                                onClick: () => this.handleClockButtons("incrementSetBreakValue")
-                            },
-                            "Increment Break"
-                        ),
+                        displayBreakIncrementButton,
                         displayBreakDecrementButton,
                     ),
                     displaySessionContainer,

@@ -383,7 +383,7 @@ class PomodoroClock extends React.Component {
                 id: "break-label",
                 style: {
                     display: "inline-block",
-                    marginTop: "1em",
+                    margin: "1em",
                     padding: "1em",
                     borderStyle: "solid",
                     borderWidth: "1px",
@@ -452,7 +452,7 @@ class PomodoroClock extends React.Component {
                 id: "session-label",
                 style: {
                     display: "inline-block",
-                    marginTop: "1em",
+                    margin: "1em",
                     padding: "1em",
                     borderStyle: "solid",
                     borderWidth: "1px",

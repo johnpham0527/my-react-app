@@ -70,10 +70,9 @@ const playAlarm = () => {
     return { type: PLAYALARM };
 }
 
-const countdown = (timer_type) => {
+const countdown = () => {
     return { 
         type: COUNTDOWN,
-        timerType: timer_type
     };
 }
 
@@ -208,7 +207,7 @@ const mapDispatchToProps = dispatch => {
         },
         submitStartAlarm: (isSessionActive) => {
             if (!isSessionActive) { //don't dispatch countdown and startAlarm if there is already an active session
-                const timerID = setInterval(() => dispatch(countdown(SESSION)), 1000); //dispatch countdown every second
+                const timerID = setInterval(() => dispatch(countdown()), 1000); //dispatch countdown every second
                 return dispatch(startAlarm(timerID)); //keep track of the timer's ID
             }
         },

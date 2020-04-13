@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/johnpham0527/my-react-app/issues"
   },
-  "homepage": "https://github.com/johnpham0527/my-react-app#readme"
+  "homepage": "https://github.com/johnpham0527/my-react-app#readme",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
 }

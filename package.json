@@ -1,0 +1,19 @@
+{
+  "name": "my-react-app",
+  "version": "1.0.0",
+  "description": "My React App",
+  "main": "clockScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnpham0527/my-react-app.git"
+  },
+  "author": "John Pham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnpham0527/my-react-app/issues"
+  },
+  "homepage": "https://github.com/johnpham0527/my-react-app#readme"
+}

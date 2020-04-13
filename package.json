@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/johnpham0527/my-react-app#readme",
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

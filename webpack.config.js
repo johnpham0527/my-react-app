@@ -12,5 +12,8 @@ module.exports = {
             }
         ]
     },
-    output: {}
+    output: {
+        filename: 'transformed.js',
+        path: __dirname + '/build'
+    }
 };

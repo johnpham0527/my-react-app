@@ -1,3 +1,5 @@
+var HTMLWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
     entry: __dirname + 'app/index.jsx',
     module: {

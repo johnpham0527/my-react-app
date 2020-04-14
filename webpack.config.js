@@ -3,7 +3,12 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/
+                test: /\.js$/,
+                exclude: [
+                    /node_modules/,
+                    /other_projects/
+                ],
+                loader: 'babel-loader'
             }
         ]
     }

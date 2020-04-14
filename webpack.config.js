@@ -1,3 +1,8 @@
 module.exports = {
-    entry: __dirname + 'app/slideshow_index.js'
+    entry: __dirname + 'app/slideshow_index.js',
+    module: {
+        loaders: [
+            {}
+        ]
+    }
 };

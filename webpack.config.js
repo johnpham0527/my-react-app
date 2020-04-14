@@ -13,7 +13,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'slideshow.js',
+        filename: 'transformed.js',
         path: __dirname + '/build'
     }
 };

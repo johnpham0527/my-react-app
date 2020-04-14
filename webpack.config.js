@@ -8,7 +8,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
     entry: __dirname + 'app/index.jsx',
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.jsx$/,
                 exclude: [

@@ -6,7 +6,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-    entry: __dirname + 'app/index.js',
+    entry: __dirname + './app/index.js',
     module: {
         rules: [
             {

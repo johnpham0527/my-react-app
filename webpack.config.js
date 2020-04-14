@@ -6,11 +6,11 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 module.exports = {
-    entry: __dirname + 'app/index.jsx',
+    entry: __dirname + 'app/index.js',
     module: {
         rules: [
             {
-                test: /\.jsx$/,
+                test: /\.js$/,
                 exclude: [
                     /node_modules/,
                     /other_projects/

@@ -1,5 +1,5 @@
 module.exports = {
-    entry: __dirname + 'app/slideshow_index.js',
+    entry: __dirname + 'app/index.jsx',
     module: {
         loaders: [
             {
@@ -13,7 +13,7 @@ module.exports = {
         ]
     },
     output: {
-        filename: 'transformed.js',
+        filename: 'slideshow.js',
         path: __dirname + '/build'
     }
 };

@@ -3,10 +3,13 @@ var React = require('react');
 class App extends React.Component {
     constructor(props) {
         super(props);
-        const featurePictures = [
+        this.featurePictures = [
             "feature_back_of_head.jpg"
         ];
-        const URL = "http://www.john-pham.com/audreybergensten/feature/"
+        this.URL = "http://www.john-pham.com/audreybergensten/feature/"
+        this.state = {
+            pictureDisplayURL: this.URL + this.featurePictures[0]
+        }
     }
     
     

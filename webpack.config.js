@@ -18,12 +18,15 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+                test: /\.(jpeg|jpg|png|gif)$/,
                 exclude: [
                     /node_modules/,
                     /other_projects/
                 ],
-                loader: 'url-loader?limit=100000'
+                loader: 'url-loader?limit=10240'
+            },
+            {
+                loader: "css-loader?url=false"
             }
         ]
     },

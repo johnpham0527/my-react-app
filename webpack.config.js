@@ -24,9 +24,6 @@ module.exports = {
                     /other_projects/
                 ],
                 loader: 'url-loader?limit=10240'
-            },
-            {
-                loader: "css-loader?url=false"
             }
         ]
     },

@@ -1,5 +1,3 @@
-import image from "./feature_back_of_head.jpg";
-
 var React = require('react');
 
 class App extends React.Component {

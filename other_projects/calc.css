@@ -35,18 +35,17 @@ h1, h2 {
 header {
     margin-top: 200px;
     text-align: center;
+    grid-row: 1;
 }
 
 footer {
     text-align: center;
+    grid-row: 3;
 }
 
 /* Main
 ====================*/
 main {
     margin: auto;
+    grid-row: 2;
 }
-
-
-/* Media Queries
-====================*/

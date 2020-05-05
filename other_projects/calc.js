@@ -400,9 +400,10 @@ class MyComponent extends React.Component {
                             padding: "10px",
                             borderRadius: "10px",
                             border: "none",
+                            fontSize: "2em",
                             backgroundColor: "#282461",
                             display: "grid",
-                            gridTemplateRows: "54px repeat(5, 1fr)"
+                            gridTemplateRows: "2.5em repeat(5, 1fr)"
                         }
                     },
                     React.createElement(
@@ -412,7 +413,7 @@ class MyComponent extends React.Component {
                             style: {
                                 border: "1px solid black",
                                 width: "256px",
-                                minHeight: "2.5em",
+                                minHeight: "2em",
                                 padding: "10px",
                                 textAlign: "right",
                                 marginTop: "5px",
@@ -436,6 +437,8 @@ class MyComponent extends React.Component {
                             {
                                 style: {
                                     width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
@@ -458,6 +461,8 @@ class MyComponent extends React.Component {
                                 style: 
                                 {
                                     width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
@@ -477,6 +482,8 @@ class MyComponent extends React.Component {
                             {style: 
                                 {
                                     width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
@@ -498,6 +505,8 @@ class MyComponent extends React.Component {
                                 style: 
                                 {
                                     width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
@@ -526,7 +535,9 @@ class MyComponent extends React.Component {
                                 id: "seven",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -548,7 +559,9 @@ class MyComponent extends React.Component {
                                 id: "eight",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "0px",
                                     marginRight: "0px",
                                     marginTop: "5px",
@@ -571,7 +584,9 @@ class MyComponent extends React.Component {
                                 id: "nine",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -593,7 +608,9 @@ class MyComponent extends React.Component {
                                 id: "multiply",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -623,7 +640,9 @@ class MyComponent extends React.Component {
                                 id: "four",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -645,7 +664,9 @@ class MyComponent extends React.Component {
                                 id: "five",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "0px",
                                     marginRight: "0px",
                                     marginTop: "5px",
@@ -668,7 +689,9 @@ class MyComponent extends React.Component {
                                 id: "six",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -690,7 +713,9 @@ class MyComponent extends React.Component {
                                 id: "subtract",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -720,7 +745,9 @@ class MyComponent extends React.Component {
                                 id: "one",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -742,7 +769,9 @@ class MyComponent extends React.Component {
                                 id: "two",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "0px",
                                     marginRight: "0px",
                                     marginTop: "5px",
@@ -765,7 +794,9 @@ class MyComponent extends React.Component {
                                 id: "three",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -787,7 +818,9 @@ class MyComponent extends React.Component {
                                 id: "add",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -815,7 +848,9 @@ class MyComponent extends React.Component {
                             "button",
                             {style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginRight: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -835,7 +870,9 @@ class MyComponent extends React.Component {
                                 id: "zero",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "0px",
                                     marginTop: "5px",
                                     marginRight: "0px",
@@ -856,7 +893,9 @@ class MyComponent extends React.Component {
                                 id: "decimal",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",
@@ -876,7 +915,9 @@ class MyComponent extends React.Component {
                                 id: "equals",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
+                                    height: "60px",
+                                    fontSize: "0.5em",
                                     marginLeft: "5px",
                                     marginTop: "5px",
                                     borderRadius: "8px",

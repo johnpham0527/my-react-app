@@ -402,7 +402,7 @@ class MyComponent extends React.Component {
                             backgroundColor: "#dddddd",
                             boxShadow: "2px 2px #888888",
                             display: "grid",
-                            gridTemplateRows: "2fr repeat(5, 1fr)"
+                            gridTemplateRows: "54px repeat(5, 1fr)"
                         }
                     },
                     React.createElement(
@@ -412,23 +412,24 @@ class MyComponent extends React.Component {
                             style: {
                                 border: "1px solid black",
                                 width: "156px",
+                                minHeight: "2.5em",
                                 padding: "10px",
                                 textAlign: "right",
                                 marginTop: "5px",
-                                marginBottom: "-10px", 
+                                marginBottom: "50px",
                                 backgroundColor: "#eeeeee",
-                                gridRow: "1"
+                                gridRow: "1",
                             }
                         },
                         this.props.storeState.display
                     ),
-                    br,
                     /* Button Row 1 */
                     React.createElement(
                         "div",
                         {
                             id: "buttonRow1",
-                            gridRow: "2"
+                            gridRow: "2",
+
                         },
                         React.createElement(
                             "button",

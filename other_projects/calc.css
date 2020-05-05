@@ -27,7 +27,7 @@ h1, h2 {
     max-width: 1200px;
     margin: auto;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
 }
 
 /* Header and Footer

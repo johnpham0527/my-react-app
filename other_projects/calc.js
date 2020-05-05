@@ -395,12 +395,12 @@ class MyComponent extends React.Component {
                     {
                         id: "main",
                         style: {
-                        border: "1px solid black",
-                        width: "182px",
-                        padding: "10px",
-                        borderRadius: "10px",
-                        backgroundColor: "#dddddd",
-                        boxShadow: "2px 2px #888888"
+                            border: "1px solid black",
+                            width: "182px",
+                            padding: "10px",
+                            borderRadius: "10px",
+                            backgroundColor: "#dddddd",
+                            boxShadow: "2px 2px #888888"
                         }
                     },
                     React.createElement(
@@ -409,7 +409,7 @@ class MyComponent extends React.Component {
                             id: "display",
                             style: {
                                 border: "1px solid black",
-                                width: "150px",
+                                width: "156px",
                                 padding: "10px",
                                 textAlign: "right",
                                 marginTop: "5px",

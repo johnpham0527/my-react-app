@@ -571,226 +571,243 @@ class MyComponent extends React.Component {
                             "*"
                         ),
                     ),
-
-                    br,
+                    /* Button Row 3 */
                     React.createElement(
-                        "button",
+                        "div",
                         {
-                            id: "four",
-                            style: 
-                            {
-                                width: "35px",
-                                marginRight: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("4")
+                            id: "buttonRow3"
                         },
-                        "4"
+                        React.createElement(
+                            "button",
+                            {
+                                id: "four",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginRight: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("4")
+                            },
+                            "4"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "five",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "0px",
+                                    marginRight: "0px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("5")
+                            },
+                            "5"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "six",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("6")
+                            },
+                            "6"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "subtract",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("subtract")
+                            },
+                            "-"
+                        ),
                     ),
+                    /* Button Row 4 */
                     React.createElement(
-                        "button",
+                        "div",
                         {
-                            id: "five",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "0px",
-                                marginRight: "0px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("5")
+                            id: "buttonRow4"
                         },
-                        "5"
+                        React.createElement(
+                            "button",
+                            {
+                                id: "one",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginRight: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("1")
+                            },
+                            "1"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "two",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "0px",
+                                    marginRight: "0px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("2")
+                            },
+                            "2"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "three",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("3")
+                            },
+                            "3"
+                        ),
+                        React.createElement(
+                            "button",
+                            {
+                                id: "add",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("add")
+                            },
+                            "+"
+                        ),
                     ),
+                    /* Button Row 5 */
                     React.createElement(
-                        "button",
+                        "div",
                         {
-                            id: "six",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("6")
+                            id: "buttonRow5"
                         },
-                        "6"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "subtract",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
+                        React.createElement(
+                            "button",
+                            {style: 
+                                {
+                                    width: "35px",
+                                    marginRight: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("plusMinus")
                             },
-                            onClick: () => this.handleCalcButton("subtract")
-                        },
-                        "-"
-                    ),
-                    br,
-                    React.createElement(
-                        "button",
-                        {
-                            id: "one",
-                            style: 
+                            "+|-"
+                        ),
+                        React.createElement(
+                            "button",
                             {
-                                width: "35px",
-                                marginRight: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
+                                id: "zero",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "0px",
+                                    marginTop: "5px",
+                                    marginRight: "0px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("0")
                             },
-                            onClick: () => this.handleCalcButton("1")
-                        },
-                        "1"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "two",
-                            style: 
+                            "0"
+                        ),
+                        React.createElement(
+                            "button",
                             {
-                                width: "35px",
-                                marginLeft: "0px",
-                                marginRight: "0px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
+                                id: "decimal",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("decimal")
                             },
-                            onClick: () => this.handleCalcButton("2")
-                        },
-                        "2"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "three",
-                            style: 
+                            "."
+                        ),
+                        React.createElement(
+                            "button",
                             {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
+                                id: "equals",
+                                style: 
+                                {
+                                    width: "35px",
+                                    marginLeft: "5px",
+                                    marginTop: "5px",
+                                    borderRadius: "8px",
+                                    backgroundColor: "#eeeeee",
+                                    padding: "10px",
+                                    textAlign: "center"
+                                },
+                                onClick: () => this.handleCalcButton("equal")
                             },
-                            onClick: () => this.handleCalcButton("3")
-                        },
-                        "3"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "add",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("add")
-                        },
-                        "+"
-                    ),
-                    br,
-                    React.createElement(
-                        "button",
-                        {style: 
-                            {
-                                width: "35px",
-                                marginRight: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("plusMinus")
-                        },
-                        "+|-"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "zero",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "0px",
-                                marginTop: "5px",
-                                marginRight: "0px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("0")
-                        },
-                        "0"
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "decimal",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("decimal")
-                        },
-                        "."
-                    ),
-                    React.createElement(
-                        "button",
-                        {
-                            id: "equals",
-                            style: 
-                            {
-                                width: "35px",
-                                marginLeft: "5px",
-                                marginTop: "5px",
-                                borderRadius: "8px",
-                                backgroundColor: "#eeeeee",
-                                padding: "10px",
-                                textAlign: "center"
-                            },
-                            onClick: () => this.handleCalcButton("equal")
-                        },
-                        "="
+                            "="
+                        ),
                     ),
                 )
             )

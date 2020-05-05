@@ -1,6 +1,31 @@
+/* Global Styles
+====================*/
 html {
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+  }
+  
+*, *:before, *:after {
+  box-sizing: inherit;
 }
+
+body {
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+/* Header and Footer
+====================*/
+
+
+
+/* Container and Main
+====================*/
 
 #app {
     padding-top: 200px;
@@ -11,3 +36,7 @@ html {
     box-shadow: inset 1px 1px #bbbbbb;
     border-radius: 5px;
 }
+
+
+/* Media Queries
+====================*/

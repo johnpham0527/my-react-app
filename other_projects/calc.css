@@ -25,18 +25,9 @@ header {
     padding-top: 200px;
 }
 
-
 /* Container and Main
 ====================*/
-#app {
-    padding-top: 200px;
 
-}
-
-#display {
-    box-shadow: inset 1px 1px #bbbbbb;
-    border-radius: 5px;
-}
 
 
 /* Media Queries

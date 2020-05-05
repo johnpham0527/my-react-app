@@ -396,7 +396,7 @@ class MyComponent extends React.Component {
                         id: "main",
                         style: {
                             border: "1px solid black",
-                            width: "180px",
+                            width: "280px",
                             padding: "10px",
                             borderRadius: "10px",
                             border: "none",
@@ -411,7 +411,7 @@ class MyComponent extends React.Component {
                             id: "display",
                             style: {
                                 border: "1px solid black",
-                                width: "156px",
+                                width: "256px",
                                 minHeight: "2.5em",
                                 padding: "10px",
                                 textAlign: "right",
@@ -430,13 +430,12 @@ class MyComponent extends React.Component {
                         {
                             id: "buttonRow1",
                             gridRow: "2",
-
                         },
                         React.createElement(
                             "button",
                             {
                                 style: {
-                                    width: "35px",
+                                    width: "60px",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
@@ -444,7 +443,6 @@ class MyComponent extends React.Component {
                                     border: "none",
                                     textAlign: "center",
                                     padding: "10px",
-                                    textAlign: "center",
                                     border: "none",
                                     textDecoration: "none",
                                     cursor: "pointer"
@@ -459,14 +457,16 @@ class MyComponent extends React.Component {
                                 id: "clear",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("clearAll")
                             },
@@ -476,14 +476,16 @@ class MyComponent extends React.Component {
                             "button",
                             {style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("Del")
                             },
@@ -495,14 +497,16 @@ class MyComponent extends React.Component {
                                 id: "divide",
                                 style: 
                                 {
-                                    width: "35px",
+                                    width: "60px",
                                     marginRight: "5px",
                                     borderRadius: "8px",
                                     backgroundColor: "#693220",
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("divide")
                             },
@@ -530,7 +534,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("7")
                             },
@@ -551,7 +557,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("8")
                             },
@@ -571,7 +579,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("9")
                             },
@@ -591,7 +601,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("multiply")
                             },
@@ -619,7 +631,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("4")
                             },
@@ -640,7 +654,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("5")
                             },
@@ -660,7 +676,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("6")
                             },
@@ -680,7 +698,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("subtract")
                             },
@@ -708,7 +728,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("1")
                             },
@@ -729,7 +751,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("2")
                             },
@@ -749,7 +773,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("3")
                             },
@@ -769,7 +795,9 @@ class MyComponent extends React.Component {
                                     color: "white",
                                     border: "none",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("add")
                             },

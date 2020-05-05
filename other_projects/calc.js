@@ -396,11 +396,11 @@ class MyComponent extends React.Component {
                         id: "main",
                         style: {
                             border: "1px solid black",
-                            width: "182px",
+                            width: "180px",
                             padding: "10px",
                             borderRadius: "10px",
-                            backgroundColor: "#dddddd",
-                            boxShadow: "2px 2px #888888",
+                            border: "none",
+                            backgroundColor: "#282461",
                             display: "grid",
                             gridTemplateRows: "54px repeat(5, 1fr)"
                         }
@@ -417,7 +417,8 @@ class MyComponent extends React.Component {
                                 textAlign: "right",
                                 marginTop: "5px",
                                 marginBottom: "50px",
-                                backgroundColor: "#eeeeee",
+                                backgroundColor: "#F7F8FA",
+                                borderRadius: "10px",
                                 gridRow: "1",
                             }
                         },
@@ -438,9 +439,13 @@ class MyComponent extends React.Component {
                                     width: "35px",
                                     marginRight: "5px",
                                     borderRadius: "8px",
-                                    backgroundColor: "#eeeeee",
+                                    backgroundColor: "#693220",
+                                    color: "white",
                                     padding: "10px",
-                                    textAlign: "center"
+                                    textAlign: "center",
+                                    border: "none",
+                                    textDecoration: "none",
+                                    cursor: "pointer"
                                 },
                                 onClick: () => this.handleCalcButton("CE")
                             },

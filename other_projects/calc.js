@@ -397,7 +397,7 @@ class MyComponent extends React.Component {
                         id: "main",
                         style: {
                         border: "1px solid black",
-                        width: "160px",
+                        width: "182px",
                         padding: "10px",
                         borderRadius: "10px",
                         backgroundColor: "#dddddd",
@@ -410,7 +410,7 @@ class MyComponent extends React.Component {
                             id: "display",
                             style: {
                                 border: "1px solid black",
-                                width: "135px",
+                                width: "150px",
                                 padding: "10px",
                                 textAlign: "right",
                                 marginTop: "5px",

@@ -400,7 +400,9 @@ class MyComponent extends React.Component {
                             padding: "10px",
                             borderRadius: "10px",
                             backgroundColor: "#dddddd",
-                            boxShadow: "2px 2px #888888"
+                            boxShadow: "2px 2px #888888",
+                            display: "grid",
+                            gridTemplateRows: "2fr repeat(5, 1fr)"
                         }
                     },
                     React.createElement(
@@ -414,7 +416,8 @@ class MyComponent extends React.Component {
                                 textAlign: "right",
                                 marginTop: "5px",
                                 marginBottom: "-10px", 
-                                backgroundColor: "#eeeeee"
+                                backgroundColor: "#eeeeee",
+                                gridRow: "1"
                             }
                         },
                         this.props.storeState.display
@@ -424,7 +427,8 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
-                            id: "buttonRow1"
+                            id: "buttonRow1",
+                            gridRow: "2"
                         },
                         React.createElement(
                             "button",
@@ -495,7 +499,8 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
-                            id: "buttonRow1"
+                            id: "buttonRow2",
+                            gridRow: "3"
                         },
                         React.createElement(
                             "button",
@@ -575,7 +580,8 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
-                            id: "buttonRow3"
+                            id: "buttonRow3",
+                            gridRow: "4"
                         },
                         React.createElement(
                             "button",
@@ -655,7 +661,8 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
-                            id: "buttonRow4"
+                            id: "buttonRow4",
+                            gridRow: "5"
                         },
                         React.createElement(
                             "button",
@@ -735,7 +742,8 @@ class MyComponent extends React.Component {
                     React.createElement(
                         "div",
                         {
-                            id: "buttonRow5"
+                            id: "buttonRow5",
+                            gridRow: "6"
                         },
                         React.createElement(
                             "button",

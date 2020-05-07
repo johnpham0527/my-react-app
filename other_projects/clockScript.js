@@ -534,7 +534,11 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "start_stop",
-                style: { display: "inline-block" },
+                style: { 
+                    ...buttonDefaultStyle,
+                    padding: "0.25em 0.5em 0.5em 0.5em",
+                    marginBottom: "0.5em"
+                },
                 onClick: () => this.handleClockButtons("submitStartPauseAlarm")
             },
             "Start/Pause"
@@ -545,7 +549,10 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "reset",
-                style: { display: "inline-block" },
+                style: { 
+                    ...buttonDefaultStyle,
+                    padding: "0.25em 0.5em 0.5em 0.5em",
+                },
                 onClick: () => this.handleClockButtons("submitResetAlarm")
             },
             "Reset"

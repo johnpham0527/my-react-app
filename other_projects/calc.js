@@ -344,7 +344,21 @@ const br = React.createElement(
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
+        
         this.handleCalcButton = this.handleCalcButton.bind(this);
+
+        this.calculatorContainerStyle = {
+            border: "1px solid black",
+            width: "280px",
+            padding: "10px",
+            borderRadius: "10px",
+            border: "none",
+            fontSize: "2em",
+            backgroundColor: "#282461",
+            display: "grid",
+            gridTemplateRows: "2.5em repeat(5, 1fr)"
+        }
+
         this.defaultButtonStyle = {
             width: "60px",
             height: "60px",
@@ -411,17 +425,7 @@ class MyComponent extends React.Component {
                     "div",
                     {
                         id: "main",
-                        style: {
-                            border: "1px solid black",
-                            width: "280px",
-                            padding: "10px",
-                            borderRadius: "10px",
-                            border: "none",
-                            fontSize: "2em",
-                            backgroundColor: "#282461",
-                            display: "grid",
-                            gridTemplateRows: "2.5em repeat(5, 1fr)"
-                        }
+                        style: this.calculatorContainerStyle
                     },
                     React.createElement(
                         "div",

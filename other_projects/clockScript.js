@@ -312,18 +312,6 @@ class PomodoroClock extends React.Component {
             null
         );
 
-        // Display h1 header
-        const displayPomodoroClockHeader = React.createElement(
-            "h1",
-            {
-                style: { 
-                    color: "charcoal",
-                    textAlign: "center",
-                }
-            },
-            "Pomodoro Clock"
-        );
-
         // Display break length text
         const displayBreakLengthText = React.createElement(
             "div",
@@ -591,7 +579,6 @@ class PomodoroClock extends React.Component {
             React.createElement(
                 "div",
                 null,
-                displayPomodoroClockHeader,
                 React.createElement(
                     "div",
                     {

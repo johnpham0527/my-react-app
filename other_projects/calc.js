@@ -357,7 +357,7 @@ class MyComponent extends React.Component {
             backgroundColor: "#282461",
             display: "grid",
             gridTemplateRows: "2.5em repeat(5, 1fr)"
-        }
+        };
 
         this.calculatorDisplayStyle = {
             border: "1px solid black",

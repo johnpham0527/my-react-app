@@ -359,6 +359,18 @@ class MyComponent extends React.Component {
             gridTemplateRows: "2.5em repeat(5, 1fr)"
         }
 
+        this.calculatorDisplayStyle = {
+            border: "1px solid black",
+            width: "256px",
+            minHeight: "2em",
+            padding: "10px",
+            textAlign: "right",
+            marginTop: "5px",
+            marginBottom: "50px",
+            backgroundColor: "#eeeeee",
+            borderRadius: "10px"
+        }
+
         this.defaultButtonStyle = {
             width: "60px",
             height: "60px",

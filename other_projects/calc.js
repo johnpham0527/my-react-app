@@ -444,15 +444,7 @@ class MyComponent extends React.Component {
                         {
                             id: "display",
                             style: {
-                                border: "1px solid black",
-                                width: "256px",
-                                minHeight: "2em",
-                                padding: "10px",
-                                textAlign: "right",
-                                marginTop: "5px",
-                                marginBottom: "50px",
-                                backgroundColor: "#eeeeee",
-                                borderRadius: "10px",
+                                ...this.calculatorDisplayStyle,
                                 gridRow: "1",
                             }
                         },

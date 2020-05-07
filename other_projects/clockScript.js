@@ -347,15 +347,19 @@ class PomodoroClock extends React.Component {
             displayBreakLengthValue
         );
 
+        const buttonDefaultStyle = {
+            display: "inline-block",
+            fontSize: "1.1em",
+            paddingBottom: "0.5em"
+        };
+
+
         // Display decrement break button
         const displayBreakDecrementButton = React.createElement(
             "button",
             {
                 id: "break-decrement",
-                style: { 
-                    display: "inline-block",
-                    fontSize: "1.1em",
-                },
+                style: buttonDefaultStyle,
                 onClick: () => this.handleClockButtons("decrementSetBreakValue")
             },
             "\u2193" //down arrow
@@ -366,10 +370,7 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "break-increment",
-                style: { 
-                    display: "inline-block",
-                    fontSize: "1.1em",
-                },
+                style: buttonDefaultStyle,
                 onClick: () => this.handleClockButtons("incrementSetBreakValue")
             },
             "\u2191" //up arrow
@@ -432,10 +433,7 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "session-increment",
-                style: { 
-                    display: "inline-block",
-                    fontSize: "1.1em",
-                },
+                style: buttonDefaultStyle,
                 onClick: () => this.handleClockButtons("incrementSetAlarmValue")
             },
             "\u2191" //up arrow
@@ -446,10 +444,7 @@ class PomodoroClock extends React.Component {
             "button",
             {
                 id: "session-decrement",
-                style: { 
-                    display: "inline-block",
-                    fontSize: "1.1em",
-                },
+                style: buttonDefaultStyle,
                 onClick: () => this.handleClockButtons("decrementSetAlarmValue")
             },
             "\u2193"

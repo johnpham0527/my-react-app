@@ -350,6 +350,7 @@ class MyComponent extends React.Component {
             height: "60px",
             fontSize: "0.5em",
             marginRight: "5px",
+            marginBottom: "5px",
             borderRadius: "8px",
             backgroundColor: "#693220",
             color: "white",

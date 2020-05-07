@@ -450,21 +450,7 @@ class MyComponent extends React.Component {
                         React.createElement(
                             "button",
                             {
-                                style: {
-                                    width: "60px",
-                                    height: "60px",
-                                    fontSize: "0.5em",
-                                    marginRight: "5px",
-                                    borderRadius: "8px",
-                                    backgroundColor: "#693220",
-                                    color: "white",
-                                    border: "none",
-                                    textAlign: "center",
-                                    padding: "10px",
-                                    border: "none",
-                                    textDecoration: "none",
-                                    cursor: "pointer"
-                                },
+                                style: this.defaultButtonStyle,
                                 onClick: () => this.handleCalcButton("CE")
                             },
                             "CE"

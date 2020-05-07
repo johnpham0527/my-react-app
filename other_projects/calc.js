@@ -459,42 +459,15 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "clear",
-                                style: 
-                                {
-                                    width: "60px",
-                                    height: "60px",
-                                    fontSize: "0.5em",
-                                    marginRight: "5px",
-                                    borderRadius: "8px",
-                                    backgroundColor: "#693220",
-                                    color: "white",
-                                    border: "none",
-                                    padding: "10px",
-                                    textAlign: "center",
-                                    textDecoration: "none",
-                                    cursor: "pointer"
-                                },
+                                style: this.defaultButtonStyle,
                                 onClick: () => this.handleCalcButton("clearAll")
                             },
                             "C"
                         ),
                         React.createElement(
                             "button",
-                            {style: 
-                                {
-                                    width: "60px",
-                                    height: "60px",
-                                    fontSize: "0.5em",
-                                    marginRight: "5px",
-                                    borderRadius: "8px",
-                                    backgroundColor: "#693220",
-                                    color: "white",
-                                    border: "none",
-                                    padding: "10px",
-                                    textAlign: "center",
-                                    textDecoration: "none",
-                                    cursor: "pointer"
-                                },
+                            {
+                                style: this.defaultButtonStyle,
                                 onClick: () => this.handleCalcButton("Del")
                             },
                             "Del"

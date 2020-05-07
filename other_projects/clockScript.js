@@ -583,6 +583,8 @@ class PomodoroClock extends React.Component {
                     marginLeft: "auto",
                     marginRight: "auto",
                     textAlign: "center",
+                    backgroundColor: "#282461",
+                    color: "white"
             }
             },
             displayRemainingTime,

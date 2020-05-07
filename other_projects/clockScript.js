@@ -480,7 +480,12 @@ class PomodoroClock extends React.Component {
             },
             displayBreakContainer,
             displaySessionContainer,
-        )
+        );
+
+        const displayRemainingTimeValueStyle = {
+            display: "block",
+            fontSize: "1.5em",
+        };
 
         // Display remaining session or break time value
         const displayRemainingTimeValue = React.createElement(
@@ -489,17 +494,15 @@ class PomodoroClock extends React.Component {
                 {
                     id: "time-left",
                     style: { 
+                        ...displayRemainingTimeValueStyle,
                         color: "red",
-                        display: "block",
-                        fontSize: "2em",
                     },
                 }
                 :
                 {
                     id: "time-left",
                     style: {
-                        display: "block",
-                        fontSize: "2em",
+                        ...displayRemainingTimeValueStyle
                     },
                 },
             displayTimeText(convertSecondsToTime(this.props.storeState.totalRemainingSeconds)).minutes +

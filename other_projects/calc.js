@@ -460,7 +460,7 @@ class MyComponent extends React.Component {
                         React.createElement(
                             "button",
                             {
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("CE")
                             },
                             "CE"
@@ -469,7 +469,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "clear",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("clearAll")
                             },
                             "C"
@@ -477,7 +477,7 @@ class MyComponent extends React.Component {
                         React.createElement(
                             "button",
                             {
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("Del")
                             },
                             "Del"
@@ -486,7 +486,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "divide",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("divide")
                             },
                             "/"
@@ -503,7 +503,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "seven",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("7")
                             },
                             "7"
@@ -512,7 +512,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "eight",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("8")
                             },
                             "8"
@@ -521,7 +521,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "nine",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("9")
                             },
                             "9",
@@ -530,7 +530,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "multiply",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("multiply")
                             },
                             "*"
@@ -547,7 +547,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "four",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("4")
                             },
                             "4"
@@ -556,7 +556,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "five",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("5")
                             },
                             "5"
@@ -565,7 +565,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "six",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("6")
                             },
                             "6"
@@ -574,7 +574,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "subtract",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("subtract")
                             },
                             "-"
@@ -591,7 +591,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "one",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("1")
                             },
                             "1"
@@ -600,7 +600,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "two",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("2")
                             },
                             "2"
@@ -609,7 +609,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "three",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("3")
                             },
                             "3"
@@ -618,7 +618,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "add",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("add")
                             },
                             "+"
@@ -634,7 +634,7 @@ class MyComponent extends React.Component {
                         React.createElement(
                             "button",
                             {
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("plusMinus")
                             },
                             "+|-"
@@ -643,7 +643,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "zero",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("0")
                             },
                             "0"
@@ -652,7 +652,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "decimal",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("decimal")
                             },
                             "."
@@ -661,7 +661,7 @@ class MyComponent extends React.Component {
                             "button",
                             {
                                 id: "equals",
-                                style: this.defaultButtonStyle,
+                                className: "calcBtn",
                                 onClick: () => this.handleCalcButton("equal")
                             },
                             "="

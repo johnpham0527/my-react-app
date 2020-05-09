@@ -49,3 +49,22 @@ main {
     margin: auto;
     grid-row: 2;
 }
+    
+/* App
+====================*/
+.defaultBtn {
+    width: "60px";
+    height: "60px";
+    font-size: "0.5em";
+    margin-right: "5px";
+    margin-bottom: "5px";
+    border-radius: "8px";
+    background-color: "#693220";
+    color: "white";
+    border: "none";
+    text-align: "center";
+    padding: "10px";
+    border: "none";
+    text-decoration: "none";
+    cursor: "pointer";
+}

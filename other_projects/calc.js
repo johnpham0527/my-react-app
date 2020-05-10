@@ -454,6 +454,8 @@ class MyComponent extends React.Component {
                         CalcButton("CE", {onClick: () => this.handleCalcButton("CE")}),
                         CalcButton("C", {id: "clear", onClick: () => this.handleCalcButton("clearAll")}),
                         CalcButton("Del", {onClick: () => this.handleCalcButton("Del")}),
+                        CalcButton("/", {id: "divide", onClick: () => this.handleCalcButton("divide")}),
+                        /*
                         React.createElement(
                             "button",
                             {
@@ -463,6 +465,7 @@ class MyComponent extends React.Component {
                             },
                             "/"
                         ),
+                        */
                     ),
                     /* Button Row 2 */
                     React.createElement(

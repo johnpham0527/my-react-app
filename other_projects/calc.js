@@ -351,6 +351,18 @@ const CalcButton = (props) => { //Stateless component for calculator buttons
 };
 */
 
+/*
+class CalcButton extends React.Component {
+    render() {
+        return (React.createElement(
+            "button",
+            { className = "calcBtn" },
+            this.props.name
+        ))
+    }
+}
+*/
+
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);

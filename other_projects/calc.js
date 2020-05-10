@@ -466,15 +466,7 @@ class MyComponent extends React.Component {
                         CalcButton("7", {id: "seven", onClick: () => this.handleCalcButton("7")}),
                         CalcButton("8", {id: "eight", onClick: () => this.handleCalcButton("8")}),
                         CalcButton("9", {id: "nine", onClick: () => this.handleCalcButton("9")}),
-                        React.createElement(
-                            "button",
-                            {
-                                id: "multiply",
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("multiply")
-                            },
-                            "*"
-                        ),
+                        CalcButton( "*", {id: "multiply", onClick: () => this.handleCalcButton("multiply")}),
                     ),
                     /* Button Row 3 */
                     React.createElement(

@@ -341,6 +341,16 @@ const br = React.createElement(
     null
 );
 
+/*
+const CalcButton = (props) => { //Stateless component for calculator buttons
+    React.createElement(
+        "button",
+        { className = "calcBtn" },
+        this.props.name
+    )
+};
+*/
+
 class MyComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -370,23 +380,6 @@ class MyComponent extends React.Component {
             backgroundColor: "#eeeeee",
             borderRadius: "10px"
         }
-
-        this.defaultButtonStyle = {
-            width: "60px",
-            height: "60px",
-            fontSize: "0.5em",
-            marginRight: "5px",
-            marginBottom: "5px",
-            borderRadius: "8px",
-            backgroundColor: "#693220",
-            color: "white",
-            border: "none",
-            textAlign: "center",
-            padding: "10px",
-            border: "none",
-            textDecoration: "none",
-            cursor: "pointer"    
-        };
         
     }
 
@@ -426,7 +419,6 @@ class MyComponent extends React.Component {
                 this.props.submitDigit(buttonValue);
         }
     }
-
 
     render() {
         return(

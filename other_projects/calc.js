@@ -455,17 +455,6 @@ class MyComponent extends React.Component {
                         CalcButton("C", {id: "clear", onClick: () => this.handleCalcButton("clearAll")}),
                         CalcButton("Del", {onClick: () => this.handleCalcButton("Del")}),
                         CalcButton("/", {id: "divide", onClick: () => this.handleCalcButton("divide")}),
-                        /*
-                        React.createElement(
-                            "button",
-                            {
-                                id: "divide",
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("divide")
-                            },
-                            "/"
-                        ),
-                        */
                     ),
                     /* Button Row 2 */
                     React.createElement(
@@ -474,15 +463,7 @@ class MyComponent extends React.Component {
                             id: "buttonRow2",
                             gridRow: "3"
                         },
-                        React.createElement(
-                            "button",
-                            {
-                                id: "seven",
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("7")
-                            },
-                            "7"
-                        ),
+                        CalcButton("7", {id: "seven", onClick: () => this.handleCalcButton("7")}),
                         React.createElement(
                             "button",
                             {

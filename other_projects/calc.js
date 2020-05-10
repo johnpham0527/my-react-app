@@ -341,27 +341,17 @@ const br = React.createElement(
     null
 );
 
-/*
-const CalcButton = (props) => { //Stateless component for calculator buttons
-    React.createElement(
+const CalcButton = (buttonName, buttonHandler, handlerValue) => {  //Stateless component for calculator buttons
+    return React.createElement(
         "button",
-        { className = "calcBtn" },
-        this.props.name
-    )
-};
-*/
-
-/*
-class CalcButton extends React.Component {
-    render() {
-        return (React.createElement(
-            "button",
-            { className = "calcBtn" },
-            this.props.name
-        ))
-    }
+        {
+            className: "calcBtn",
+            onClick: () => buttonHandler(handlerValue)
+        },
+        buttonName
+    );
 }
-*/
+
 
 class MyComponent extends React.Component {
     constructor(props) {
@@ -461,14 +451,7 @@ class MyComponent extends React.Component {
                             id: "buttonRow1",
                             gridRow: "2",
                         },
-                        React.createElement(
-                            "button",
-                            {
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("CE")
-                            },
-                            "CE"
-                        ),
+                        CalcButton("CE", this.handleCalcButton, "CE"),
                         React.createElement(
                             "button",
                             {

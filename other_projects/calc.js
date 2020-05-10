@@ -499,14 +499,7 @@ class MyComponent extends React.Component {
                             id: "buttonRow5",
                             gridRow: "6"
                         },
-                        React.createElement(
-                            "button",
-                            {
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("plusMinus")
-                            },
-                            "+|-"
-                        ),
+                        CalcButton("+|-", {onClick: () => this.handleCalcButton("plusMinus")}),
                         React.createElement(
                             "button",
                             {

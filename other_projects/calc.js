@@ -345,8 +345,8 @@ const CalcButton = (buttonName, properties) => {  //Stateless component for calc
     return React.createElement(
         "button",
         {
-            ...properties,
-            className: "calcBtn",
+            ...properties, //using the spread operator here so that I can add additional properties
+            className: "calcBtn", //all CalcButtons will have a class name of calcBtn. A CSS stylesheet will use this hook to style the buttons
         },
         buttonName
     );

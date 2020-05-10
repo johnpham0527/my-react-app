@@ -501,15 +501,7 @@ class MyComponent extends React.Component {
                         },
                         CalcButton("+|-", {onClick: () => this.handleCalcButton("plusMinus")}),
                         CalcButton("0", {id: "zero", onClick: () => this.handleCalcButton("0")}),
-                        React.createElement(
-                            "button",
-                            {
-                                id: "decimal",
-                                className: "calcBtn",
-                                onClick: () => this.handleCalcButton("decimal")
-                            },
-                            "."
-                        ),
+                        CalcButton(".", {id: "decimal", onClick: () => this.handleCalcButton("decimal")}),
                         React.createElement(
                             "button",
                             {

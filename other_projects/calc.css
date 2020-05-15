@@ -52,12 +52,37 @@ main {
     
 /* App
 ====================*/
+#main {
+    border: medium none;
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 2em;
+    background-color: rgb(40, 36, 97);
+    display: grid;
+    grid-template-rows: 2.5em repeat(5, 1fr);
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 0.25em;
+}
+
+#display {
+    border: 1px solid black;
+    width: 100%;
+    min-height: 2em;
+    padding: 10px;
+    text-align: right;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10px;
+    grid-row: 1;
+    grid-column: 1 / span 4;
+}
+
 .calcBtn {
     width: 60px;
     height: 60px;
     font-size: 0.5em;
-    margin-right: 5px;
-    margin-bottom: 5px;
     border-radius: 8px;
     background-color: #693220;
     color: white;

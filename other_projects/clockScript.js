@@ -329,10 +329,6 @@ class PomodoroClock extends React.Component {
             "div",
             {
                 id: "break-length",
-                style: { 
-                    display: "block",
-                    fontSize: "1.5em",
-                },
             },
             this.props.storeState.setBreakMinutes,
         );

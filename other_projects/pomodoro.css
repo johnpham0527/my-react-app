@@ -83,6 +83,10 @@ main {
     font-size: 2em
 }
 
+#display-start-pause-and-reset-buttons {
+    margin-top: 1em; 
+}
+
 #display-clock-elements {
     display: block;
     width: 300px;

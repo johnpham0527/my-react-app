@@ -457,12 +457,7 @@ class PomodoroClock extends React.Component {
         const displaySessionContainer = React.createElement(
             "div",
             {
-                id: "session-label",
-                style: {
-                    display: "inline-block",
-                    margin: "1em",
-                    padding: "1em",
-                }
+                id: "session-label"
             },
             displaySessionLength,
             displaySessionIncrementButton,

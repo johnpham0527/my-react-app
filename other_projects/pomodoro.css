@@ -57,3 +57,9 @@ main {
     margin: 4px;
     padding: 4px;
 }
+
+#session-label {
+    display: inline-block;
+    margin: 4px;
+    padding: 4px;
+}

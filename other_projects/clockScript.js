@@ -538,22 +538,7 @@ class PomodoroClock extends React.Component {
         // Div that displays clock elements: time left, start/pause, and reset buttons
         const displayClockElements = React.createElement(
             "div",
-            {
-                style: {
-                    display: "block",
-                    width: "300px",
-                    margin: "1em",
-                    padding: "1em",
-                    borderStyle: "solid",
-                    borderWidth: "1px",
-                    borderRadius: "1em",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    textAlign: "center",
-                    backgroundColor: "#282461",
-                    color: "white"
-            }
-            },
+            { id: "display-clock-elements" },
             displayRemainingTime,
             displayStartPauseAndResetButtons,
         );

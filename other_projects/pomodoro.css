@@ -83,6 +83,21 @@ main {
     font-size: 2em
 }
 
+#display-clock-elements {
+    display: block;
+    width: 300px;
+    margin: 1em;
+    padding: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #282461;
+    color: white;
+}
+
 .buttonDefaultStyle {
     display:inline-block;
     font-size: 1.1em;

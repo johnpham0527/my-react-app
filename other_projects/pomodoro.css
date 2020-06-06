@@ -78,6 +78,11 @@ main {
     text-align: center;
 }
 
+#timer-label {
+    display: block;
+    font-size: 2em
+}
+
 .buttonDefaultStyle {
     display:inline-block;
     font-size: 1.1em;

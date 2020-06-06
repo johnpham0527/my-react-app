@@ -490,13 +490,7 @@ class PomodoroClock extends React.Component {
         // Display remaining session or break time label
         const displayRemainingTime = React.createElement(
             "div",
-            {
-                id: "timer-label",
-                style: { 
-                    display: "block",
-                    fontSize: "2em",
-                }
-            },
+            { id: "timer-label" },
             this.props.storeState.status === INACTIVE || this.props.storeState.status === SESSION ? //If status is inactive or session, display session as the label
                 "Session" : "Break", //Otherwise, display break as the label
             displayRemainingTimeValue

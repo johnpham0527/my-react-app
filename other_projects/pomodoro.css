@@ -67,3 +67,18 @@ main {
 #display-break-and-session-container {
     text-align: center;
 }
+
+.buttonDefaultStyle {
+    display:inline-block;
+    font-size: 1.1em;
+    padding-bottom: 0.5em;
+    margin: auto 0.25em auto 0.25em;
+    border-radius: 8px;
+    background-color: #693220;
+    color: "white";
+    border: "none";
+    text-align: "center";
+    border: "none";
+    text-decoration: "none";
+    cursor: "pointer";
+};

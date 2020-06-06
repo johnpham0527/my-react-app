@@ -549,9 +549,7 @@ class PomodoroClock extends React.Component {
                 null,
                 React.createElement(
                     "div",
-                    {
-                        id: "main"
-                    },
+                    { id: "main" },
                     displayBreakAndSessionContainers,
                     displayClockElements,
                 ),

@@ -467,9 +467,7 @@ class PomodoroClock extends React.Component {
         const displayBreakAndSessionContainers = React.createElement(
             "div",
             {
-                style: {
-                    textAlign: "center"
-                }
+                id: "display-break-and-session-container"
             },
             displayBreakContainer,
             displaySessionContainer,

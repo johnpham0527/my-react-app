@@ -63,3 +63,7 @@ main {
     margin: 4px;
     padding: 4px;
 }
+
+#display-break-and-session-container {
+    text-align: center;
+}

@@ -49,3 +49,11 @@ main {
     margin: auto;
     grid-row: 2;
 }
+
+/* App
+=====================*/
+#break-label {
+    display: inline-block;
+    margin: 4px;
+    padding: 4px;
+}

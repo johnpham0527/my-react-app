@@ -389,13 +389,7 @@ class PomodoroClock extends React.Component {
         const displayBreakContainer = React.createElement(
             "div",
             {
-                id: "break-label",
-                style: {
-                    display: "inline-block",
-                    margin: "1em",
-                    padding: "1em",
-
-                }
+                id: "break-label"
             },
             displayBreakLength,
             displayBreakIncrementButton,

@@ -53,7 +53,7 @@ main {
 /* App
 =====================*/
 #break-label {
-    display: inline-block;
+    flex: 1 1 50%;
     margin: 4px;
     padding: 4px;
 }
@@ -73,7 +73,7 @@ main {
 }
 
 #session-label {
-    display: inline-block;
+    flex: 1 1 50%;
     margin: 4px;
     padding: 4px;
 }
@@ -94,6 +94,8 @@ main {
 
 #display-break-and-session-container {
     text-align: center;
+    display: flex;
+    justify-content: space-between;
 }
 
 #timer-label {

@@ -329,9 +329,7 @@ class PomodoroClock extends React.Component {
         // Display container for break length text and value
         const displayBreakLength = React.createElement(
             "div",
-            { 
-                id: "display-break-length-container"
-            },
+            { id: "display-break-length-container" },
             displayBreakLengthText,
             displayBreakLengthValue
         );
@@ -351,7 +349,6 @@ class PomodoroClock extends React.Component {
             textDecoration: "none",
             cursor: "pointer"    
         };
-
 
         // Display decrement break button
         const displayBreakDecrementButton = React.createElement(

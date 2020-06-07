@@ -74,6 +74,11 @@ main {
     font-size: 1.5em;
 }
 
+#display-session-length-text {
+    display: inline;
+    font-size: 1.1em;
+}
+
 #display-break-and-session-container {
     text-align: center;
 }

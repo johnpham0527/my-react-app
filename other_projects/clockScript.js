@@ -392,12 +392,7 @@ class PomodoroClock extends React.Component {
         // Display session length text
         const displaySessionLengthText = React.createElement(
             "div",
-            { 
-                style: { 
-                    display: "inline",
-                    fontSize: "1.1em",
-                } 
-            },
+            { id: "display-session-length-text" },
             "Session Length",
         );
 

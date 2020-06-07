@@ -344,7 +344,8 @@ class PomodoroClock extends React.Component {
         const buttonDefaultStyle = {
             display: "inline-block",
             fontSize: "1.1em",
-            paddingBottom: "0.5em",
+            paddingTop: "0.25em",
+            paddingBottom: "0.25em",
             margin: "auto 0.25em auto 0.25em",
             borderRadius: "8px",
             backgroundColor: "#693220",

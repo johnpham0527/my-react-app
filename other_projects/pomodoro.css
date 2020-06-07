@@ -63,6 +63,15 @@ main {
     font-size: 1.5em;
 }
 
+#display-break-length-text {
+    display: inline;
+    font-size: 1.1em;
+}
+
+#display-break-length-container {
+    display: block;
+}
+
 #session-label {
     display: inline-block;
     margin: 4px;

@@ -315,12 +315,7 @@ class PomodoroClock extends React.Component {
         // Display break length text
         const displayBreakLengthText = React.createElement(
             "div",
-            { 
-                style: { 
-                    display: "inline",
-                    fontSize: "1.1em",
-                } 
-            },
+            { id: "display-break-length-text" },
             "Break Length",
         )
 
@@ -335,7 +330,7 @@ class PomodoroClock extends React.Component {
         const displayBreakLength = React.createElement(
             "div",
             { 
-                style: { display: "block" }
+                id: "display-break-length-container"
             },
             displayBreakLengthText,
             displayBreakLengthValue
